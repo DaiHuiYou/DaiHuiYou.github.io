@@ -87,6 +87,8 @@
 		        
 					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
+					<a class="mail" target="_blank" href="mailto:litten225@qq.com" title="mail"><i class="icon-mail"></i></a>
+		        
 			</div>
 		</nav>
 	</header>		
@@ -130,6 +132,8 @@
 			        
 						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
+						<a class="mail" target="_blank" href="mailto:litten225@qq.com" title="mail"><i class="icon-mail"></i></a>
+			        
 				</div>
 			</nav>
 
@@ -155,6 +159,107 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-C-多维数组" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/04/C-多维数组/">C_多维数组</a>
+    </h1>
+  
+
+        
+        <a href="/2018/09/04/C-多维数组/" class="archive-article-date">
+  	<time datetime="2018-09-04T08:57:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a[] = &#123;<span class="number">1</span>, <span class="number">2</span>&#125;;</span><br><span class="line">	<span class="keyword">int</span> b[<span class="number">100</span>] = &#123;<span class="number">1</span>, <span class="number">3</span>&#125;;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> c[<span class="number">200</span>] = &#123;<span class="number">0</span>&#125;; <span class="comment">//编译的是 就已经确定 所有的值 为零</span></span><br><span class="line"></span><br><span class="line">	<span class="built_in">memset</span>(c, <span class="number">0</span>, <span class="keyword">sizeof</span>(c)); <span class="comment">//显示的 重置内存块</span></span><br><span class="line">	<span class="comment">//对一维数组  C规定：</span></span><br><span class="line">	<span class="comment">//c是数组首元素的地址 c+1 步长 4个字节</span></span><br><span class="line">	<span class="comment">//&amp;c 是整个数组的地址 //&amp;c+1 步长 200*4 </span></span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"hello...\n"</span>);</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>//怎么样表达int a[10]这种数据类型那？int[]<br>//类型本质：固定大小内存块的别名<br>//定义数组类型<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">	typedef int (MyArrayType)[5]; //定义了一个数据类型  数组数据类型</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">	MyArrayType  myArray;  <span class="comment">//int myArray[5];</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		myArray[i] = i+<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>, myArray[i]);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"myArray代表数组首元素的地址 myArray:%d myArray+1:%d \n"</span>, myArray, myArray+<span class="number">1</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"&amp;myArray代表整个数组的地址 &amp;myArray:%d &amp;myArray+1:%d \n"</span>, &amp;myArray, &amp;myArray+<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"hello...\n"</span>);</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="定义数组指针变量的方法1"><a href="#定义数组指针变量的方法1" class="headerlink" title="定义数组指针变量的方法1"></a>定义数组指针变量的方法1</h3><p>//用数组类型<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> *Myarray[] = &#123;<span class="string">"1111"</span>, <span class="string">"33333"</span>, <span class="string">"aaaa"</span>&#125;; <span class="comment">//指针 数组</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//数组指针  用一个指针 来指向一个数组</span></span><br><span class="line"></span><br><span class="line">	typedef int (MyArrayType)[5]; //定义了一个数据类型  数组数据类型</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">	MyArrayType  myArray;  <span class="comment">//int myArray[5]; //用类型定义变量 </span></span><br><span class="line"></span><br><span class="line">	MyArrayType *pArray; <span class="comment">//定义一个指针变量 这个指针变量 指向一个数组</span></span><br><span class="line"></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> myArray2[<span class="number">5</span>]; <span class="comment">//相当于一级指针</span></span><br><span class="line"></span><br><span class="line">		pArray = &amp;myArray2; <span class="comment">//相当于2级指针</span></span><br><span class="line">		<span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			(*pArray)[i] = i+<span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	</span><br><span class="line">		<span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%d "</span>, (*pArray)[i]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"hello...\n"</span>);</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> ;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="定义数组指针变量的第二种方法"><a href="#定义数组指针变量的第二种方法" class="headerlink" title="定义数组指针变量的第二种方法"></a>定义数组指针变量的第二种方法</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//定义声明一个数组指针类型</span></span><br><span class="line">	typedef int (*PArrayType)[5];</span><br><span class="line">	PArrayType pArray;  <span class="comment">//告诉编译器 给我分配一个指针变量</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> c[<span class="number">5</span>];</span><br><span class="line">	<span class="keyword">int</span> i  = <span class="number">0</span>;</span><br><span class="line">	pArray = &amp;c;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		(*pArray)[i] = i + <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>, (*pArray)[i]);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"hello...\n"</span>);</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> ;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="定义数组指针变量的第三种方法"><a href="#定义数组指针变量的第三种方法" class="headerlink" title="定义数组指针变量的第三种方法"></a>定义数组指针变量的第三种方法</h3><p>//前2种方法 通过类型定义变量 比较麻烦<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//int [][5]</span></span><br><span class="line">	<span class="keyword">int</span> (*pMyArray)[<span class="number">5</span>]; <span class="comment">//直接定义一个指向数组的 数组指针变量</span></span><br><span class="line">	<span class="keyword">int</span> c[<span class="number">5</span>];</span><br><span class="line">	<span class="keyword">int</span> i  = <span class="number">0</span>;</span><br><span class="line">	pMyArray = &amp;c;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		(*pMyArray)[i] = i + <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>, (*pMyArray)[i]);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"hello...\n"</span>);</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> ;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="多维数组名的本质是数组指针"><a href="#多维数组名的本质是数组指针" class="headerlink" title="多维数组名的本质是数组指针"></a>多维数组名的本质是数组指针</h3><h3 id="多维数组作参数退化问问题"><a href="#多维数组作参数退化问问题" class="headerlink" title="多维数组作参数退化问问题"></a>多维数组作参数退化问问题</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//多维数组作参数的退化问题</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">getArray1</span><span class="params">(<span class="keyword">int</span> buff[<span class="number">3</span>][<span class="number">5</span>])</span><span class="comment">//buff退化为数组指针</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> num = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> i, j;</span><br><span class="line">	<span class="keyword">int</span> temp = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	num = <span class="keyword">sizeof</span>(buff);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"num:%d\n"</span>, num);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(j=<span class="number">0</span>; j&lt;<span class="number">5</span>; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			*(*(buff+i)+j) = temp++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">getArray2</span><span class="params">(<span class="keyword">int</span> buff[][<span class="number">5</span>])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j;</span><br><span class="line">	<span class="keyword">int</span> temp = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(j=<span class="number">0</span>; j&lt;<span class="number">5</span>; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			buff[i][j] = temp++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void getArray3(int (*buff)[5])</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j;</span><br><span class="line">	<span class="keyword">int</span> temp = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(j=<span class="number">0</span>; j&lt;<span class="number">5</span>; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			*(*(buff+i)+j) = temp++;;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//多维数组名的本质  数组指针 ，步长 一维的长度</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// (a+i) 代表是整个第i行的地址  二级指针</span></span><br><span class="line"><span class="comment">// *(a+i) 代表 1级指针  第i行首元素的地址</span></span><br><span class="line"><span class="comment">// *(a+i) + j  ===&gt; &amp;  a[i][j]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//*( *(a+i) + j) ===&gt;a[i][j]元素的值</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;	</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">3</span>][<span class="number">5</span>];</span><br><span class="line">	<span class="keyword">int</span> i, j;</span><br><span class="line">	<span class="keyword">int</span> temp = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	getArray3(a);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(j=<span class="number">0</span>; j&lt;<span class="number">5</span>; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%d "</span>, a[i][j]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"hello.\n"</span>);</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="等价关系"><a href="#等价关系" class="headerlink" title="等价关系"></a>等价关系</h3><table>
+<thead>
+<tr>
+<th>数组参数</th>
+<th>等效数组参数 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一维数组 char a[30]</td>
+<td>一级指针 char *a </td>
+</tr>
+<tr>
+<td>指针数组 char *a[30]</td>
+<td>二级指针char **a </td>
+</tr>
+<tr>
+<td>二维数组 char a[5][30]</td>
+<td>数组指针变量char (*a)[30]</td>
+</tr>
+</tbody>
+</table>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C提高</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/04/C-多维数组/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-C_二级指针三种内存模型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -870,92 +975,6 @@
 
 
   
-    <article id="post-markdown使用总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/28/markdown使用总结/">markdown使用总结</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/28/markdown使用总结/" class="archive-article-date">
-  	<time datetime="2018-08-28T08:09:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li><p>换行：<br>1.方法1： 连续两个以上空格+回车。  </p>
-</li>
-<li><p>首行缩进两个字符：（每个表示一个空格，连续使用两个即可）</p>
-<pre><code>1.&amp;ensp;半角的空格  
-2.&amp;emsp;全角的空格
-</code></pre></li>
-<li><p>字体、字号、颜色</p>
-<pre><code>- &lt;font color=red&gt;red&lt;/font&gt;
-- &lt;font color=blue&gt;blue&lt;/font&gt;
-- &lt;font color=green&gt;green&lt;/font&gt;
-</code></pre></li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工具</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/28/markdown使用总结/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
@@ -1053,15 +1072,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">C++基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">C++</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">C提高</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1069,7 +1080,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">c++基础</a>
+                <a href="javascript:void(0)" class="js-tag color1">C++基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">C提高</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1081,6 +1096,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">c++基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
@@ -1089,11 +1108,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
