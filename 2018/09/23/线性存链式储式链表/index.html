@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="https://daihuiyou.top">
   <title>线性存链式储式链表 | Will&#39;notebook</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="单独把结点的指针域 声明成结构体数据类型，   note:worong:12current-&amp;gt;next = node-&amp;gt;next;node = current-&amp;gt;next;		// what is wrong?   node is not pointer filed and can&apos;t be assigned. right: 12node-&amp;gt;next = current-&amp;">
+  <meta name="description" content="单独把结点的指针域 声明成结构体数据类型，  指针指向谁， 就把谁的地址赋给指针。  note:worong:12current-&amp;gt;next = node-&amp;gt;next;node = current-&amp;gt;next;		// what is wrong?   node is not pointer filed and can&apos;t be assigned. right: 12node-&amp;">
 <meta name="keywords" content="数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线性存链式储式链表">
 <meta property="og:url" content="https://daihuiyou.top/2018/09/23/线性存链式储式链表/index.html">
 <meta property="og:site_name" content="Will&#39;notebook">
-<meta property="og:description" content="单独把结点的指针域 声明成结构体数据类型，   note:worong:12current-&amp;gt;next = node-&amp;gt;next;node = current-&amp;gt;next;		// what is wrong?   node is not pointer filed and can&apos;t be assigned. right: 12node-&amp;gt;next = current-&amp;">
+<meta property="og:description" content="单独把结点的指针域 声明成结构体数据类型，  指针指向谁， 就把谁的地址赋给指针。  note:worong:12current-&amp;gt;next = node-&amp;gt;next;node = current-&amp;gt;next;		// what is wrong?   node is not pointer filed and can&apos;t be assigned. right: 12node-&amp;">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.imgur.com/1IEmyQY.png">
-<meta property="og:updated_time" content="2018-09-24T02:57:01.357Z">
+<meta property="og:updated_time" content="2018-09-24T07:21:30.716Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性存链式储式链表">
-<meta name="twitter:description" content="单独把结点的指针域 声明成结构体数据类型，   note:worong:12current-&amp;gt;next = node-&amp;gt;next;node = current-&amp;gt;next;		// what is wrong?   node is not pointer filed and can&apos;t be assigned. right: 12node-&amp;gt;next = current-&amp;">
+<meta name="twitter:description" content="单独把结点的指针域 声明成结构体数据类型，  指针指向谁， 就把谁的地址赋给指针。  note:worong:12current-&amp;gt;next = node-&amp;gt;next;node = current-&amp;gt;next;		// what is wrong?   node is not pointer filed and can&apos;t be assigned. right: 12node-&amp;">
 <meta name="twitter:image" content="https://i.imgur.com/1IEmyQY.png">
   
     <link rel="alternative" href="/atom.xml" title="Will&#39;notebook" type="application/atom+xml">
@@ -186,6 +186,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>单独把结点的指针域 声明成结构体数据类型， </p>
+<p>指针指向谁， 就把谁的地址赋给指针。</p>
 <p><img src="https://i.imgur.com/1IEmyQY.png" alt=""></p>
 <h3 id="note"><a href="#note" class="headerlink" title="note:"></a>note:</h3><p>worong:<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">current-&gt;next = node-&gt;next;</span><br><span class="line">node = current-&gt;next;		<span class="comment">// what is wrong?   node is not pointer filed and can't be assigned.</span></span><br></pre></td></tr></table></figure></p>
 <p>right:</p>
@@ -205,7 +206,7 @@
             <span class="tooltip-content">
               <span class="tooltip-text">
                 <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>你的认可是我最大的鼓励<i class="icon icon-quo-right"></i></p>
                   <div class="reward-box">
                     
                     
@@ -441,11 +442,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">C++基础</a>
+                <a href="javascript:void(0)" class="js-tag color1">C++提高</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">C++提高</a>
+                <a href="javascript:void(0)" class="js-tag color1">C++基础</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -453,11 +454,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">the first post.</a>
+                <a href="javascript:void(0)" class="js-tag color1">c++基础</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color1">the first post.</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -465,7 +466,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -477,11 +482,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">c++基础</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
             
             <div class="clearfix"></div>
