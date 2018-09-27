@@ -152,19 +152,160 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-线性存链式储式链表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-for循环常用写法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/23/线性存链式储式链表/">线性存链式储式链表</a>
+      <a class="article-title" href="/2018/09/27/for循环常用写法/">for循环常用写法</a>
     </h1>
   
 
         
-        <a href="/2018/09/23/线性存链式储式链表/" class="archive-article-date">
+        <a href="/2018/09/27/for循环常用写法/" class="archive-article-date">
+  	<time datetime="2018-09-27T03:03:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>插入元素:<br><img src="https://i.imgur.com/AbGJ8V6.png" alt=""></p>
+<p>删除元素:<br><img src="https://i.imgur.com/Rcci3gt.png" alt=""></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span>  i = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">20</span>];</span><br><span class="line">	<span class="keyword">int</span> len = <span class="number">10</span>;</span><br><span class="line">	<span class="keyword">int</span> pos = <span class="number">5</span>;</span><br><span class="line"></span><br><span class="line">	i = i - <span class="number">1</span>; <span class="comment">/*结果:i = -1; 不是溢出.*/</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"i = %d\n"</span>, i);</span><br><span class="line">    <span class="comment">/*数组赋值*/</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; len; i++)</span><br><span class="line">		a[i] = i + <span class="number">1</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">	<span class="comment">/*逆序打印*/</span></span><br><span class="line">	<span class="keyword">for</span> (i = len<span class="number">-1</span>; i &gt;=<span class="number">0</span>; i--)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>, a[i]);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line"></span><br><span class="line">	<span class="comment">/*插入元素, 往后移动元素(倒序循环)*/</span></span><br><span class="line">	<span class="keyword">for</span> (i = len<span class="number">-1</span>; i &gt;=<span class="number">5</span>; i--)<span class="comment">/* 往后移动 倒序循环*/</span></span><br><span class="line">	&#123;</span><br><span class="line">		a[i+<span class="number">1</span>] = a[i];  <span class="comment">/*表示最后要插入a[6] = a[5] */</span></span><br><span class="line">	&#125;</span><br><span class="line">	a[<span class="number">5</span>] = <span class="number">0</span>;</span><br><span class="line">	len = len + <span class="number">1</span>;	</span><br><span class="line">    <span class="comment">/*逆序打印*/</span></span><br><span class="line">	<span class="keyword">for</span> (i = len<span class="number">-1</span>; i &gt;= <span class="number">0</span>; i--)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>, a[i]);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">	<span class="comment">/*删除元素, 往前移动(正序循环)*/</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">5</span>; i &lt;len; i++) <span class="comment">/*向前移动, 正序循环*/</span></span><br><span class="line">	&#123;</span><br><span class="line">		a[i] = a[i+<span class="number">1</span>];</span><br><span class="line">	&#125;</span><br><span class="line">	len = len - <span class="number">1</span>;</span><br><span class="line">    <span class="comment">/*逆序打印*/</span></span><br><span class="line">	<span class="keyword">for</span> (i = len - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) <span class="comment">//倒序循环</span></span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>, a[i]);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"hello."</span>);</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">总结:</span><br><span class="line">符号要注意区分, 正序循环&lt; 和 倒序循环&gt;</span><br><span class="line">A: 正序循环 <span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;len; i++)   </span><br><span class="line">    	   <span class="keyword">for</span>(i=<span class="number">1</span>; i&lt;=len; i++)</span><br><span class="line">B: 倒序循环 <span class="keyword">for</span>(i=len<span class="number">-1</span>; i&lt;=<span class="number">0</span>; i--) <span class="comment">//数组采用这种方式, 大于号和小于号</span></span><br><span class="line">    	   <span class="keyword">for</span>(i=len; i&lt;<span class="number">0</span>; i--)</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">大话数据结构</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/27/for循环常用写法/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-顺序栈和链式栈" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/25/顺序栈和链式栈/">顺序栈和链式栈</a>
+    </h1>
+  
+
+        
+        <a href="/2018/09/25/顺序栈和链式栈/" class="archive-article-date">
+  	<time datetime="2018-09-25T07:54:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>stack的采用模型：</p>
+<p>线性表的链式存储：头插法　　　</p>
+<p>线性表的顺序存储：尾插法　　　</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/25/顺序栈和链式栈/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-线性表顺序存储和链式存储" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/23/线性表顺序存储和链式存储/">线性表顺序存储和链式存储</a>
+    </h1>
+  
+
+        
+        <a href="/2018/09/23/线性表顺序存储和链式存储/" class="archive-article-date">
   	<time datetime="2018-09-23T11:46:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-23</time>
 </a>
         
@@ -203,7 +344,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/23/线性存链式储式链表/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/09/23/线性表顺序存储和链式存储/">展开全文 >></a>
         </p>
       
 
@@ -747,147 +888,6 @@
 
 
   
-    <article id="post-左值右值" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/19/左值右值/">左值右值</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/19/左值右值/" class="archive-article-date">
-  	<time datetime="2018-09-19T13:34:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>左值和右值</li>
-<li>左值是可以放在赋值号左边可以被赋值的值；左值必须要在内存中有实体；</li>
-<li>右值当在赋值号右边取出值赋给其他变量的值；右值可以在内存也可以在CPU寄存器。<br>-一个对象被用作右值时，使用的是它的内容(值)，被当作左值时，使用的是它的地址。</li>
-</ul>
-<p>对象的初始化， 和赋值不一样<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A a = b; 	<span class="comment">//	调用a的拷贝构造函数</span></span><br><span class="line"></span><br><span class="line">A a;</span><br><span class="line">a = b;  <span class="comment">//调用操作符重载=函数,</span></span><br></pre></td></tr></table></figure></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/19/左值右值/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-C++类模板" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/19/C++类模板/">C++类模板</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/19/C++类模板/" class="archive-article-date">
-  	<time datetime="2018-09-19T07:41:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"iostream"</span><span class="comment">//类模板的本质， 两次编译</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Teacher</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span> :</span><br><span class="line">	<span class="keyword">static</span> T a;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line">T Teacher&lt;T&gt;::a = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;	</span><br><span class="line">	Teacher&lt;<span class="keyword">int</span>&gt; t1;</span><br><span class="line">	t1.a = <span class="number">10</span>;</span><br><span class="line">	t1.a++;</span><br><span class="line">	t1.a++;</span><br><span class="line"></span><br><span class="line">	Teacher&lt;<span class="keyword">char</span>&gt; t2;</span><br><span class="line">	t2.a = <span class="string">'a'</span>;</span><br><span class="line">	t2.a++;</span><br><span class="line">	t2.a++;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; t2.a &lt;&lt; <span class="built_in">endl</span>; <span class="comment">//两个静态变量， 不一样， 属于不同内存空间</span></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; t1.a &lt;&lt; <span class="built_in">endl</span>;<span class="comment">//类模板机制的本质， 两次编译</span></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"hello."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">C++提高</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/19/C++类模板/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -985,10 +985,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">C++</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">C++基础</a>
               </li>
              
@@ -997,19 +993,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">C++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">C提高</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">工具</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">the first post.</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1017,11 +1005,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
+                <a href="javascript:void(0)" class="js-tag color1">the first post.</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color2">大话数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">工具</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1029,7 +1021,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">需要掌握系统知识与工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
               </li>
             
             <div class="clearfix"></div>

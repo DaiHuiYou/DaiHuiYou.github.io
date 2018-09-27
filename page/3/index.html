@@ -152,6 +152,168 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-C_文件操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/06/C_文件操作/">C_文件操作</a>
+    </h1>
+  
+
+        
+        <a href="/2018/09/06/C_文件操作/" class="archive-article-date">
+  	<time datetime="2018-09-06T03:44:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="文件句柄"><a href="#文件句柄" class="headerlink" title="文件句柄"></a>文件句柄</h3><p>文件句柄： 就是内存块的首地址或者资源首地址。</p>
+<h3 id="测试框架-和-分层模块的区别"><a href="#测试框架-和-分层模块的区别" class="headerlink" title="测试框架 和  分层模块的区别"></a>测试框架 和  分层模块的区别</h3>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C提高</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/06/C_文件操作/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-C_结构体" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/05/C_结构体/">C_结构体</a>
+    </h1>
+  
+
+        
+        <a href="/2018/09/05/C_结构体/" class="archive-article-date">
+  	<time datetime="2018-09-05T05:53:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一维数组做函数参数， 去决定被调函数是否修改参数的值。  </p>
+<p>例如：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//结构体定义</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Teacher</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">char</span> name[<span class="number">30</span>];</span><br><span class="line">	<span class="keyword">int</span> age;</span><br><span class="line">&#125;Teacher;</span><br><span class="line"></span><br><span class="line"><span class="function">Teacher *<span class="title">SortTeacher</span><span class="params">(<span class="keyword">int</span> num)</span> <span class="comment">//堆区分配内存</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Teacher *pArray = <span class="literal">NULL</span>;</span><br><span class="line">	pArray = (Teacher *) <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Teacher) *num);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">if</span>(pArray == <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"pArray = NULL."</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> pArray.</span><br><span class="line"></span><br><span class="line">&#125; <span class="comment">//返回值</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//优化</span></span><br><span class="line"><span class="keyword">int</span> CreateTeahcer_good( Teacher **pArray, <span class="keyword">int</span> num)	<span class="comment">//	用二级指针修改一级指针的值</span></span><br><span class="line">&#123;</span><br><span class="line">	Teacher * temp;</span><br><span class="line"></span><br><span class="line">	temp = (Teacher *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Teacher)*num);</span><br><span class="line">	<span class="keyword">if</span>(temp == <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"堆区分配失败."</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	*pArray = temp;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="用结构体套一级指针"><a href="#用结构体套一级指针" class="headerlink" title="用结构体套一级指针"></a>用结构体套一级指针</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//结构体定义</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Teacher</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">char</span> name[<span class="number">30</span>];</span><br><span class="line">	<span class="keyword">int</span> age;</span><br><span class="line">	<span class="keyword">char</span> *id;  <span class="comment">//需要分配内存空间才有效。</span></span><br><span class="line">&#125;Teacher;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">CreateTeahcer_good</span><span class="params">( Teacher **pArray, <span class="keyword">int</span> num)</span>	<span class="comment">//	用二级指针修改一级指针的值</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Teacher * temp;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	temp = (Teacher *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Teacher)*num);</span><br><span class="line">	<span class="keyword">if</span>(temp == <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"堆区分配失败."</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;num; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		temp[i].id = (<span class="keyword">char</span> *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">char</span>)*<span class="number">120</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	*pArray = temp;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//需要两次释放堆内存  </span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">freeMem</span><span class="params">(Teacher *pArray)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(pArray == <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"error."</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(pArray-&gt;id != <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">free</span>(pArray-&gt;id);</span><br><span class="line">		pArray-&gt;id = <span class="literal">NULL</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">free</span>(pArray);</span><br><span class="line">	pArray = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="结构体嵌套二级指针"><a href="#结构体嵌套二级指针" class="headerlink" title="结构体嵌套二级指针"></a>结构体嵌套二级指针</h3><p>C语言的高效（数组作函数的参数的退化现象）</p>
+<p>指针作间接赋值的应用。（修改主函数一级指针的值，被调函数的参数为二级指针）。</p>
+<p>什么时候用一级指针，什么时候用二级指针。  </p>
+<p>被调用函数分配内存，供主调函数使用，二级指针。  </p>
+<p>主调函数分配内存，供被调函数使用，一级指针。  </p>
+<h3 id="p间接赋值成立的条件：3个条件："><a href="#p间接赋值成立的条件：3个条件：" class="headerlink" title="*p间接赋值成立的条件：3个条件："></a>*p间接赋值成立的条件：3个条件：</h3><ul>
+<li>2个变量（通常一个实参，一个形参）</li>
+<li>建立关系，实参取地址赋给形参</li>
+<li>*p形参区间接修改形参的值</li>
+</ul>
+<p>不断修改指针变量的值</p>
+<p>越界场景：<br>char from[5] = “abcde” //数组越界 “abcde”包含’\0’</p>
+<h3 id="函数调用时，用n级指针（形参）改变n-1级指针（实参）的值"><a href="#函数调用时，用n级指针（形参）改变n-1级指针（实参）的值" class="headerlink" title="函数调用时，用n级指针（形参）改变n-1级指针（实参）的值"></a>函数调用时，用n级指针（形参）改变n-1级指针（实参）的值</h3>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C提高</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/05/C_结构体/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-C-多维数组" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -812,161 +974,6 @@
 
 
   
-    <article id="post-C_数据类型的大小和内存四区的划分" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/01/C_数据类型的大小和内存四区的划分/">C_数据类型的大小，内存四区的划分</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/01/C_数据类型的大小和内存四区的划分/" class="archive-article-date">
-  	<time datetime="2018-09-01T07:57:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="整个数组的首地址和数组第一个数的地址"><a href="#整个数组的首地址和数组第一个数的地址" class="headerlink" title="整个数组的首地址和数组第一个数的地址"></a>整个数组的首地址和数组第一个数的地址</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> b[<span class="number">40</span>];</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"b=%d, b+1=%d, &amp;b=%d, &amp;b+1=%d\n"</span>, b, b+<span class="number">1</span>, &amp;b, &amp;b+<span class="number">1</span>);</span><br><span class="line">																<span class="comment">//b = &amp;b, b+1 != &amp;b+1;</span></span><br><span class="line">																<span class="comment">//b 表明 数组第一个数的地址。数组类型</span></span><br><span class="line">																<span class="comment">//&amp;b 表明 整个数组的首地址。指针类型</span></span><br><span class="line">																<span class="comment">//&amp;b+1 加整个数组的大小得到的地址。</span></span><br><span class="line">																<span class="comment">//&amp;b 加数组中第一个数的大小得到的地址。</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"sizeof(b) = %d\r\n"</span>, <span class="keyword">sizeof</span>(b)); <span class="comment">//160 整个数组大小</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"sizeof(&amp;b) = %d\r\n"</span>, <span class="keyword">sizeof</span>(&amp;b)); <span class="comment">//4 数组指针的大小</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\r\n"</span>);</span><br><span class="line">	system(<span class="string">"pause"</span>); </span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;   </span><br><span class="line"></span><br><span class="line"> 结果显示:</span><br><span class="line">	b=<span class="number">3013888</span>, b+<span class="number">1</span>=<span class="number">3013892</span>, &amp;b=<span class="number">3013888</span>, &amp;b+<span class="number">1</span>=<span class="number">3014048</span> </span><br><span class="line">	<span class="keyword">sizeof</span>(b) = <span class="number">160</span></span><br><span class="line">	<span class="keyword">sizeof</span>(&amp;b) = <span class="number">4</span></span><br></pre></td></tr></table></figure>
-<h3 id="静态变量的本质"><a href="#静态变量的本质" class="headerlink" title="静态变量的本质"></a>静态变量的本质</h3><h4 id="指针指向谁，就把谁的地址赋给指针"><a href="#指针指向谁，就把谁的地址赋给指针" class="headerlink" title="指针指向谁，就把谁的地址赋给指针"></a>指针指向谁，就把谁的地址赋给指针</h4><h4 id="指针变量和他指向的内存空间（栈区，全局变量区，-堆区，-代码区）的变量是两个不同的概念"><a href="#指针变量和他指向的内存空间（栈区，全局变量区，-堆区，-代码区）的变量是两个不同的概念" class="headerlink" title="指针变量和他指向的内存空间（栈区，全局变量区， 堆区， 代码区）的变量是两个不同的概念"></a>指针变量和他指向的内存空间（栈区，全局变量区， 堆区， 代码区）的变量是两个不同的概念</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">char</span> * <span class="title">getStr1</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> *p1 = <span class="string">"abcdefg2"</span>; <span class="comment">//字符串常量 存放在全局变量区   p1是局部变量，存放在栈区。</span></span><br><span class="line">	<span class="keyword">return</span> p1;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">char</span> *<span class="title">getStr2</span><span class="params">()</span>     </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> *p2 = <span class="string">"abcdefg2"</span>;</span><br><span class="line">	<span class="keyword">return</span> p2;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> *p1 = <span class="literal">NULL</span>;</span><br><span class="line">	<span class="keyword">char</span> *p2 = <span class="literal">NULL</span>;</span><br><span class="line">	p1 = getStr1();</span><br><span class="line">	p2 = getStr2();</span><br><span class="line"></span><br><span class="line">	<span class="comment">//打印p1 p2 所指向内存空间的数据</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"p1:%s , p2:%s \n"</span>, p1, p2);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//打印p1 p2 的值</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"p1:%d , p2:%d \n"</span>, p1, p2);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"hello...\n"</span>);</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="内存四区划分"><a href="#内存四区划分" class="headerlink" title="内存四区划分"></a>内存四区划分</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> buf[<span class="number">100</span>];</span><br><span class="line">	<span class="comment">//byte b1 = new byte[100];</span></span><br><span class="line">	<span class="keyword">int</span> a = <span class="number">10</span>; <span class="comment">//分配4个字节的内存 栈区也叫临时区</span></span><br><span class="line">	<span class="keyword">int</span> *p;<span class="comment">//分配4个字节的内存</span></span><br><span class="line">	p = &amp;a; <span class="comment">//cpu执行的代码，放在代码区</span></span><br><span class="line"></span><br><span class="line">	*p = <span class="number">20</span>; <span class="comment">//</span></span><br><span class="line"></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">char</span> *p = <span class="literal">NULL</span>; <span class="comment">//分配4个字节的内存 栈区也叫临时区</span></span><br><span class="line">		p = (<span class="keyword">char</span> *)<span class="built_in">malloc</span>(<span class="number">100</span>); <span class="comment">//内存泄露概念  全局区</span></span><br><span class="line">		<span class="keyword">if</span> (p != <span class="literal">NULL</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">free</span>(p);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C提高</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/01/C_数据类型的大小和内存四区的划分/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-C_函数参数的退化问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/01/C_函数参数的退化问题/">函数参数的退化问题</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/01/C_函数参数的退化问题/" class="archive-article-date">
-  	<time datetime="2018-09-01T04:01:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="数组做函数参数的退回问题，退回一个指针"><a href="#数组做函数参数的退回问题，退回一个指针" class="headerlink" title="数组做函数参数的退回问题，退回一个指针"></a>数组做函数参数的退回问题，退回一个指针</h3><ul>
-<li>结论： 把数组的内存首地址和数组的有效长度传给被调用函数  </li>
-<li>实参的 a 的 形参的 a的数据类型不一样  </li>
-<li>形参中的数组， 编译器会把它当成指针处理， 这是C语言的特色。   </li>
-<li>形参写在函数上，和卸载函数内是一样的，只不过是具有对外的属性而已。  </li>
-</ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">SortArray</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> num)</span> <span class="comment">// int a[] 数组的形参自动退化成指针。</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> temp = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> num1 = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	num1 = <span class="keyword">sizeof</span>(a) / <span class="keyword">sizeof</span>(a[<span class="number">0</span>]);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"num1: %d\r\n"</span>, num1); <span class="comment">// num1  = 1, 结果表明形参中的a[]是指针类型。</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;num; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(j=<span class="number">0</span>; j&lt;i+<span class="number">1</span>; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(a[i] &lt; a[j])</span><br><span class="line">			&#123;</span><br><span class="line">				temp = a[i];</span><br><span class="line">				a[i] = a[j];</span><br><span class="line">				a[j] = temp;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printfArray</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> num)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;<span class="number">6</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>, a[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//排序</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a[] = &#123;<span class="number">123</span>,<span class="number">321</span>,<span class="number">231</span>,<span class="number">332</span>,<span class="number">221</span>,<span class="number">1</span>&#125;;</span><br><span class="line">	<span class="keyword">int</span>	i, j, temp;</span><br><span class="line">	<span class="keyword">int</span> num = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	num = <span class="keyword">sizeof</span>(a) / <span class="keyword">sizeof</span>(a[<span class="number">0</span>]);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"num = %d \r\n"</span>, num); <span class="comment">// num = 6, 结果表明a[]为数组类型。</span></span><br><span class="line"></span><br><span class="line">	SortArray(a, num);</span><br><span class="line">	printfArray(a, num);</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"hello...\n"</span>);</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C提高</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/01/C_函数参数的退化问题/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
@@ -1064,10 +1071,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">C++</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">C++基础</a>
               </li>
              
@@ -1076,19 +1079,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">C++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">C提高</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">工具</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">the first post.</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1096,11 +1091,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
+                <a href="javascript:void(0)" class="js-tag color1">the first post.</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color2">大话数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">工具</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1108,7 +1107,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">需要掌握系统知识与工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
               </li>
             
             <div class="clearfix"></div>
