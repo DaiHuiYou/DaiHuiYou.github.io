@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>运算符 | Will&#39;notebook</title>
-  <meta name="keywords" content=" C++ ">
-  <meta name="description" content="运算符 | Will&#39;notebook">
+  <title>软考 | Will&#39;notebook</title>
+  <meta name="keywords" content=" 考证 ">
+  <meta name="description" content="软考 | Will&#39;notebook">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="第 1 章 计算机系统基础知识基本的计算机硬件系统由运算器, 控制器, 存储器, 输入设备和输出设备组成. 运算器和控制器以及其相关部件已被集成到一起, 统称为中央处理单元(CPU) 移码表示法: 是在数X上增加一个偏移量来定义的, 常用与表示浮点数中的阶码. 移码:不管正负数, 只要将其补码的符号位取反即可.  例如：X=-101011 , [X]原= 10101011 ，[X]反=110101">
 <meta name="keywords" content="考证">
@@ -491,9 +491,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-运算符" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-软考" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">运算符</h1>
+        <h1 class="article-title">软考</h1>
     
     <div class="article-meta">
         
@@ -502,14 +502,14 @@
         
         <span class="tag">
             
-            <a href="javascript:" class="color4">C++</a>
+            <a href="javascript:" class="color3">考证</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2018-10-03 21:42:31'>2018-09-11 07:21</time>
+        创建时间:<time class="date" title='更新时间: 2018-10-03 21:59:14'>2018-10-03 21:57</time>
         
     </div>
     <div class="article-meta">
@@ -531,7 +531,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#const-和-define-相同之处"><span class="toc-text">const 和 #define 相同之处</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#引用的基本用法"><span class="toc-text">引用的基本用法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数返回值当左值右值"><span class="toc-text">函数返回值当左值右值</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#第-1-章-计算机系统基础知识"><span class="toc-text">第 1 章 计算机系统基础知识</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第-2-章-操作系统基础知识"><span class="toc-text">第 2 章 操作系统基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本概念"><span class="toc-text">基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#程序执行时的特征"><span class="toc-text">程序执行时的特征.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#进程控制"><span class="toc-text">进程控制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#进程通信"><span class="toc-text">进程通信</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#进程调度"><span class="toc-text">进程调度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#死锁"><span class="toc-text">死锁</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#线程"><span class="toc-text">线程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#存储管理"><span class="toc-text">存储管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件管理"><span class="toc-text">文件管理</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第-3-章-数据库基础知识"><span class="toc-text">第 3 章  数据库基础知识</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -546,115 +546,119 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <pre><code class="c++">
-    //struct 和 class完成的功能一样
-    //布尔类型  bool类型
-    //关于左值（必须是一个变量，即有内存空间）
-    //111 = 33；（111不能当左值， 不是一个变量，没有内存空间）
-    //三目运算符， C返回是一个数（不能当左值）， C++返回是一个变量（能当左值）
-
-    void main()
-    {
-        bool b1, b2, b3;
-
-        b1 = 10;
-        b2 = -10;
-        b3 = 0;
-
-        cout &lt;&lt; &quot;sizeof(bool)&quot; &lt;&lt; sizeof(bool) &lt;&lt; endl;
-
-        cout &lt;&lt; b1 &lt;&lt; endl;
-        cout &lt;&lt; b2 &lt;&lt; endl;
-        cout &lt;&lt; b3 &lt;&lt; endl;
-
-        system(&quot;pause&quot;);
-
-        return;
-
-    }
-
-    //结果显示：
-    //sizeof(bool)1
-    //1
-    //1
-    //0
-    //请按任意键继续. . .
-</code></pre>
-<h3 id="const-和-define-相同之处"><a href="#const-和-define-相同之处" class="headerlink" title="const 和 #define 相同之处"></a>const 和 #define 相同之处</h3><p> #define 是单纯的文本替换， 作用域具有全局性 </p>
-<p> #undef 限制作用域</p>
-<h4 id="引用的基本用法"><a href="#引用的基本用法" class="headerlink" title="引用的基本用法"></a>引用的基本用法</h4><p>C++的引用: 已定义变量再起个别名</p>
-<p>Type&amp; name = var;</p>
-<pre><code class="c++">    //引用作函数参数: 与指针类似
-
-    void myswap1 (int a, int b) //不能间接赋值
-    {
-        int c = 0;
-
-        c = a;
-        a = b;
-        b = c;
-    }
-
-    void myswap2(int *a, int *b) //指针做函数参数， 实现间接赋值。
-    {
-        int c = 0;
-
-        c = *b;
-        *b = *a;
-        *a = c;
-    }
-
-    void myswap3(int &amp;a, int &amp;b) //引用做函数参数， 实现间接赋值。
-    {
-        int c = 0;
-
-        c = a;
-        a = b;
-        b = c;
-    }
-    void main()
-    {
-        int a = 10;
-        int b = 20;
-
-        myswap1(a, b);
-        cout &lt;&lt; a &lt;&lt; endl;
-        cout &lt;&lt; b &lt;&lt; endl;
-
-        myswap2(&amp;a, &amp;b);
-        printf(&quot;a = %d, b = %d\n&quot;, a, b);
-
-        myswap3(a, b);
-        cout &lt;&lt; a &lt;&lt; endl;
-        cout &lt;&lt; b &lt;&lt; endl;
-        system(&quot;pause&quot;);
-
-        return;
-
-    }
-</code></pre>
-<pre><code>//10
-//20
-//a = 20, b = 10
-//10
-//20
-//请按任意键继续. . .
-</code></pre><h3 id="函数返回值当左值右值"><a href="#函数返回值当左值右值" class="headerlink" title="函数返回值当左值右值"></a>函数返回值当左值右值</h3><pre><code class="c++">    int&amp; func(void)
-    {
-        int a = 10;
-        return a;
-    }
-    void main()
-    {
-        int a = func(); //将栈变量的值赋值给a.
-
-        int &amp;b = func(); //传递栈变量的地址
-
-        cout &lt;&lt; a &lt;&lt; &quot; &quot; &lt;&lt; endl;
-        cout &lt;&lt; b &lt;&lt; &quot; &quot; &lt;&lt; endl; //显示乱码
-        system(&quot;pause&quot;);
-    }
-</code></pre>
+        <h1 id="第-1-章-计算机系统基础知识"><a href="#第-1-章-计算机系统基础知识" class="headerlink" title="第 1 章 计算机系统基础知识"></a>第 1 章 计算机系统基础知识</h1><p>基本的计算机硬件系统由运算器, 控制器, 存储器, 输入设备和输出设备组成.</p>
+<p>运算器和控制器以及其相关部件已被集成到一起, 统称为中央处理单元(CPU)</p>
+<p>移码表示法: 是在数X上增加一个偏移量来定义的, 常用与表示浮点数中的阶码.</p>
+<p><strong>移码</strong>:不管正负数, 只要将其补码的符号位取反即可. </p>
+<p>例如：X=-101011 , [X]原= 10101011 ，[X]反=11010100，[X]补=11010101，[X]移=01010101</p>
+<p>十进制数与字符的编码表示: 数值, 文字, 英文字母都被认为是字符, 任何字符进入计算机时, 都必须转换成二进制表示形式, 成为字符编码.</p>
+<p>用4位二进制代码表示以为十进制数, 称为二-十进制编码, 简称BCD编码.  </p>
+<p>直接存储器存取(Direct Memory Access, DMA) 方式的基本思想是通过硬件控制实现主存与I/O设备之间的直接数据传送. 数据的传送过程由 DMA 控制器( DMAC ) 进行控制, 不需要 CPU 的干预. </p>
+<p>CPU 所能完成的操作是由其执行的指令决定的, 这些指令成为机器指令.  CPU 能执行的所有机器指令的集合称为该 CPU 的指令系统. 指令系统是计算机硬件与软件之间的接口. </p>
+<p>指令是指挥计算机完成各种操作的基本命令. 一般来说, 一条指令包括两个基本组成部分: 操作码和地址码. </p>
+<p><strong>操作码</strong>说明指令的功能机操作性质. </p>
+<p><strong>地址码</strong>用来指出指令的操作对象, 它指出操作数或操作数的地址及指令结果的地址. </p>
+<p>操作码用二进制编码来表示, 该字段越长, 所能表示的指令就越多. </p>
+<p>寻址方式: 就是如何对指令中的地址字段进行解释, 以获得操作数的方法或获得程序转移地址的方法, 操作数的位置可能在指令中, 寄存器中, 存储中或 I/O 端口. 常用的寻址方式有立即寻址, 直接寻址, 寄存器寻址, 寄存器间接寻址等.  </p>
+<h1 id="第-2-章-操作系统基础知识"><a href="#第-2-章-操作系统基础知识" class="headerlink" title="第 2 章 操作系统基础知识"></a>第 2 章 操作系统基础知识</h1><p>操作系统是计算机系统中必不可少的核心系统软件, 其他软件的(编辑程序, 汇编乘车, 编译程序, 数据库管理程序等系统软件, 以及大量的应用的软件)是建立在操作系统的基础上的. </p>
+<p>操作系统的作用是通过资源管理提高计算机系统的效率.</p>
+<p>操作系统的 4 个特征是并发性, 共享性, 虚拟性和不确定性.  从资源管理的观点来看, 操作系统的功能可分为5大部分: 处理机管理, 文件管理, 存储管理, 设备管理和作业管理. </p>
+<p>处理机管理, 实质上是对处理机的执行时间进行管理, 采用多道程序等技术将CPU 的时间合理地分配给每个任务. 主要包括进程控制, 进程同步, 进程通信和进程调度. </p>
+<p>处理机管理也称为进程管理, 其核心是如何合理地分配处理机的时间, 提高系统的效率. 在计算机系统中有多个并发执行的程序, 采用 程序 这个静态概念已经不能描述程序执行时的动态变化过程, 所以引入了 进程 .</p>
+<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><h3 id="程序执行时的特征"><a href="#程序执行时的特征" class="headerlink" title="程序执行时的特征."></a>程序执行时的特征.</h3><p>进程 (Process) 是程序的一次执行. 进程通常有程序, 数据和进程控制模块 (Process Control Block, PCB ) 组成.  进程控制模块是进程存在的唯一标志. </p>
+<ol>
+<li><p>进程的状态及其状态键的转换</p>
+<p>三态模型, 在多道程序系统中, 进程的运行是走走停停的, 在处理器上交替运行, 状态也不断地发生变化, 因此一般有三种基本状态: 运行, 就绪和阻塞, 也成为三态模型. </p>
+<ul>
+<li>运行:　当一个进程在处理机上运行时，称为进程处理运行状态．显然，对于单处理机系统，处理运行状态的进程只有一个．　</li>
+<li>就绪：一个进程获得了除处理机外的一切说需要的资源，一旦得到处理机即可运行，则称为进程处于就绪状态．</li>
+<li>阻塞：也称为等待或睡眠状态，一个进程正在等待某一事件发生而暂时停止运行，　这时及时把处理机分配给进程，这时及时把处理机分配给该进程，他也无法运行，故称为该进程处于堵塞状态．　</li>
+</ul>
+</li>
+<li><p>五态模型</p>
+</li>
+</ol>
+<h3 id="进程控制"><a href="#进程控制" class="headerlink" title="进程控制"></a>进程控制</h3><ol>
+<li>进程控制是对系统中所有进程从创建到消亡的全过程实施有效的控制．在操作系统中通过设置一套控制机构堆进程实施控制，其主要功能包括创建一个新进程，撤销一个已经运行完的进程，改变进程的状态，实现进程间的通信．进程控制是由操作系统内核中的原语实现的．　</li>
+<li>原语是指由若干条机器指令组成，用于完成特定功能的程序段，　</li>
+</ol>
+<h3 id="进程通信"><a href="#进程通信" class="headerlink" title="进程通信"></a>进程通信</h3><ol>
+<li>在多道程序环境的系统中，存在多个可并发执行的进程，因此进程间必然存在资源共享和相互合作的问题．进程通信是指各个进程交换信息的过程．　<ul>
+<li>进程间的同步:是指进程间完成一项任务时直接发生相互作用的关系. </li>
+<li>进程间的互斥: 在多道程序系统中, 各进程可以共享各类资源, 但有些资源一次只能供一个进程使用, 称为临界资源.  如打印机. 进程间的互斥是指系统中各进程互斥使用临界资源. </li>
+<li>临界区是进程中对临界资源实施操作的那段程序.<ul>
+<li>有空即进.</li>
+<li>无空则等</li>
+<li>有限等待</li>
+<li>让权等待</li>
+</ul>
+</li>
+<li>信号量机制: 是一种有效的进程同步与互斥工具.<ul>
+<li>整形信号量与 PV 操作<ul>
+<li>信号量是一个整形变量, 根据控制对象的不同被赋予不同的值. <ul>
+<li>公用信号量. 实现进程间的互斥, 初值为 1 或资源的数目</li>
+<li>私用信号量. 实现进程间的同步, 初值为 0 或某个正整数. </li>
+</ul>
+</li>
+<li>信号量 S 的物理意义: 若 S &gt;= 0, 表示某资源的可用数; 若 S &lt;０，则其绝对值表示阻塞队列中等待该资源的进程数．　</li>
+<li>对系统中的每个进程，其工作的正确与否不仅取决于它自身的正确性，而且与它在执行中能否与其他相关进程正确地实施同步互斥有关．　</li>
+<li>PV 操作是实现进程同步与互斥的常用方法. P 操作和 V操作是低级通信原语, 在执行期间不可分割. 其中, P 操作表示申请一个资源, V 操作表示释放一个资源. </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>高级通信:<ul>
+<li>为了提高通信效率, 能传递大量数据, 减轻程序的复杂度, 系统引入了高级通信方式. <ul>
+<li>高级通信方式主要分为<ul>
+<li>共享存储模式,  相互通信的进程共享某些数据结构 ( 或存储区), 实现进程之间的通信.</li>
+<li>消息传递模式, 进程间的数据交换以消息为单位, 程序员直接利用系统提高的一组通信命令 (原语) 来实现通信. 如Send(A), Receive(A) </li>
+<li>管道通信: 管道是用于连接一个读进程和一个写进程, 以实现它们之家你通信的共享文件 (pipe文件)，向管道提供输入的发送数据（即写进程), 以字符流的形式将大量的数据送入管道; 而接受进程可从管道接受大量的数据. </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>直接和间接通信<ul>
+<li>直接通信是将消息直接发送给制定进程.</li>
+<li>间接通信是以信箱为媒体来是实现通信的, 接受信件的进程只需设疑一个信箱, 若干个进程都可以向同一个进程发送信件. </li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="进程调度"><a href="#进程调度" class="headerlink" title="进程调度"></a>进程调度</h3><p>​    进程调度方式是指当有更高优先级的进程到来时, 如何分配 CPU. 调度方式分为可剥夺和不可剥夺两种. </p>
+<ul>
+<li>三级调度</li>
+<li>调度算法:　常用的进程调度算法有先来先服务，　时间片轮转，　优先级调度和多级反馈调度算法．　</li>
+</ul>
+<h3 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h3><ol>
+<li>在计算机系统中有各种互斥资源(如磁带机, 打印机和绘图仪) 和 软件资源(如进程表, 临界区等),  若两个进程互相要求对方已占用的资源. <strong>所谓死锁, 是指两个以上的进程互相要求使用对方已经占有的资源而导致无法继续运行的现象.</strong></li>
+<li>进程推进顺序不当, 同类资源分配不当, PV 操作使用不当等情况都可能造成死锁.</li>
+</ol>
+<h3 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h3><ol>
+<li>传统的进程有两个基本属性: 可拥有资源的独立单位, 可独立调度和分配的基本单位. 由于在进程的创建, 撤销和切换中, 系统必须为之付出较大的时空开销, 因此在系统中的设置的进程数目不宜过多, 进程切换不宜太高, 这就是限制了并发程度的提高. 引入了线程后, 将传统进程的两个基本属性分开, 线程作为调度和分配的基本单位, 进程作为独立分配资源的单位. 用户可以通过创建线程来完成任务, 以减少程序并发执行时付出的时空开销. <ol>
+<li>进程: 资源分配的最小单位</li>
+<li>线程: 程序执行的最小单位.</li>
+<li>线程是进程中的一个实体, 是被系统独立分配和调度的基本的单位. 线程基本上不拥有资源, 只拥有一点运行中必不可少的资源. 它可与同属一个进程的其他线程共享进程所拥有的全部资源. </li>
+</ol>
+</li>
+</ol>
+<h3 id="存储管理"><a href="#存储管理" class="headerlink" title="存储管理"></a>存储管理</h3><ol>
+<li>存储器管理的对象是(主存, 内存).  存储管理的主要功能包括分配和回收住存空间, 提高主存的利用率, 扩充主存, 对主存信息实现有效保护. </li>
+</ol>
+<h3 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h3><ol>
+<li>文件是就有符号名的, 在逻辑上具有完整意义的一组相关信息项的集合. </li>
+</ol>
+<h1 id="第-3-章-数据库基础知识"><a href="#第-3-章-数据库基础知识" class="headerlink" title="第 3 章  数据库基础知识"></a>第 3 章  数据库基础知识</h1><ol>
+<li>文件系统是操作系统中的一个子系统, 它按一定的规则将数据组织成为一个文件, 应用程序通过文件系统堆文件的数据进行存取和加工. 文件系统对数据管理的, 实际上是通过应用程序和数据之间的一种接口实现. </li>
+<li>文件系统的最大特点是解决了应用程序和数据之间的一个公共接口问题, 使得应用程序采用统一的存取方法来操作数据. </li>
+<li>数据库系统是由计算机软件, 硬件资源组成的系统, 它实现了大量关联数据有组织地, 动态第存储, 方便用户访问. 它与文件系统的重要区别是数据的充分共享, 交叉访问, 与应用程序高度独立.</li>
+<li>数据模型<ol>
+<li>模型是对现实世界特征的模拟和抽象, 数据模型是对现实世界数据特征的抽象.</li>
+</ol>
+</li>
+</ol>
 
       
        <hr><span style="font-style: italic;color: gray;"> 感谢你的浏览,期待你的反馈, 可以邮件至 daihuiyo@163.com </span>
