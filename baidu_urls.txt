@@ -1,10 +1,1 @@
 https://daihuiyou.top/2018/10/03/软考/
-https://daihuiyou.top/2018/09/27/for循环常用写法/
-https://daihuiyou.top/2018/09/25/顺序栈和链式栈/
-https://daihuiyou.top/2018/09/23/线性表顺序存储和链式存储/
-https://daihuiyou.top/2018/09/22/基本概念/
-https://daihuiyou.top/2018/09/21/异常/
-https://daihuiyou.top/2018/09/20/知识点/
-https://daihuiyou.top/2018/09/20/匿名对象/
-https://daihuiyou.top/2018/09/20/引用/
-https://daihuiyou.top/2018/09/20/重载和重写/
