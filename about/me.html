@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>类模板 | Will&#39;notebook</title>
-  <meta name="keywords" content=" C++ ">
-  <meta name="description" content="类模板 | Will&#39;notebook">
+  <title>Will&#39;notebook</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="Will&#39;notebook">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="插入元素: 删除元素:  void main() {      int  i = 0;     int a[20];     int len = 10;     int pos = 5;      i = i - 1; /*结果:i = -1; 不是溢出.*/     printf(&amp;quot;i = %d\n&amp;quot;, i);     /*数组赋值*/     for (i = 0; i &amp;">
 <meta name="keywords" content="大话数据结构">
@@ -508,25 +508,17 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-类模板" class="article article-type-post" itemscope itemprop="blogPost">
-    
-        <h1 class="article-title">类模板</h1>
+        <article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
     
     <div class="article-meta">
         
         
         
-        
-        <span class="tag">
-            
-            <a href="javascript:" class="color4">C++</a>
-            
-        </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2018-10-03 21:42:22'>2018-09-19 15:41</time>
+        创建时间:<time class="date" title='更新时间: 2018-10-04 23:58:59'>2018-10-04 23:58</time>
         
     </div>
     <div class="article-meta">
@@ -548,7 +540,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#about-me"><span class="toc-text">about me:</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -563,39 +555,7 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <pre><code class="c++">    #include &quot;iostream&quot;//类模板的本质， 两次编译
-    using namespace std;
-
-    template &lt;typename T&gt;
-    class Teacher
-    {
-    public :
-        static T a;
-    private:
-    };
-
-    template &lt;typename T&gt;
-    T Teacher&lt;T&gt;::a = 0;
-
-
-    void main()
-    {    
-        Teacher&lt;int&gt; t1;
-        t1.a = 10;
-        t1.a++;
-        t1.a++;
-
-        Teacher&lt;char&gt; t2;
-        t2.a = &#39;a&#39;;
-        t2.a++;
-        t2.a++;
-
-        cout &lt;&lt; t2.a &lt;&lt; endl; //两个静态变量， 不一样， 属于不同内存空间
-        cout &lt;&lt; t1.a &lt;&lt; endl;//类模板机制的本质， 两次编译
-        cout &lt;&lt; &quot;hello.&quot; &lt;&lt; endl;
-        system(&quot;pause&quot;);
-    }
-</code></pre>
+        <h1 id="about-me"><a href="#about-me" class="headerlink" title="about me:"></a>about me:</h1><p> hello, world.</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 感谢你的浏览,期待你的反馈, 可以邮件至 daihuiyo@163.com </span>

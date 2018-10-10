@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>类模板 | Will&#39;notebook</title>
-  <meta name="keywords" content=" C++ ">
-  <meta name="description" content="类模板 | Will&#39;notebook">
+  <title>Java | Will&#39;notebook</title>
+  <meta name="keywords" content=" Java ">
+  <meta name="description" content="Java | Will&#39;notebook">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="插入元素: 删除元素:  void main() {      int  i = 0;     int a[20];     int len = 10;     int pos = 5;      i = i - 1; /*结果:i = -1; 不是溢出.*/     printf(&amp;quot;i = %d\n&amp;quot;, i);     /*数组赋值*/     for (i = 0; i &amp;">
 <meta name="keywords" content="大话数据结构">
@@ -508,9 +508,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-类模板" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Java" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">类模板</h1>
+        <h1 class="article-title">Java</h1>
     
     <div class="article-meta">
         
@@ -519,14 +519,14 @@
         
         <span class="tag">
             
-            <a href="javascript:" class="color4">C++</a>
+            <a href="javascript:" class="color5">Java</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2018-10-03 21:42:22'>2018-09-19 15:41</time>
+        创建时间:<time class="date" title='更新时间: 2018-10-10 21:52:16'>2018-10-10 21:51</time>
         
     </div>
     <div class="article-meta">
@@ -548,7 +548,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#常量分类"><span class="toc-text">常量分类:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据类型分类"><span class="toc-text">数据类型分类:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#标识符"><span class="toc-text">标识符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#变量定义和注意事项"><span class="toc-text">变量定义和注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类型转换"><span class="toc-text">类型转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串参与加法运算"><span class="toc-text">字符串参与加法运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#赋值运算符"><span class="toc-text">赋值运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#逻辑运算符"><span class="toc-text">逻辑运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#键盘录入-Scanner"><span class="toc-text">键盘录入 Scanner</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#产生随机数"><span class="toc-text">产生随机数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java-中的内存分配"><span class="toc-text">Java 中的内存分配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数组的动态初始化和静态初始化"><span class="toc-text">数组的动态初始化和静态初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#输出内容"><span class="toc-text">输出内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法的形参"><span class="toc-text">方法的形参</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#一个对象的内存图"><span class="toc-text">一个对象的内存图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法共用的内存图"><span class="toc-text">方法共用的内存图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#成员变量和局部变量的区别"><span class="toc-text">成员变量和局部变量的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类名作形式参数和返回值"><span class="toc-text">类名作形式参数和返回值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String类"><span class="toc-text">String类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自动生成方法"><span class="toc-text">自动生成方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对象数组"><span class="toc-text">对象数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#集合类"><span class="toc-text">集合类</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -563,39 +563,414 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <pre><code class="c++">    #include &quot;iostream&quot;//类模板的本质， 两次编译
-    using namespace std;
+        <p>java中类名第一个字母都是大写的.</p>
+<h3 id="常量分类"><a href="#常量分类" class="headerlink" title="常量分类:"></a>常量分类:</h3><ol>
+<li>字符型常量: “HelloWorld”</li>
+<li>整形常量: 12</li>
+<li>小数常量: 0.21</li>
+<li>布尔常量: true</li>
+<li>空常量: null</li>
+</ol>
+<h3 id="数据类型分类"><a href="#数据类型分类" class="headerlink" title="数据类型分类:"></a>数据类型分类:</h3><ol>
+<li>基本数据类型<ol>
+<li>注意: 整数默认是int 类型, 浮点数默认是double类型</li>
+<li>定义long类型数据的时候, 要加L或者l</li>
+<li>定义float类型数据的时候, 要加F或者f</li>
+</ol>
+</li>
+<li>引用数据类型(类, 接口, 数组)</li>
+</ol>
+<h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h3><ul>
+<li>标识符常见命名规则: <ul>
+<li>包(就是文件夹, 用于对类进行管理)<ul>
+<li>全部小写, 举例：com, com.itheima</li>
+</ul>
+</li>
+<li>类<ul>
+<li>一个单词的首字母大写</li>
+<li>多个单词每个单词的首字符大写</li>
+</ul>
+</li>
+<li>方法和变量<ul>
+<li>一个单词首字母小写</li>
+<li>多个单词组成, 从第二个单词开始每个单词的首字母大写. </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="变量定义和注意事项"><a href="#变量定义和注意事项" class="headerlink" title="变量定义和注意事项"></a>变量定义和注意事项</h3><ul>
+<li>变量未赋值, 不能直接使用</li>
+<li>变量只在它所属的范围内有效,变量属于它所在的那对大括号</li>
+<li>一行上可以定义多个变量, 但是不建议</li>
+</ul>
+<h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><ul>
+<li>隐式转换<ul>
+<li>byte, short, char – int –long – float – double 从小变大</li>
+</ul>
+</li>
+<li>强制转换<ul>
+<li>目标类型 变量名 = (目标类型) (被转换的数据);</li>
+<li>建议:　数据作运算，结果应该是什么类型，就用什么类型接受，不要随意转换类型，否则会有精度的损失．　</li>
+</ul>
+</li>
+</ul>
+<h3 id="字符串参与加法运算"><a href="#字符串参与加法运算" class="headerlink" title="字符串参与加法运算"></a>字符串参与加法运算</h3><pre><code class="JAVA">public class OperatorDemo01 {
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 20;
+        System.out.println(a + b + &quot;hello wolrd.&quot;);
+        System.out.println(&quot;hello wolrd&quot; + a + b);
+        System.out.println(&quot;hello world&quot; + a);
 
-    template &lt;typename T&gt;
-    class Teacher
-    {
-    public :
-        static T a;
-    private:
-    };
+    }
+}
+</code></pre>
+<h3 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h3><ul>
+<li><p>注意:扩展的赋值运算符，隐含了强制类型转换．</p>
+<pre><code class="JAVA">short s = 1;
+s += 1; //s = (short)(s+1);
+System.out.println(s);
+</code></pre>
+</li>
+</ul>
+<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><ul>
+<li>&amp; 和 &amp;&amp;的区别:<ul>
+<li>相同点:  &amp;&amp; 和 &amp; 的结果一样, || 和 | 的结果一样</li>
+<li>不同点: &amp; 左边无论是什么, 右边都会执行. &amp;&amp;有短路效果, 左边为FALSE,右边都不执行.</li>
+</ul>
+</li>
+</ul>
+<h3 id="键盘录入-Scanner"><a href="#键盘录入-Scanner" class="headerlink" title="键盘录入 Scanner"></a>键盘录入 Scanner</h3><ul>
+<li><p>导入包中类 :　</p>
+<pre><code class="java">import java.util.Scanner;
+//快捷键(推荐) Ctrl + shift + o
+</code></pre>
+</li>
+<li><p>分配内存，定义对象</p>
+<pre><code class="java">Scanner sc = new Sanner(System.in);    
+</code></pre>
+</li>
+</ul>
+<h3 id="产生随机数"><a href="#产生随机数" class="headerlink" title="产生随机数"></a>产生随机数</h3><pre><code class="java">Random r = new Random(); //产生随机数
 
-    template &lt;typename T&gt;
-    T Teacher&lt;T&gt;::a = 0;
+for(int i=0; i&lt;10; i++) {
+    int ret = r.nextInt(10); //随机数的范围为[0, 10), 包括0, 不包括10;
+    System.out.println(ret);
+}
 
+int ret = r.nextInit(100) + 1; // 随机数的范围:[1, 100];
 
-    void main()
-    {    
-        Teacher&lt;int&gt; t1;
-        t1.a = 10;
-        t1.a++;
-        t1.a++;
+</code></pre>
+<h3 id="Java-中的内存分配"><a href="#Java-中的内存分配" class="headerlink" title="Java 中的内存分配"></a>Java 中的内存分配</h3><ul>
+<li>Java 程序在运行时, 需要在内存中分配空间. 为了提高运算效率, 就对空间进行了不同区域的划分, 因为每一片区域都有特定的处理数据方式和内存管理方式. <ul>
+<li>栈 存储局部变量</li>
+<li>堆 存储new出来的东西</li>
+<li>方法区(面向对象进阶讲)</li>
+<li>本地方法区(和系统相关）</li>
+<li>寄存器（给 cpu 使用)<br>-<img src="https://i.imgur.com/CADcID4.png" alt=""></li>
+</ul>
+</li>
+</ul>
+<h3 id="数组的动态初始化和静态初始化"><a href="#数组的动态初始化和静态初始化" class="headerlink" title="数组的动态初始化和静态初始化"></a>数组的动态初始化和静态初始化</h3><pre><code class="java">        //动态初始化
+        int [] myArray = new int[3];
 
-        Teacher&lt;char&gt; t2;
-        t2.a = &#39;a&#39;;
-        t2.a++;
-        t2.a++;
+        //静态初始化
+        int [] myArray2 = new int[] {1,2,3};
+        //简化格式:int[] myArray2 = {1,2,3};
 
-        cout &lt;&lt; t2.a &lt;&lt; endl; //两个静态变量， 不一样， 属于不同内存空间
-        cout &lt;&lt; t1.a &lt;&lt; endl;//类模板机制的本质， 两次编译
-        cout &lt;&lt; &quot;hello.&quot; &lt;&lt; endl;
-        system(&quot;pause&quot;);
+</code></pre>
+<ul>
+<li><strong>引用类型</strong>: 类, 接口, 数组</li>
+</ul>
+<h3 id="输出内容"><a href="#输出内容" class="headerlink" title="输出内容"></a>输出内容</h3><pre><code class="java">System.out.println(); //输出内容并换行
+System.out.print(); //只输出内容,不换行. 
+</code></pre>
+<h3 id="方法的形参"><a href="#方法的形参" class="headerlink" title="方法的形参"></a>方法的形参</h3><ul>
+<li><strong>基本数据类型</strong>:　形参的改变　不影响　实际参数．</li>
+<li><strong>引用数据类型</strong>:　形参的改变直接　影响　实际参数．　</li>
+</ul>
+<h3 id="一个对象的内存图"><a href="#一个对象的内存图" class="headerlink" title="一个对象的内存图"></a>一个对象的内存图</h3><p><img src="https://i.imgur.com/Y5RDGbQ.png" alt=""></p>
+<h3 id="方法共用的内存图"><a href="#方法共用的内存图" class="headerlink" title="方法共用的内存图"></a>方法共用的内存图</h3><p><img src="https://i.imgur.com/aq4c00z.png" alt=""></p>
+<h3 id="成员变量和局部变量的区别"><a href="#成员变量和局部变量的区别" class="headerlink" title="成员变量和局部变量的区别"></a>成员变量和局部变量的区别</h3><ul>
+<li>在类中的位置不同<ul>
+<li>成员变量：　类中，方法外．</li>
+<li>局部变量：　方法中或者方法声明中（形式参数）</li>
+</ul>
+</li>
+<li>在内存中的位置不同<ul>
+<li>成员变量：在堆内存分配</li>
+<li>局部变量:　在栈内存分配</li>
+</ul>
+</li>
+<li>生命周期不同<ul>
+<li>成员变量随着对象的创建而存在，随着对象的消失而消失</li>
+<li>局部变量随着方法的调用而存在，随着方法的调用完成而消失．</li>
+</ul>
+</li>
+<li>初始化值的问题<ul>
+<li>成员变量有默认值</li>
+<li>局部变量没有默认值，必须先定义，赋值，才可以使用．　</li>
+</ul>
+</li>
+</ul>
+<h3 id="类名作形式参数和返回值"><a href="#类名作形式参数和返回值" class="headerlink" title="类名作形式参数和返回值"></a>类名作形式参数和返回值</h3><h3 id="String类"><a href="#String类" class="headerlink" title="String类"></a>String类</h3><ul>
+<li><pre><code class="java">/*
+ *      通过构造方法创建字符串对象和直接赋值方式创建字符串对象的区别
+ *      通过构造方法创建字符串对象在堆内.
+ *      直接赋值方式创建对象在方法区的常量池.
+ *  
+ *  ==:
+ *      基本数据类型:：比较是基本数据类型的值是否相等
+ *      引用数据类型:    比较是引用数据类型的地址值是否相等. 
+ *
+ */
+public class StringDemo {
+    public static void main(String[] args) {
+        String s1 = new String(&quot;Hello&quot;);
+        System.out.println(&quot;s1 &quot; + s1);
+        System.out.println(&quot;----------&quot;);
+
+        String s2 = &quot;Hello&quot;;
+        System.out.println(&quot;s2 &quot; + s2);
+        System.out.println(&quot;----------&quot;);
+
+        System.out.println(&quot;s1 == s2 : &quot; + (s1==s2));
+
+        String s3 = &quot;Hello&quot;;
+        System.out.println(&quot;s3 == s2: &quot; + (s3 == s2));
+    }
+
+}
+</code></pre>
+</li>
+<li><p>内存图:</p>
+<ul>
+<li><img src="https://i.imgur.com/FqjxClK.png" alt=""></li>
+</ul>
+</li>
+<li><p>String类的判断功能</p>
+<ul>
+<li>Object: 是类层次结构的根类, 所有的类都直接或者间接继承该类</li>
+<li>如果一个方法的形式参数是Object, 那么这里我们就可以传递它任意子类的对象. </li>
+</ul>
+</li>
+</ul>
+<pre><code class="java">/*
+ * Object: 是类层次结构的根类, 所有的类都直接或者间接继承该类
+ * 如果一个方法的形式参数是Object, 那么这里我们就可以传递它任意子类的对象. 
+
+ * String类的判断功能:
+ *  boolean equals(Object obj);  比较字符串的内容是否相同
+ *  boolean equalsIgnoreCase(String str); 比价字符串的内容是否相同, 忽略大小写
+ *  boolean startsWith(String str); 比较字符创对象是否以指定的str开始.
+ *  boolean endsWith(String str); 比较字符创对象是否以指定的str结尾.
+ * 
+ * */
+public class StringDemo {
+    public static void main(String[] args) {
+        String s1 = &quot;hello&quot;;
+        String s2 = &quot;hello&quot;;
+        String s3 = &quot;Hello&quot;;
+
+        System.out.println(&quot;s1 == s2 :&quot; + s1.equals(s2));
+        System.out.println(&quot;s1 == s3 :&quot; + s1.equals(s3));
+        System.out.println(&quot;-------------&quot;);
+
+        System.out.println(&quot;s1 == s2 :&quot; + s1.equalsIgnoreCase(s2));
+        System.out.println(&quot;s1 == s3 :&quot; + s1.equalsIgnoreCase(s3));
+        System.out.println(&quot;-------------&quot;);
+
+        System.out.println(&quot;s1 == s2 :&quot; + s1.startsWith(&quot;he&quot;));
+        System.out.println(&quot;s1 == s3 :&quot; + s1.startsWith(&quot;he&quot;));
+        System.out.println(&quot;-------------&quot;);
+
+        System.out.println(&quot;s1 == s2 :&quot; + s1.endsWith(&quot;llo&quot;));
+        System.out.println(&quot;s1 == s3 :&quot; + s1.endsWith(&quot;llo&quot;));
+        System.out.println(&quot;-------------&quot;);
     }
 </code></pre>
+<ul>
+<li>String类的获取功能</li>
+</ul>
+<pre><code class="java">/*
+ *  String类的获取功能
+ *  int length():获取字符串长度, 其他也就是字符个数.
+ *  char charAt(int index); 获取指定索引处的字符
+ *  int indexOf(String str); 获取str在字符串对象中第一次出现的索引
+ *  String substring(int start); 从start开始截取字符串
+ *  String substring(int start, int end); 从start到end之间截取字符串, 包括start, 不包括end
+ * 
+ * */
+public class StringDemo {
+    public static void main(String[] args) {
+        String s = &quot;helloworld&quot;;
+        System.out.println(s.length());
+        System.out.println(&quot;-----------&quot;);
+
+        System.out.println(s.charAt(0));
+        System.out.println(s.charAt(1));
+        System.out.println(&quot;-----------&quot;);
+
+        System.out.println(s.indexOf(&quot;ell&quot;));//获取str在字符串对象中第一次出现的索引
+        System.out.println(&quot;------------&quot;);
+
+        System.out.println(s.substring(5)); 
+        System.out.println(&quot;------------&quot;);
+
+        System.out.println(s.substring(0, 5));//从start到end之间截取字符串, 包括start, 不包括end
+
+    }
+}
+</code></pre>
+<ul>
+<li><p>String类的转换功能</p>
+<pre><code class="java">/*
+    char[] toCharArray(): 把字符串转换为字符数组
+    String toLowerCase(): 把字符串转换为小写字符串
+    String toUpperCase(): 把字符串转换为大写字符串
+
+*/
+</code></pre>
+</li>
+<li><p>String类的其空格和分割功能   </p>
+</li>
+</ul>
+<pre><code class="java">/*
+    String trim(): 去除字符串两端的空格
+    String[] spilt(String str): 按照指定符号分割字符串,注意返回的是字符数组
+
+*/
+public class StringDemo {
+public static void main(String[] args) {
+    String s = &quot;  aa,bb,cc&quot;;
+
+    String tmpStr = s.trim(); //去除字符串两端的空格, 不包括中间空格
+    System.out.println(tmpStr);
+    System.out.println(&quot;---------&quot;);
+
+    String[] strArray = tmpStr.split(&quot;,&quot;);//返回值是字符串数组. 
+    for(int i=0; i&lt;strArray.length; i++) {
+        System.out.println(strArray[i]);
+    }
+
+}
+}
+
+</code></pre>
+<ul>
+<li><p>StringBulder类</p>
+<ol>
+<li><p>作用:　如果对字符串进行拼接操作，每次拼接，都会构建新的String的字符串对象, 即耗时,又浪费空间.而StringBuilder 可以解决这个问题. </p>
+</li>
+<li><p>内存分配示意图:<br><img src="https://i.imgur.com/4WkiZlo.png" alt=""></p>
+</li>
+<li><p>常用方法:</p>
+<pre><code class="java">/*
+ * StringBuilder: 是一个可变的字符串. 字符串数组缓冲类
+ * 
+ * String 和 StringBuilder的区别
+ * String: 是内容是固定的. 
+ * StringBilder: 是内容可变的
+ * 
+ * StringBuilder的常用方法:
+ * public String  append(任意类型);
+ * public String reverse(String str);
+ */
+public class StringDemo {
+    public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder();
+        System.out.println(&quot;容量为:&quot; + sb.capacity());  
+        System.out.println(&quot;长度为: &quot; + sb.length());
+
+        StringBuilder sb2 = sb.append(&quot;hello&quot;);  //返回本身对象的地址
+
+        System.out.println(sb);
+        System.out.println(sb2);
+        System.out.println(sb == sb2);   
+
+        //链式编程
+        sb.append(123).append(123).append(123);
+        System.out.println(sb);
+
+        System.out.println(&quot;------------&quot;);
+        //public String reverse(String str)
+        sb.reverse();
+        System.out.println(sb);
+    }
+}
+</code></pre>
+</li>
+<li><p>String 和 StringBuilder 相互转换.</p>
+<pre><code class="java">/*
+String 和 StringBuilder的相互转换
+StringBuilder &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;String 
+    public String toString(); 通过toString()就可以实现把StringBuilder转换成String
+String &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;StringBuilder
+    StringBuilder(String str); 通过构造方法, 将String转换成StringBuilder
+
+*/
+public class StringDemo {
+    public static void main(String[] args) {
+        //StringBuilder &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; String
+        StringBuilder sb = new StringBuilder();
+        sb.append(&quot;hello&quot;);
+        String s = sb.toString();
+        System.out.println(s);
+        //String &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; StringBuilder
+        String ss = &quot;hello&quot;;
+        StringBuilder sb2 = new StringBuilder(ss);
+        System.out.println(sb2);
+    }
+
+}
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="自动生成方法"><a href="#自动生成方法" class="headerlink" title="自动生成方法"></a>自动生成方法</h3><pre><code class="java">/*
+ * 
+ *  快速自动生成构造方法  Set() 和 Get()方法.
+ *  右键:  source 
+ *  Generate Constructor from Superclass 无参构造方法
+ *  Generate Constructor using Fields 有参构造方法
+ *  Generate constructor Getter and Setters .. 
+ */
+public class Student {
+    private String name;
+    private int age;
+    public Student() {
+
+    }
+    public Student(String name, int age) {
+        super();
+        this.name = name;
+        this.age = age;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public int getAge() {
+        return age;
+    }
+    public void setAge(int age) {
+        this.age = age;
+    }
+}
+</code></pre>
+<h3 id="对象数组"><a href="#对象数组" class="headerlink" title="对象数组"></a>对象数组</h3><p>内存图</p>
+<p><img src="https://i.imgur.com/P0Ff6Ab.png" alt=""></p>
+<h3 id="集合类"><a href="#集合类" class="headerlink" title="集合类"></a>集合类</h3><ol>
+<li><p>集合类的特点</p>
+</li>
+<li><pre><code class="java">
+</code></pre>
+</li>
+</ol>
 
       
        <hr><span style="font-style: italic;color: gray;"> 感谢你的浏览,期待你的反馈, 可以邮件至 daihuiyo@163.com </span>
