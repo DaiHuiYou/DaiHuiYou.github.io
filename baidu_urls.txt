@@ -1,3 +1,4 @@
+https://www.daihuiyou.top/2018/10/10/C/
 https://www.daihuiyou.top/2018/10/10/Java/
 https://www.daihuiyou.top/2018/10/03/软考/
 https://www.daihuiyou.top/2018/09/27/for循环常用写法/
@@ -17,20 +18,6 @@ https://www.daihuiyou.top/2018/09/11/指针作引用/
 https://www.daihuiyou.top/2018/09/11/结构体作函数参数/
 https://www.daihuiyou.top/2018/09/11/运算符/
 https://www.daihuiyou.top/2018/09/10/类/
-https://www.daihuiyou.top/2018/09/10/链表/
-https://www.daihuiyou.top/2018/09/06/动态库/
-https://www.daihuiyou.top/2018/09/06/文件操作/
-https://www.daihuiyou.top/2018/09/05/结构体/
-https://www.daihuiyou.top/2018/09/04/多维数组/
-https://www.daihuiyou.top/2018/09/04/二级指针三种内存模型/
-https://www.daihuiyou.top/2018/09/04/const的用法/
-https://www.daihuiyou.top/2018/09/03/字符串常用操作/
-https://www.daihuiyou.top/2018/09/02/二级指针的间接赋值/
-https://www.daihuiyou.top/2018/09/02/指针也是一种数据类型/
-https://www.daihuiyou.top/2018/09/02/堆栈区和函数调用分析/
-https://www.daihuiyou.top/2018/09/01/堆栈区的理解/
-https://www.daihuiyou.top/2018/09/01/数据类型的大小和内存四区的划分/
-https://www.daihuiyou.top/2018/09/01/函数参数的退化问题/
 https://www.daihuiyou.top/2018/08/28/markdown使用总结/
 https://www.daihuiyou.top/2018/08/28/clover工具使用/
 https://www.daihuiyou.top/2018/08/28/从0 开始学习 GitHub 系列 笔记/
