@@ -1,11 +1,8 @@
+https://www.daihuiyou.top/2018/10/11/大话数据结构/
 https://www.daihuiyou.top/2018/10/11/C++/
 https://www.daihuiyou.top/2018/10/10/C/
 https://www.daihuiyou.top/2018/10/10/Java/
 https://www.daihuiyou.top/2018/10/03/软考/
-https://www.daihuiyou.top/2018/09/27/for循环常用写法/
-https://www.daihuiyou.top/2018/09/25/顺序栈和链式栈/
-https://www.daihuiyou.top/2018/09/23/线性表顺序存储和链式存储/
-https://www.daihuiyou.top/2018/09/22/基本概念/
 https://www.daihuiyou.top/2018/08/28/markdown使用总结/
 https://www.daihuiyou.top/2018/08/28/clover工具使用/
 https://www.daihuiyou.top/2018/08/28/从0 开始学习 GitHub 系列 笔记/
