@@ -286,7 +286,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2018-10-11 09:07:26'>2018-10-11 08:53</time>
+        创建时间:<time class="date" title='更新时间: 2018-10-17 20:15:45'>2018-10-11 08:53</time>
         
     </div>
     <div class="article-meta">
@@ -308,7 +308,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#for循环常用写法"><span class="toc-text">for循环常用写法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#循序栈和链式栈"><span class="toc-text">循序栈和链式栈</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#线性表顺序存储和链式存储"><span class="toc-text">线性表顺序存储和链式存储</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基本概念"><span class="toc-text">基本概念</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#for循环常用写法"><span class="toc-text">for循环常用写法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#循序栈和链式栈"><span class="toc-text">循序栈和链式栈</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#线性表顺序存储和链式存储"><span class="toc-text">线性表顺序存储和链式存储</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基本概念"><span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二叉树"><span class="toc-text">二叉树</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#二叉树的表示法"><span class="toc-text">二叉树的表示法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二叉树遍历"><span class="toc-text">二叉树遍历</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#树的非递归中序遍历"><span class="toc-text">树的非递归中序遍历</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -666,6 +666,70 @@ for (i = 0; i &lt; n; i++)
 </li>
 </ol>
 <p>　</p>
+<h3 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h3><p>定义： 是 n(n&gt;=0)个结点的有限集合，由一个根结点以及两颗互不相交的，分别成为左子树和右子树的二叉树组成。</p>
+<p>基本特征：每个结点最多只有两颗子树； 左子树和右子树次序不能颠倒（有序树）</p>
+<p>二叉树性质： 对于任何一颗二叉树，若2度的节点数有 n 个，则叶子数必定为 n+1。</p>
+<p>满二叉树：每层都“充满”了结点。</p>
+<p>完全二叉树： 第 k-1 层 和满二叉树的一样； 最后一层，叶子节点尽力靠左。</p>
+<p>性质： <strong>对完全二叉树，若从上至下，从左到右编号，则编号为 i 的结点，其左孩子编号必为 2i， 其右孩子编号必为 2i+1， 其双亲的编号必为 i/2.</strong> 可以通过数组下标，隐藏地找到其左孩子和右孩子。 </p>
+<p>不是完全二叉树， 则一律转为完全二叉树。 将各层空缺处统统补上”虚结点“， 其内容为空。</p>
+<h4 id="二叉树的表示法"><a href="#二叉树的表示法" class="headerlink" title="二叉树的表示法"></a><strong>二叉树的表示法</strong></h4><p>二叉树的二叉链表 表示法</p>
+<p>二叉树的三叉链表 表示法： 添加了 Parent Position</p>
+<p>二叉树的双亲链表 Parent）： 子结点中保存了 双亲的位置。</p>
+<p>​    </p>
+<pre><code class="c">//二叉链 表示法 
+typedef struct BitNode {
+    int data;
+    struct BitNode *lchild, *rchild;
+}BitNode, *BitNode;
+
+//三叉链表
+typedef struct TriNode {
+    int data;
+    struct TriNode *lchild, *rchild;
+    struct TriNode *parent;
+}TriNode, *TriNode;
+
+//双亲表示法
+#define MAX_TREE_SIZE 100
+typedef struct BPTNode {
+    int data;
+    int parentPosition;
+    char LRTag;
+}BPTNode;
+
+typedef struct BPTree {
+    BPTNode nodes[MAX_TREE_SIZE];
+    int num_node;
+    int root;
+}BPTree;
+</code></pre>
+<h4 id="二叉树遍历"><a href="#二叉树遍历" class="headerlink" title="二叉树遍历"></a>二叉树遍历</h4><p>先序遍历： DLR， 先根再左再右</p>
+<p>中序遍历： LDR， 先左再根再右</p>
+<p>后序遍历： LDR，先左再右再根</p>
+<p>总结： 顺序都是相对于根（root）来说的。</p>
+<p>二叉树表示算数表达式： </p>
+<ol>
+<li>先序遍历： 前缀表示法</li>
+<li>中序遍历： 中缀表示法</li>
+<li>后序遍历： 后缀表示法</li>
+</ol>
+<p>对遍历的分析：</p>
+<p>1.从前面的三种遍历算法可以知道：如果将 printf 语句抹去，从递归的角度看， 这三种算法是完全相同的，或者说者三种遍历算法的访问路径是相同，知识访问结点的时机不同。</p>
+<p>从虚线的出发点到终点的路径上，每个结点经过3次。</p>
+<p>第 1 次经过时访问 = 先序遍历</p>
+<p>第 2 次经过时访问 = 中序遍历</p>
+<p>第 3 次经过时访问 = 后序遍历</p>
+<h3 id="树的非递归中序遍历"><a href="#树的非递归中序遍历" class="headerlink" title="树的非递归中序遍历"></a>树的非递归中序遍历</h3><pre><code class="c++">/*
+步骤1： 
+如果结点有左子树，该结点入栈；
+若果结点没有左子树，访问该结点
+步骤2： 
+如果结点有右子树，重复步骤1；
+如果结点没有右子树（结点访问完毕），根据栈顶指示回退，访问栈顶元素，并访问右子树，重复步骤1
+如果栈为空，表示遍历结束。
+*/
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 感谢你的浏览,期待你的反馈, 可以邮件至 daihuiyo@163.com </span>
