@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>大话数据结构 | Will&#39;notebook</title>
+  <title>数据结构 | Will&#39;notebook</title>
   <meta name="keywords" content=" 汇总 ">
-  <meta name="description" content="大话数据结构 | Will&#39;notebook">
+  <meta name="description" content="数据结构 | Will&#39;notebook">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="about me: hello, world.">
 <meta property="og:type" content="website">
@@ -241,19 +241,19 @@
         </a>
         
         <a  class=""
-           href="/2018/10/11/大话数据结构/"
-           data-tag="汇总"
-           data-author="" >
-            <span class="post-title" title="大话数据结构">大话数据结构</span>
-            <span class="post-date" title="2018-10-11 08:53:13">2018/10/11</span>
-        </a>
-        
-        <a  class=""
            href="/2018/08/28/需要掌握系统知识与工具/"
            data-tag="需要掌握系统知识与工具"
            data-author="" >
             <span class="post-title" title="知道自己不知道的">知道自己不知道的</span>
             <span class="post-date" title="2018-08-28 12:55:17">2018/08/28</span>
+        </a>
+        
+        <a  class=""
+           href="/2018/10/11/数据结构/"
+           data-tag="汇总"
+           data-author="" >
+            <span class="post-title" title="数据结构">数据结构</span>
+            <span class="post-date" title="2018-10-11 08:53:13">2018/10/11</span>
         </a>
         
     </nav>
@@ -268,9 +268,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-大话数据结构" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-数据结构" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">大话数据结构</h1>
+        <h1 class="article-title">数据结构</h1>
     
     <div class="article-meta">
         
@@ -286,7 +286,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2018-10-17 20:15:45'>2018-10-11 08:53</time>
+        创建时间:<time class="date" title='更新时间: 2018-10-18 09:36:14'>2018-10-11 08:53</time>
         
     </div>
     <div class="article-meta">
@@ -729,7 +729,83 @@ typedef struct BPTree {
 如果结点没有右子树（结点访问完毕），根据栈顶指示回退，访问栈顶元素，并访问右子树，重复步骤1
 如果栈为空，表示遍历结束。
 */
+#include &lt;iostream&gt;
+using namespace std;
+#include &quot;stack&quot;
+
+typedef struct BitNode {
+    int data;
+    struct BitNode *lchild;
+    struct BitNode *rchild;
+}BitNode;
+
+//参数列表: BitNode *T, stack(BitNode *&gt; &amp;s
+//返回值: BitNode *
+BitNode *goLeft(BitNode *T, stack&lt;BitNode *&gt; &amp;s) {   //&amp;s 引用类型
+    if (T == NULL) {
+        return NULL;
+    }
+    while (T-&gt;lchild != NULL) {
+        //如果有左子树， 该结点入栈，并指向左子树。
+        s.push(T);
+        T = T-&gt;lchild;
+    }
+    //如果没有左子树， 返回该结点。
+    return T;
+}
+void inOrder(BitNode *T) {
+    BitNode *t = NULL;
+    stack&lt;BitNode *&gt;s;
+
+    t = goLeft(T, s);
+    while (t) {
+        printf(&quot;%d &quot;, t-&gt;data); // 访问该结点
+        //如果t有右子树，重复步骤1
+        if (t-&gt;rchild != NULL) {
+            t = goLeft(t-&gt;rchild, s);
+        }
+        // 如果t没有右子树，根据栈顶提示，回退
+        else if (!s.empty()) {
+            t = s.top();
+            s.pop();
+        }
+        // 如果没有右子树， 并且栈为空
+        else {
+            t = NULL;
+        }
+    }
+
+}
+
+void main() {
+    BitNode t1, t2, t3, t4, t5;
+    memset(&amp;t1, 0, sizeof(BitNode));
+    memset(&amp;t2, 0, sizeof(BitNode));
+    memset(&amp;t3, 0, sizeof(BitNode));
+    memset(&amp;t4, 0, sizeof(BitNode));
+    memset(&amp;t5, 0, sizeof(BitNode));
+    t1.data = 1;
+    t2.data = 2;
+    t3.data = 3;
+    t4.data = 4;
+    t5.data = 5;
+
+    t1.lchild = &amp;t2;
+    t1.rchild = &amp;t3;
+    t2.lchild = &amp;t4;
+    t3.lchild = &amp;t5;
+
+    printf(&quot;\r\n 非递归遍历 \r\n&quot;);
+    inOrder(&amp;t1);
+
+    cout &lt;&lt; &quot;hello world&quot; &lt;&lt; endl;
+    system(&quot;pause&quot;);
+}
 </code></pre>
+<p>通过中序遍历和先序遍历可以确定一个树</p>
+<p>通过中序遍历和后序遍历可以确定一个树</p>
+<p>通过先序遍历和后序遍历不能确定一个树</p>
+<p>单独先序遍历。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 感谢你的浏览,期待你的反馈, 可以邮件至 daihuiyo@163.com </span>
