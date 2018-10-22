@@ -143,15 +143,15 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">读书笔记</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color2">需要掌握系统知识与工具</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color3">考证</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">读书笔记</a>
     </li>
     
     <div class="clearfix"></div>
@@ -161,11 +161,19 @@
     <nav id="title-list-nav">
         
         <a  class=""
-           href="/2018/10/22/Java复习/"
+           href="/2018/10/11/C++/"
            data-tag="汇总"
            data-author="" >
-            <span class="post-title" title="Java复习">Java复习</span>
-            <span class="post-date" title="2018-10-22 17:51:18">2018/10/22</span>
+            <span class="post-title" title="C++">C++</span>
+            <span class="post-date" title="2018-10-11 08:17:58">2018/10/11</span>
+        </a>
+        
+        <a  class=""
+           href="/2018/10/10/Java/"
+           data-tag="汇总"
+           data-author="" >
+            <span class="post-title" title="Java">Java</span>
+            <span class="post-date" title="2018-10-10 21:51:26">2018/10/10</span>
         </a>
         
         <a  class=""
@@ -185,27 +193,11 @@
         </a>
         
         <a  class=""
-           href="/2018/10/10/C/"
+           href="/2018/10/22/Java复习/"
            data-tag="汇总"
            data-author="" >
-            <span class="post-title" title="C">C</span>
-            <span class="post-date" title="2018-10-10 21:58:34">2018/10/10</span>
-        </a>
-        
-        <a  class=""
-           href="/2018/08/28/markdown使用总结/"
-           data-tag="工具"
-           data-author="" >
-            <span class="post-title" title="markdown使用总结">markdown使用总结</span>
-            <span class="post-date" title="2018-08-28 16:09:25">2018/08/28</span>
-        </a>
-        
-        <a  class=""
-           href="/2018/10/11/C++/"
-           data-tag="汇总"
-           data-author="" >
-            <span class="post-title" title="C++">C++</span>
-            <span class="post-date" title="2018-10-11 08:17:58">2018/10/11</span>
+            <span class="post-title" title="Java复习">Java复习</span>
+            <span class="post-date" title="2018-10-22 17:51:18">2018/10/22</span>
         </a>
         
         <a  class=""
@@ -217,6 +209,14 @@
         </a>
         
         <a  class=""
+           href="/2018/08/28/markdown使用总结/"
+           data-tag="工具"
+           data-author="" >
+            <span class="post-title" title="markdown使用总结">markdown使用总结</span>
+            <span class="post-date" title="2018-08-28 16:09:25">2018/08/28</span>
+        </a>
+        
+        <a  class=""
            href="/2018/08/28/从0 开始学习 GitHub 系列 笔记/"
            data-tag="git"
            data-author="" >
@@ -225,11 +225,27 @@
         </a>
         
         <a  class=""
-           href="/2018/10/10/Java/"
+           href="/2018/08/21/学会提问/"
+           data-tag="读书笔记"
+           data-author="" >
+            <span class="post-title" title="学会提问">学会提问</span>
+            <span class="post-date" title="2018-08-21 12:19:37">2018/08/21</span>
+        </a>
+        
+        <a  class=""
+           href="/2018/10/10/C/"
            data-tag="汇总"
            data-author="" >
-            <span class="post-title" title="Java">Java</span>
-            <span class="post-date" title="2018-10-10 21:51:26">2018/10/10</span>
+            <span class="post-title" title="C">C</span>
+            <span class="post-date" title="2018-10-10 21:58:34">2018/10/10</span>
+        </a>
+        
+        <a  class=""
+           href="/2018/10/11/数据结构/"
+           data-tag="汇总"
+           data-author="" >
+            <span class="post-title" title="数据结构">数据结构</span>
+            <span class="post-date" title="2018-10-11 08:53:13">2018/10/11</span>
         </a>
         
         <a  class=""
@@ -246,22 +262,6 @@
            data-author="" >
             <span class="post-title" title="软考">软考</span>
             <span class="post-date" title="2018-10-03 21:57:52">2018/10/03</span>
-        </a>
-        
-        <a  class=""
-           href="/2018/08/21/学会提问/"
-           data-tag="读书笔记"
-           data-author="" >
-            <span class="post-title" title="学会提问">学会提问</span>
-            <span class="post-date" title="2018-08-21 12:19:37">2018/08/21</span>
-        </a>
-        
-        <a  class=""
-           href="/2018/10/11/数据结构/"
-           data-tag="汇总"
-           data-author="" >
-            <span class="post-title" title="数据结构">数据结构</span>
-            <span class="post-date" title="2018-10-11 08:53:13">2018/10/11</span>
         </a>
         
     </nav>
@@ -425,7 +425,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#汇总','#the first post.','#工具','#hexo','#git','#需要掌握系统知识与工具','#考证','#读书笔记',],
+            'data': ['#汇总','#the first post.','#工具','#hexo','#git','#读书笔记','#需要掌握系统知识与工具','#考证',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
