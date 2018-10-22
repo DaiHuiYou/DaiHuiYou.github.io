@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>C++ | Will&#39;notebook</title>
+  <title>Java复习 | Will&#39;notebook</title>
   <meta name="keywords" content=" 汇总 ">
-  <meta name="description" content="C++ | Will&#39;notebook">
+  <meta name="description" content="Java复习 | Will&#39;notebook">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="about me: hello, world.">
 <meta property="og:type" content="website">
@@ -276,9 +276,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-C++" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Java复习" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">C++</h1>
+        <h1 class="article-title">Java复习</h1>
     
     <div class="article-meta">
         
@@ -294,7 +294,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2018-10-11 08:51:16'>2018-10-11 08:17</time>
+        创建时间:<time class="date" title='更新时间: 2018-10-22 18:00:01'>2018-10-22 17:51</time>
         
     </div>
     <div class="article-meta">
@@ -316,7 +316,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#匿名对象"><span class="toc-text">匿名对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#异常"><span class="toc-text">异常</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#知识点"><span class="toc-text">知识点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#引用"><span class="toc-text">引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重载和重写"><span class="toc-text">重载和重写</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#左值右值"><span class="toc-text">左值右值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类模板"><span class="toc-text">类模板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#线性链表"><span class="toc-text">线性链表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#泛型编程"><span class="toc-text">泛型编程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#指针作引用"><span class="toc-text">指针作引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#结构体作函数参数"><span class="toc-text">结构体作函数参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运算符"><span class="toc-text">运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类"><span class="toc-text">类</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#与-equals"><span class="toc-text">== 与 equals</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#线程-程序-进程的基本概念和他们之间关系"><span class="toc-text">线程, 程序, 进程的基本概念和他们之间关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#线程的基本状态和基本状态的定义"><span class="toc-text">线程的基本状态和基本状态的定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在-Java-中定义一个不做事且没有参数的构造方法的作用"><span class="toc-text">在 Java 中定义一个不做事且没有参数的构造方法的作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java-和-C-的区别"><span class="toc-text">Java 和 C++的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#接口和抽象类的区别："><span class="toc-text">接口和抽象类的区别：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#静态方法和实例方法"><span class="toc-text">静态方法和实例方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对象的相等与指向他们的引用相等，两者有什么不同？"><span class="toc-text">对象的相等与指向他们的引用相等，两者有什么不同？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在调用子类构造方法之前会先调用父类没有参数的构造方法，其目的是？"><span class="toc-text">在调用子类构造方法之前会先调用父类没有参数的构造方法，其目的是？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注释和注解的区别"><span class="toc-text">注释和注解的区别</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -331,378 +331,53 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="匿名对象"><a href="#匿名对象" class="headerlink" title="匿名对象"></a>匿名对象</h3><p>date: 2018-09-20 17:15:00</p>
-<p>匿名对象可以理解为是一个临时对象，一般系统自动生成的，如你的函数返回一个对象，这个对象在返回时会生成一个临时对象。</p>
-<pre><code class="c++">class AA
-{
-public:
-    AA()
-    {
-        cout &lt;&lt; &quot;调用拷贝构造函数&quot; &lt;&lt; endl;
-    }
-    ~AA()
-    {
-        cout &lt;&lt; &quot;调用析构函数&quot; &lt;&lt; endl;
-    }
-};
-void main()
-{
-    //AA a = AA();  //产生一个匿名对象， 有一个变量去接，不会调用析构函数。
-    AA b;   //调用拷贝构造函数。
-    b = AA();   //匿名对象， 会调用拷贝构造函数和析构函数。
-
-    //func();
-    system(&quot;pause&quot;);
-}
-</code></pre>
-<h3 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h3><p>date: 2018-09-21 14:28:22</p>
-<p>抛出异常是跨函数的。</p>
-<p>c++异常处理机制使得异常的引发和异常的处理不必写在同一个函数中，<br>这样底层的函数可以着重解决具体问题， 而不必过多的考虑异常的处理。上层调用者可以在适当的位置设计对不同类型异常的处理。</p>
-<p>栈解旋unwinding， 在函数中发生异常时， 立即结束局部变量的生命周期， 并抛出异常（throw）。</p>
-<p>异常接口声明：为了加强程序的可读性， 可以在函数声明中列出可能抛出所有异常类型。</p>
-<pre><code class="c++">void func() thorw(A, B, C, D)
-{
-
-}
-</code></pre>
-<h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><p>date: 2018-09-20 21:51:18</p>
-<p>左值（lvalue）：指向内存位置的表达式被称为左值（lvalue）表达式。左值可以出现在赋值号的左边或右边。  </p>
-<p>右值（rvalue）：术语右值（rvalue）指的是存储在内存中某些地址的数值。右值是不能对其进行赋值的表达式，也就是说，右值可以出现在赋值号的右边，但不能出现在赋值号的左边</p>
-<p><img src="https://i.imgur.com/Yq0pat4.png" alt=""></p>
-<p>常量是固定值，在程序执行期间不会改变。这些固定的值，又叫做字面量。</p>
-<p>常量可以是任何的基本数据类型，可分为整型数字、浮点数字、字符、字符串和布尔值。</p>
-<p>字符串常量/字面量</p>
-<p>拷贝构造函数：是一种特殊的构造函数，他在构建对象时， 是使用同一类中之前创建的对象来初始化新创建的对象。   </p>
-<p>迭代器： 是一种检查容器内元素并遍历元素的数据类型，可以代替下标访问vector对象的元素。迭代器是便利容器的同一方法。</p>
-<p>容器： 任何数据类型都能存储。</p>
-<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>引用分为普通引用和常引用</p>
-<pre><code class="c++">//常引用 
-//常引用当函数参数 ,可以传字面量或者实参
-void func1(const int&amp; num)
-{
-    cout &lt;&lt; &quot;num: &quot; &lt;&lt; num &lt;&lt; endl;
-
-}
-
-//普通引用当函数参数， 传实参
-void func2(int &amp;num)
-{
-    cout &lt;&lt; &quot;num: &quot; &lt;&lt; num &lt;&lt; endl;
-}
-void main()
-{
-    int a = 10;
-    int c = a;  //引用当右值， 把变量的值赋值给变量
-    int &amp;d = c; //引用当左值， 把变量C起另一个别名， 本质把C的地址赋值给D。
-
-    cout &lt;&lt; &quot;&amp;d : &quot; &lt;&lt; &amp;d &lt;&lt; endl;
-    cout &lt;&lt; &quot;&amp;c : &quot; &lt;&lt; &amp;c &lt;&lt; endl;
-    cout &lt;&lt; &quot;&amp;a : &quot; &lt;&lt; &amp;a &lt;&lt; endl;
-
-    cout &lt;&lt; &quot;d : &quot; &lt;&lt; d &lt;&lt; endl;
-    cout &lt;&lt; &quot;c : &quot; &lt;&lt; c &lt;&lt; endl;
-    cout &lt;&lt; &quot;a : &quot; &lt;&lt; a &lt;&lt; endl;
-
-    //字面量常引用
-    const int&amp; tmp = 123; //分配内存
-    cout &lt;&lt; &quot;&amp;tmp : &quot; &lt;&lt; &amp;tmp &lt;&lt; endl;
-    cout &lt;&lt; &quot;tmp : &quot; &lt;&lt; tmp &lt;&lt; endl;
-
-    //普通引用
-    //int&amp; var = 123;        //不自动分配内存， 编译错误
-    int var = 123;
-    func1(123);        //可以传进字面量
-    func1(var);    //可以传进变量
-
-    func2(var); //只能传进变量.
-
-    cout &lt;&lt; &quot;hello.&quot; &lt;&lt; endl;
-    system(&quot;pause&quot;);
-}
-</code></pre>
-<p><strong>常量必须初始化</strong></p>
-<p><img src="https://i.imgur.com/JVMkB17.png" alt=""></p>
-<h3 id="重载和重写"><a href="#重载和重写" class="headerlink" title="重载和重写"></a>重载和重写</h3><p>date: 2018-09-20 08:28:05</p>
-<p>重写与重载：</p>
-<ul>
-<li>方法的重写Overriding和重载Overloading是多态性的不同表现。</li>
-<li>重写Overriding是父类与子类之间多态性的一种表现，</li>
-<li>重载Overloading是一个类中多态性的一种表现。</li>
-<li>如果在子类中定义某方法与其父类有相同的名称和参数，我们说该方法被重写 (Overriding)。</li>
-<li>子类的对象使用这个方法时，将调用子类中的定义，对它而言，父类中的定义如同被“屏蔽”了，而且如果子类的方法名和参数类型和个数都和父类相同，那么子类的返回值类型必须和父类的相同；</li>
-<li>如果在一个类中定义了多个同名的方法，它们或有不同的参数个数或有不同的参数类型，则称为方法的重载(Overloading)。<br>Overloading的方法是可以改变返回值的类型。也就是说，重载的返回值类型可以相同也可以不同</li>
-</ul>
-<p>定义：malloc 和free是分配和释放一块内存，构建对象时不会自动调用构造和析构函数，而new和delete是建立和释放一个对象，构建对象时会自动调用构造和析构函数。</p>
-<h3 id="左值右值"><a href="#左值右值" class="headerlink" title="左值右值"></a>左值右值</h3><p>date: 2018-09-19 21:34:18</p>
-<ul>
-<li>左值和右值</li>
-<li>左值是可以放在赋值号左边可以被赋值的值；左值必须要在内存中有实体；</li>
-<li>右值当在赋值号右边取出值赋给其他变量的值；右值可以在内存也可以在CPU寄存器。<br>-一个对象被用作右值时，使用的是它的内容(值)，被当作左值时，使用的是它的地址。</li>
-</ul>
-<p>对象的初始化， 和赋值不一样 </p>
-<pre><code class="c++">A a = b;     //    调用a的拷贝构造函数
-
-A a;
-a = b;  //调用操作符重载=函数, 
-</code></pre>
-<h3 id="类模板"><a href="#类模板" class="headerlink" title="类模板"></a>类模板</h3><p>date: 2018-09-19 15:41:31</p>
-<pre><code class="c++">#include &quot;iostream&quot;//类模板的本质， 两次编译
-using namespace std;
-
-template &lt;typename T&gt;
-class Teacher
-{
-public :
-    static T a;
-private:
-};
-
-template &lt;typename T&gt;
-T Teacher&lt;T&gt;::a = 0;
-
-void main()
-{    
-    Teacher&lt;int&gt; t1;
-    t1.a = 10;
-    t1.a++;
-    t1.a++;
-
-    Teacher&lt;char&gt; t2;
-    t2.a = &#39;a&#39;;
-    t2.a++;
-    t2.a++;
-
-    cout &lt;&lt; t2.a &lt;&lt; endl; //两个静态变量， 不一样， 属于不同内存空间
-    cout &lt;&lt; t1.a &lt;&lt; endl;//类模板机制的本质， 两次编译
-    cout &lt;&lt; &quot;hello.&quot; &lt;&lt; endl;
-    system(&quot;pause&quot;);
-}
-</code></pre>
-<h3 id="线性链表"><a href="#线性链表" class="headerlink" title="线性链表"></a>线性链表</h3><p>date: 2018-09-18 17:29:04</p>
-<h3 id="泛型编程"><a href="#泛型编程" class="headerlink" title="泛型编程"></a>泛型编程</h3><p>date: 2018-09-17 22:11:16</p>
-<h3 id="指针作引用"><a href="#指针作引用" class="headerlink" title="指针作引用"></a>指针作引用</h3><p>date: 2018-09-11 20:17:36</p>
-<h3 id="结构体作函数参数"><a href="#结构体作函数参数" class="headerlink" title="结构体作函数参数"></a>结构体作函数参数</h3><p>date: 2018-09-11 14:49:20</p>
-<pre><code class="c++">//结构体作函数参数
-struct Teacher
-{
-    char name[60];
-    int age;
-};
-
-void printTeacher1(Teacher t1)
-{
-    cout &lt;&lt; t1.age &lt;&lt; endl;
-}
-
-void printTeacher2(Teacher &amp;t2)
-{
-    t2.age = 20;
-    cout &lt;&lt;t2.age&lt;&lt; endl;
-}
-
-void printTeacher3(Teacher *t3)
-{
-    t3-&gt;age = 30;
-    cout &lt;&lt; t3-&gt;age &lt;&lt; endl;
-}
-void main()
-{
-
-    Teacher t1;
-    t1.age =10;
-    printTeacher1(t1);
-    printTeacher2(t1);    //引用方式，结构体作函数参数
-    printTeacher3(&amp;t1);    //作用与指针间接赋值一样。
-
-    system(&quot;pause&quot;);
-
-    return;
-
-}
-</code></pre>
-<p><strong>Type &amp;name = var;//等效于C语言 Type *const name = var;</strong></p>
-<p>引用作函数参数， 当左值和右值。</p>
-<p>当左值的条件：要有内存空间；C++编译器帮助程序员取了一个地址而已  </p>
-<p>引用就是给内存取多个门牌号（多个别名）</p>
-<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><p>date: 2018-09-11 07:21:16</p>
-<pre><code class="c++">//struct 和 class完成的功能一样
-//布尔类型  bool类型
-//关于左值（必须是一个变量，即有内存空间）
-//111 = 33；（111不能当左值， 不是一个变量，没有内存空间）
-//三目运算符， C返回是一个数（不能当左值）， C++返回是一个变量（能当左值）
-
-void main()
-{
-    bool b1, b2, b3;
-
-    b1 = 10;
-    b2 = -10;
-    b3 = 0;
-
-    cout &lt;&lt; &quot;sizeof(bool)&quot; &lt;&lt; sizeof(bool) &lt;&lt; endl;
-
-    cout &lt;&lt; b1 &lt;&lt; endl;
-    cout &lt;&lt; b2 &lt;&lt; endl;
-    cout &lt;&lt; b3 &lt;&lt; endl;
-
-    system(&quot;pause&quot;);
-
-    return;
-
-}
-
-//结果显示：
-//sizeof(bool)1
-//1
-//1
-//0
-//请按任意键继续. . .
-</code></pre>
-<p><strong>const 和 #define 相同之处</strong></p>
-<ol>
-<li>#define 是单纯的文本替换， 作用域具有全局性 </li>
-<li>#undef 限制作用域</li>
+        <h3 id="与-equals"><a href="#与-equals" class="headerlink" title="== 与 equals"></a>== 与 equals</h3><p>== : 它的作用判断两个对象的地址是否相等, 判断基本数据类型的值是否相等.</p>
+<p>equals: String 中的 equals() 方法是被重写的, 因为 Object 的 equals 方法是比较对象的内存地址.而 String 的 equals 方法是比较对象的值. </p>
+<h3 id="线程-程序-进程的基本概念和他们之间关系"><a href="#线程-程序-进程的基本概念和他们之间关系" class="headerlink" title="线程, 程序, 进程的基本概念和他们之间关系"></a>线程, 程序, 进程的基本概念和他们之间关系</h3><p><strong>1.    线程</strong>和进程相似, 但线程是一个比进程更小的执行单位. 一个进程在其执行过程中可以产生多个线程. 与线程不同的是同类的多个线程共享同一个内存空间和一组系统资源, 所以系统产生一个线程, 或是在各个线程之间作切换工作时, 负担要比进程小得多, 也正因如此, 线程也被称称为轻量级进程. </p>
+<p><strong>2.    程序</strong>是含有指令和数据的文件,  被存储在磁盘或者其他的数据存储设备中, 也就是说程序是静态的代码. </p>
+<p><strong>3.     进程</strong>是程序一次运行过程, 是系统运行的基本单位, 因为进程是动态. 系统运行一个程序即是一个进程从创建, 运行到消亡的过程.简单来说, 一个进程就是一个执行中的程序, 它在计算机中的一个指令接着一个指令的执行, 同时, 每个进程还占某些系统资源如CPU时间, 内存空间, 文件, 输入输出设备的使用权等等. </p>
+<p><strong>4.    换句话说</strong>, 当程序在执行时, 将会被操作系统载入内存中, 线程是进程划分成的更小的运行单位. 线程和进程最大不同在于基本上各进程是独立的, 而各线程则不一定, 因为同一进程中的线程极有可能会相互影响. 从另一角度出发, 进程属于操作系统的范畴, 主要是同一段时间内, 可以同时执行一个以上的程序, 而线程则是在同一个程序内几乎同时执行一个以上的程序段. </p>
+<h3 id="线程的基本状态和基本状态的定义"><a href="#线程的基本状态和基本状态的定义" class="headerlink" title="线程的基本状态和基本状态的定义"></a>线程的基本状态和基本状态的定义</h3><ol>
+<li><strong>新建（new)</strong>: 新创建了一个线程对象. </li>
+<li><strong>可运行(runnable)</strong>:线程对象创建后, 其他线程(比如main线程)调用了该对象的 start() 方法. 该状态的线程位于可运行线程池中, 等待被线程调度选中, 获取CPU的使用权. </li>
+<li><strong>运行(running)</strong>: 可运行(runnable)的线程获得了 CPU 时间片(time slice), 执行程序代码.</li>
+<li><strong>阻塞(block)</strong>: 阻塞状态是指线程因为某种原因放了CPU的使用权, 也即让出了 CPU time slice. 暂时停止运行. 直到线程进入可运行的状态, 才有机会再次获得 CPU time slice 转到运行状态. <ol>
+<li>阻塞的情况分三种:<ol>
+<li>等待阻塞</li>
+<li>同步阻塞</li>
+<li>其他阻塞　</li>
 </ol>
-<p><strong>引用的基本用法</strong></p>
-<p>C++的引用: 已定义变量再起个别名</p>
-<p>Type&amp; name = var;</p>
-<pre><code class="c++">//引用作函数参数: 与指针类似
-
-void myswap1 (int a, int b) //不能间接赋值
-{
-    int c = 0;
-
-    c = a;
-    a = b;
-    b = c;
-}
-
-void myswap2(int *a, int *b) //指针做函数参数， 实现间接赋值。
-{
-    int c = 0;
-
-    c = *b;
-    *b = *a;
-    *a = c;
-}
-
-void myswap3(int &amp;a, int &amp;b) //引用做函数参数， 实现间接赋值。
-{
-    int c = 0;
-
-    c = a;
-    a = b;
-    b = c;
-}
-void main()
-{
-    int a = 10;
-    int b = 20;
-
-    myswap1(a, b);
-    cout &lt;&lt; a &lt;&lt; endl;
-    cout &lt;&lt; b &lt;&lt; endl;
-
-    myswap2(&amp;a, &amp;b);
-    printf(&quot;a = %d, b = %d\n&quot;, a, b);
-
-    myswap3(a, b);
-    cout &lt;&lt; a &lt;&lt; endl;
-    cout &lt;&lt; b &lt;&lt; endl;
-    system(&quot;pause&quot;);
-
-    return;
-
-}
-/*结果显示:
-    10
-    20
-    a = 20, b = 10
-    10
-    20
-    请按任意键继续. . .
-*/
-
-</code></pre>
-<p><strong>函数返回值当左值右值</strong></p>
-<pre><code class="c++">int&amp; func(void)
-{
-    int a = 10;
-    return a;
-}
-void main()
-{
-    int a = func(); //将栈变量的值赋值给a.
-
-    int &amp;b = func(); //传递栈变量的地址
-
-    cout &lt;&lt; a &lt;&lt; &quot; &quot; &lt;&lt; endl;
-    cout &lt;&lt; b &lt;&lt; &quot; &quot; &lt;&lt; endl; //显示乱码
-    system(&quot;pause&quot;);
-}
-</code></pre>
-<h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><p>date: 2018-09-10 17:49:28</p>
-<pre><code class="c++">#include &quot;iostream&quot;
-
-using namspace std;
-
-void main()
-{
-    cout&lt;&lt;&quot;hello.\n&quot;&lt;&lt;endl;
-    system(&quot;pause&quot;):
-    retun;
-}
-</code></pre>
-<p>//endl 相当于 \n</p>
-<p>类是一种数据类型， 是固定大小内存块的别名  </p>
-<p>定义一个类，是一个抽象的概念， 不会分配内存</p>
-<p><strong>using namespace std;</strong></p>
-<p>C中的命名空间，只有一个全局作用域。<br>C语言中所有的全局标识符共享一个作用域。</p>
-<p><strong>命名空间</strong></p>
+</li>
+</ol>
+</li>
+<li><strong>死亡:</strong> 线程 run(), main()方法执行结束后, 或者因异常退出了run()方法, 则该线程接受了生命周期. 死亡的线程不可再次复生.</li>
+</ol>
+<h3 id="在-Java-中定义一个不做事且没有参数的构造方法的作用"><a href="#在-Java-中定义一个不做事且没有参数的构造方法的作用" class="headerlink" title="在 Java 中定义一个不做事且没有参数的构造方法的作用"></a>在 Java 中定义一个不做事且没有参数的构造方法的作用</h3><pre><code> Java 程序在执行子类的构造方法之前, 如果没有用super()来调用父类特定的构造方法, 则会调用父类中没有参数的构造方法. 因此父类中只定义了有参数的构造方法, 而在子类的构造方法中又没有的super()来调用父类中特定的构造方法, 则编译时将方法错误, 因为 Java 程序在父类中找不到没有参数的构造方法可执行. 解决方法是咋父类里加上一个不做事且没有参数的构造方法. 
+</code></pre><h3 id="Java-和-C-的区别"><a href="#Java-和-C-的区别" class="headerlink" title="Java 和 C++的区别"></a>Java 和 C++的区别</h3><p>都是面向对象的语言， 都支持封装，继承和多态</p>
+<p>Java 不提供指针来直接内存，程序内存更加安全</p>
+<p>Java 的类是单继承的， C++支持多继承； 虽然 Java 的类不可以多继承， 但是接口可以多继承</p>
+<p>Java 有自动内存管理机制， 不需要程序员手动释放无用内存</p>
+<h3 id="接口和抽象类的区别："><a href="#接口和抽象类的区别：" class="headerlink" title="接口和抽象类的区别："></a>接口和抽象类的区别：</h3><ol>
+<li>接口的方法默认是 public， 所有方法在接口中不能有实现，抽象类可有非抽象的方法</li>
+<li>接口中实例变量默认是 final 类型， 而抽象类中则不一定</li>
+<li>一个类可以实现多个接口， 但最多只能实现一个抽象类</li>
+<li>一个类实现接口的话， 要实现接口的所有方法， 而抽象类不一定。</li>
+<li>接口不能用 new 实例化， 但可以声明， 必须应用一个实现该接口的的对象</li>
+<li>从设计层面来说， 抽象是对类的抽象，是一种模板设计； 接口是行为的抽象， 是一种行为的规范。</li>
+</ol>
+<h3 id="静态方法和实例方法"><a href="#静态方法和实例方法" class="headerlink" title="静态方法和实例方法"></a>静态方法和实例方法</h3><ol>
+<li>在外部调用静态方法，可以使用“类名.方法名”的方式， 也可以使用“对象.方法名”的方式。 而实例方法只有后面这种方式。 也就是说， 调用静态方法可不需要创建对象。 </li>
+<li>静态方法在访问本类的成员时， 只允许访问静态成员（即静态成员变量和静态方法）， 而不允许访问实例成员变量和实例方法； 实例方法则无此限制。 </li>
+</ol>
+<h3 id="对象的相等与指向他们的引用相等，两者有什么不同？"><a href="#对象的相等与指向他们的引用相等，两者有什么不同？" class="headerlink" title="对象的相等与指向他们的引用相等，两者有什么不同？"></a>对象的相等与指向他们的引用相等，两者有什么不同？</h3><p>对象的相等，比的是内存中存放的内容是否相等。而引用相等，比较的是他们指向的内存地址是否相等。</p>
+<h3 id="在调用子类构造方法之前会先调用父类没有参数的构造方法，其目的是？"><a href="#在调用子类构造方法之前会先调用父类没有参数的构造方法，其目的是？" class="headerlink" title="在调用子类构造方法之前会先调用父类没有参数的构造方法，其目的是？"></a>在调用子类构造方法之前会先调用父类没有参数的构造方法，其目的是？</h3><p>帮助子类做初始化工作。</p>
+<h3 id="注释和注解的区别"><a href="#注释和注解的区别" class="headerlink" title="注释和注解的区别"></a>注释和注解的区别</h3><p>Java中的注释和其他编程语言一样，注释的内容不会被编译运行，知识源代码中对代码的解释说明， 提高源代码的可读性。</p>
+<p>Java中的注解（Annotation），也叫元数据，是Java 5以后版本引入的一个特性</p>
 <ul>
-<li>C++中提出了命名空间的概念：  </li>
-<li>不同命名空间中的标识符可以同名而不会发生冲突  </li>
-<li>命名空间可以相互嵌套   </li>
-<li>全局作用域也叫默认命名空间。   </li>
+<li>注解与类、接口、枚举是在同一个层次，可以用来标注包、类、字段、方法、局部变量、方法参数等元素，达到对这些元素的面数和说明。</li>
+<li>注解是可以允许 jvm 在运行中读取它，这一点与注释完全不同。</li>
+<li>注解作用： 编写文档， 代码分析， 编译检查</li>
 </ul>
-<pre><code class="c++">namespace namespaceA
-{
-    int age = 10;
-}
-
-namespace namespaceB
-{
-    int age = 20;
-    namespace namespaceC
-    {
-        struct Teacher
-        {
-            int age;
-        };
-    }
-}
-
-void main()
-{
-
-    cout &lt;&lt; &quot;hell.&quot; &lt;&lt; endl;
-    using namespace namespaceA;
-    using namespace namespaceB;
-
-    cout &lt;&lt; namespaceA::age&lt;&lt;endl;
-    cout &lt;&lt; namespaceB::age&lt;&lt;endl;
-
-    using namespaceB::namespaceC::Teacher  ;    //注意事项， 缺少namespace
-    Teacher t1;
-    t1.age = 30;
-    cout &lt;&lt; t1.age &lt;&lt;endl;
-    system(&quot;pause&quot;);
-
-    return;
-
-}
-</code></pre>
-<p>​    </p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 感谢你的浏览,期待你的反馈, 可以邮件至 daihuiyo@163.com </span>
