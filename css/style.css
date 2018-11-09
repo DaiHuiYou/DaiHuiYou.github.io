@@ -995,6 +995,24 @@ left0px
   line-height: 30px;
   color: #4183c4;
 }
+.nav-right:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10%;
+  height: 10%;
+  opacity: 0.1;
+  background: url("/img/color.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
 #nprogress {
   position: fixed;
   top: 0;
@@ -1947,4 +1965,22 @@ font-size
   .shang_box .shang_payselect {
     font-size: 16px;
   }
+}
+.nav-right:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10%;
+  height: 10%;
+  opacity: 0.1;
+  background: url("/img/color.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
