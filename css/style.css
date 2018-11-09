@@ -1966,21 +1966,3 @@ font-size
     font-size: 16px;
   }
 }
-.nav-right:before {
-  content: ' ';
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 10%;
-  height: 10%;
-  opacity: 0.1;
-  background: url("/img/color.jpg");
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  -ms-background-size: cover;
-  -o-background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
-}
