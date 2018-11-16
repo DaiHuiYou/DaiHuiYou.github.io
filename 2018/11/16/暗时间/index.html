@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
-  <title>设计模式 | Will&#39;s notebook</title>
-  <meta name="keywords" content=" 理论 ">
-  <meta name="description" content="设计模式 | Will&#39;s notebook">
+  <title>暗时间 | Will&#39;s notebook</title>
+  <meta name="keywords" content=" 书籍 ">
+  <meta name="description" content="暗时间 | Will&#39;s notebook">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="About me:">
 <meta name="keywords" content="笔记 生活">
@@ -314,9 +314,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-设计模式" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <article id="post-暗时间" class="article article-type-post" itemscope="" itemprop="blogPost">
     
-        <h1 class="article-title">设计模式</h1>
+        <h1 class="article-title">暗时间</h1>
     
     <div class="article-meta">
         
@@ -324,26 +324,26 @@
         
         <span class="book">
             
-            <a href="javascript:" data-rel="编程">编程</a>
+            <a href="javascript:" data-rel="Share">Share</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color3">理论</a>
+            <a href="javascript:" class="color3">书籍</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title="更新时间: 2018-11-09 16:03:47">2018-11-08 18:56</time>
+        创建时间:<time class="date" title="更新时间: 2018-11-16 09:52:38">2018-11-16 09:46</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:495</span>
+        <span>字数:3.4k</span>
         
         
         
@@ -351,7 +351,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#抽象工厂模式"><span class="toc-text">抽象工厂模式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#建造者模式"><span class="toc-text">建造者模式</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一章-暗时间"><span class="toc-text">第一章 暗时间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二章-设计你自己的进度条"><span class="toc-text">第二章 设计你自己的进度条</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第三章-如何有效地记忆与学习"><span class="toc-text">第三章 如何有效地记忆与学习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第四章-学习密度与专注力"><span class="toc-text">第四章 学习密度与专注力</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第五章-一直以来伴随我们的一些学习习惯"><span class="toc-text">第五章 一直以来伴随我们的一些学习习惯</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第六章-我在南大的七年"><span class="toc-text">第六章 我在南大的七年</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第七章-逃出你的肖申克"><span class="toc-text">第七章 逃出你的肖申克</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -366,218 +366,157 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="抽象工厂模式"><a href="#抽象工厂模式" class="headerlink" title="抽象工厂模式"></a>抽象工厂模式</h5><p><img src="https://i.imgur.com/RfWAInW.png" alt=""></p>
-<pre><code class="c++">//抽象工厂模式， 生产一组产品
-class Fruit
-{
-public:
-    virtual void SayName() = 0;
-};
-class AbstractFactory
-{
-public:
-    virtual Fruit *CreateBanana() = 0;
-    virtual Fruit *CreateApple() = 0;
-};
-class NorthBanana : public Fruit
-{
-public:
-    virtual void SayName() {
-        cout &lt;&lt; &quot;It&#39;s north banana&quot; &lt;&lt; endl;
-    }
-};
-class NorthApple : public Fruit
-{
-public:
-    virtual void SayName() {
-        cout &lt;&lt; &quot;It&#39;s north apple&quot; &lt;&lt; endl;
-    }
-};
-
-class SouthBanana : public Fruit
-{
-public:
-    virtual void SayName() {
-        cout &lt;&lt; &quot;It&#39;s south Banana&quot; &lt;&lt; endl;
-    }
-};
-class SouthApple : public Fruit
-{
-public:
-    virtual void SayName() {
-        cout &lt;&lt; &quot;It&#39;s south apple&quot; &lt;&lt; endl;
-    }
-};
-class NorthFactory : public AbstractFactory
-{
-public:
-    virtual Fruit *CreateBanana() {
-        return new NorthBanana();
-    }
-    virtual Fruit *CreateApple() {
-        return new NorthApple();
-    }
-};
-class SouthFactory : public AbstractFactory
-{
-public:
-    virtual Fruit  *CreateBanana() {
-        return new SouthBanana();
-    }
-    virtual Fruit *CreateApple() {
-        return new SouthApple();
-    }
-};
-void main()
-{
-    AbstractFactory *af = NULL;
-    Fruit    *fruit = NULL;
-
-    af = new NorthFactory();
-    fruit = af-&gt;CreateApple();
-    fruit-&gt;SayName();
-    delete fruit;
-    fruit = af-&gt;CreateBanana();
-    fruit-&gt;SayName();
-
-    af = new SouthFactory();
-    fruit = af-&gt;CreateApple();
-    fruit-&gt;SayName();
-    delete fruit;
-    fruit = af-&gt;CreateBanana();
-    fruit-&gt;SayName();
-    system(&quot;pause&quot;);
-}
-</code></pre>
-<h5 id="建造者模式"><a href="#建造者模式" class="headerlink" title="建造者模式"></a>建造者模式</h5><pre><code class="c++">class House
-{
-public:
-    void setDoor(string door) {
-        this-&gt;m_door = door;
-    }
-    void setWall(string wall) {
-        this-&gt;m_wall = wall;
-    }
-    void setWindow(string window) {
-        this-&gt;m_window = window;
-    }
-    string getDoor() {
-        cout &lt;&lt; m_door &lt;&lt; endl;
-        return m_door;
-    }
-    string getWall() {
-        cout &lt;&lt; m_wall &lt;&lt; endl;
-        return m_wall;
-    }
-    string getWindow() {
-        cout &lt;&lt; m_window &lt;&lt; endl;
-        return m_window;
-    }
-private:
-    string m_door;
-    string m_wall;
-    string m_window;
-};
-
-class Builder
-{
-public:
-    virtual void buildWall()     = 0;
-    virtual void buildDoor()     = 0;
-    virtual void buildWindow()    = 0;
-    virtual House* getHouse()     = 0;
-};
-
-class FlatBuilder : public Builder
-{
-public:
-    FlatBuilder() {
-        m_house = new House;
-    }
-    virtual void buildDoor() {
-        m_house-&gt;setDoor(&quot;Flat door&quot;);
-    }
-    virtual void buildWall() {
-        m_house-&gt;setWall(&quot;Flat wall&quot;);
-    }
-    virtual void buildWindow() {
-        m_house-&gt;setWindow(&quot;Flat window&quot;);
-    }
-    virtual House *getHouse() {
-        return m_house;
-    }
-private:
-    House *m_house;
-};
-class VillaBuilder : public Builder
-{
-public:
-    VillaBuilder() {
-        m_house = new House;
-    }
-    virtual void buildDoor() {
-        m_house-&gt;setDoor(&quot;Villa door&quot;);
-    }
-    virtual void buildWall() {
-        m_house-&gt;setWall(&quot;Villa wall&quot;);
-    }
-    virtual void buildWindow() {
-        m_house-&gt;setWindow(&quot;Villa window&quot;);
-    }
-    virtual House *getHouse() {
-        return m_house;
-    }
-private:
-    House *m_house;
-};
-
-class Director
-{
-public:
-    Director(Builder *build) {
-        m_build = build;
-    }
-    void Construct() {
-        m_build-&gt;buildWall();
-        m_build-&gt;buildWindow();
-        m_build-&gt;buildDoor();
-    }
-private:
-    Builder *m_build;
-};
-void main()
-{
-    House        *house = NULL;
-    Builder        *builder = NULL;
-    Director    *director = NULL;
-
-    builder = new VillaBuilder();
-    //设计师 指挥 工程队 干活
-    director = new Director(builder);
-    director-&gt;Construct();
-    house = builder-&gt;getHouse(); //返回房子
-    house-&gt;getWindow();
-    house-&gt;getDoor();
-
-    delete house;
-    delete builder;
-
-    //请 FlatBuilder 公寓
-    builder = new FlatBuilder;
-    director = new Director(builder);
-    director-&gt;Construct();
-    house = builder-&gt;getHouse();
-    house-&gt;getWindow();
-    house-&gt;getDoor();
-    delete house;
-    delete builder;
-
-    delete director;
-    system(&quot;pause&quot;);
-    return;
-
-}
-</code></pre>
+        <ul>
+<li><h3 id="第一章-暗时间"><a href="#第一章-暗时间" class="headerlink" title="第一章 暗时间"></a>第一章 暗时间</h3><ul>
+<li>善于利用思维时间的人，可以无形中必别人多出很多时间<ul>
+<li>心理年龄</li>
+<li>衡量一个人生活了多少人，应该用思维时间来计算</li>
+</ul>
+</li>
+<li>认为时间对每个人都是均等 是个错觉<ul>
+<li>实际投入 = 时间和效率的乘积</li>
+<li>要学习的东西常驻在你大脑中，时刻赋予最高的优先级<ul>
+<li>CPU总是分配给它，这时候你的思维时间就被利用到了极致了，因为你的CPU是满载的</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>看书并记住书中的东西只是记忆（不能完全是记忆，还有理解），并没有涉及推理<ul>
+<li>只有靠推理才能深入的理解的一个事物，看到别人看不到的地方，这部分推理的过程就是你的思维时间，也是人一生中占据一个显著比例的“暗时间”</li>
+</ul>
+</li>
+<li>能够利用暗时间的人将无形中多出一大块生命。<ul>
+<li>优秀的人不仅学习好，而且“业余”也很厉害</li>
+</ul>
+</li>
+<li>任务切换需要耗费许多额外的开销</li>
+<li>能够迅速进入专注状态，以及能够长期保持专注的状态，是高效学习的两个最重要习惯。</li>
+<li>最后一个高效的习惯：抗干扰<ul>
+<li>只有具备超强的抗干扰能力，才能有效地利用起前面提到的种种暗时间。</li>
+<li>抗干扰能力也是可以练习出来的，有干扰的环境中看书是非常锻炼专注能力的一个办法，经常利用各种碎片时间阅读和思考，对迅速集中注意力和保持注意力都非常有帮助。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="第二章-设计你自己的进度条"><a href="#第二章-设计你自己的进度条" class="headerlink" title="第二章 设计你自己的进度条"></a>第二章 设计你自己的进度条</h3><ul>
+<li>做事情也是同样的道理，善于规划的人，会将目标分割成为一个个的里程碑，再将里程碑分割成TODO列表。<ul>
+<li>反之如果没有分割，整个任务或目标对您来说就只有两种状态 ： 完成 和 未完成</li>
+<li>那么你会发现你的进度条总是“未完成”，一次又一次的等待未果会耗尽你的耐心，让你下意识的产生“这事什么时候才能完呢？”的疑惑，没有分而治之，你就不知道未来还需要付出多少努力才能达到目的，这就会让你心生怯意，不敢进一步投入时间，免得血本无归。在这样的心理下，不少人就会选择保守策略——退出，以免到头来花了时间还一事无成。</li>
+<li>所谓的规划其实就是针对这种心理弱点的做事方法。</li>
+</ul>
+</li>
+<li>不要过早退出循环<ul>
+<li>过早退出的原因往往在于对未来的不确定性，对与投资时间最终无法收到回报的恐惧。</li>
+<li>过早退出是一切失败的根源</li>
+</ul>
+</li>
+<li>兴趣遍地都是，专注和持之以恒才是真正稀缺的。<ul>
+<li>区别他们的并不是兴趣的有无，而是他们的性格里面有没有维持兴趣的火种一直燃烧下去的燃料。</li>
+</ul>
+</li>
+<li>靠专业技能的成功是最具可复制性的</li>
+<li>反思是让人得以改进自己的最重要的思维品质</li>
+<li>饿死在干草堆之间的驴子<ul>
+<li>“转行还是不转行？”“学C++还是学Java。？“做管理还是做程序员？”</li>
+<li>但更重要的是，有人会因为无法作出决定就推迟决定，然而实际上推迟决定是最差的决定，在推迟决定期间，时间悄悄流逝，你却没有任何一条路上的积累，白白浪费了时间。</li>
+<li>所以，不管有多纠结，也不要从纠结中逃离，试图推延决定，既然终究是个痛苦的决定，就痛一回，好好思考和调查之后作出一个决定并坚持下去，只要不是太不靠谱的行业（相信也没谁会在纠结了之后却选了一个不靠谱的行业的），经过你的积累总会成为高手。</li>
+</ul>
+</li>
+<li>一生的知识积累，自学的起码占90%<ul>
+<li>作为程序员如果没有查过wikipedia，没有看过几本原版电子书，没有在国内外主要邮件列表里面提过问题吵过架，没有用技术博客记录学习的独特体会，没有订阅技术牛人们的博客，怎么好意思说身在这个行业呢？</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="第三章-如何有效地记忆与学习"><a href="#第三章-如何有效地记忆与学习" class="headerlink" title="第三章 如何有效地记忆与学习"></a>第三章 如何有效地记忆与学习</h3><ul>
+<li>你所拥有的知识并不取决与你记得多少，而在于他们能否在适当的时候被回忆起来。</li>
+<li>最终的目的是要在恰当的时候能够想得起来区使用。</li>
+<li>经常主动回顾一段时间学到的东西</li>
+<li>整理笔记</li>
+<li>书写：将一段时间学习的知识按照一个主题系统地“串”起来大大地丰富了知识之间的关联</li>
+</ul>
+</li>
+<li><h3 id="第四章-学习密度与专注力"><a href="#第四章-学习密度与专注力" class="headerlink" title="第四章 学习密度与专注力"></a>第四章 学习密度与专注力</h3><ul>
+<li>其实，在大学期间，最不缺的是就是业余时间，最缺的就是专注精神。</li>
+</ul>
+</li>
+<li><h3 id="第五章-一直以来伴随我们的一些学习习惯"><a href="#第五章-一直以来伴随我们的一些学习习惯" class="headerlink" title="第五章 一直以来伴随我们的一些学习习惯"></a>第五章 一直以来伴随我们的一些学习习惯</h3><ul>
+<li>学习与思考<ul>
+<li>Google &amp; Wiki</li>
+<li>看书要挑剔，只看经典</li>
+<li>做读书笔记。一是将自己的阅读的时候的思考总结下来，二是将书本的好例子摘抄下来</li>
+<li>无时无刻的思考</li>
+<li>将思考成为成为习惯还有一个很大的好处—避免焦虑</li>
+<li>重要的事情营造比较大的时间块来完成</li>
+<li>多看心理学与思维的书</li>
+<li>获得的多少并不取决与读了多少，而取决于思考了多少、多深</li>
+</ul>
+</li>
+<li>时间管理<ul>
+<li>学习和思考的过程中常问自己的几个问题<ul>
+<li>你的问题到底是什么？</li>
+<li>到现在为止，我到底有了什么收获呢？（自己时不时去总结，整理学习的东西）</li>
+</ul>
+</li>
+<li>重视知识的本质：<ul>
+<li>底层知识永远都不过时。算法数据结构永远都不过时。基本的程序设计理论永远都不过时。良好的编码习惯永远都不过时。分析问题和解决问题的能力永远都不过时。强大的学习能力和旺盛的求知欲永远都不过时。你大脑的思维方式永远都不过时。</li>
+</ul>
+</li>
+<li>重视积累的强大力量，万事提前准备</li>
+<li>抬起头来<ul>
+<li>人的思维是非常容易只见树木不见森林的（否则这个成语从哪来的呢？）。时不时抬起头来审视一下自己正在做的事情，问一问它（对现在或未来）有什么价值，是不是你真正希望做的。你学到的东西到底是什么？它们重要吗？你需要在这个时候学习这些吗？（见第2条）。你的时间就是你的资源，你投入这些资源来掌握知识，所以到底用来掌握哪些知识是一个很重要的问题。仅仅遵循兴趣是不够的，人会对很多次要的东西产生兴趣，并一头钻进去浪费好多时间。所以判断一个东西值不值得学习是很重要的。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>阅读方法<ul>
+<li>趁着对一件事情有热情的时候，一股脑儿把万事开头那些最难的阶段熬过去。</li>
+<li>根据主题查阅资料，而不是根据资料查阅主题。<ul>
+<li>以前读书的时候是一本一本的读，眼里看到的是一本一本的书，现在则是一章、甚至一节一节的读，眼中看到的不是一本一本的书，而是一堆一堆的章节，一个一个的知识主题，按照主题来阅读，你会发现读的时候不再是老老实实地一本书看完看另一本，而是非常频繁地从一本书跳到另一本书，从一处资料跳到另一处资料，从而来获得多个不同的人对同一个主题是如何讲解的。</li>
+</ul>
+</li>
+<li>好资料，坏资料。<ul>
+<li>好资料的特点：从问题出发；重点介绍方法背后的理念（ rationale ），注重直观解释，而不是方法的技术细节；按照方法被发明的时间流程来介绍（先是遇到了什么什么问题，然后怎样分析，推理，最后发现目前所使用的方法）。坏资料的特点是好资料的反面：上来就讲方法细节，仿佛某方法是从天上掉下来的，他们往往这样写“我们定义… 我们称… 我们进行以下几个步骤… ”。根本不讲为什么要用这个方法，人们最初是因为面对什么问题才想到这个方法的，其间又是怎样才想出了这么个方法的，方法背后的直观思想又是什么。实际上一个方法如果将其最终最简洁的形式直接表达出来往往丢失掉了绝大多数信息，这个丢掉的信息就是问题解决背后的思维过程。</li>
+</ul>
+</li>
+<li>学习一个东西之前，首先在大脑中积累充分的“疑惑感”。<ul>
+<li>即弄清面临的问题到底是什么，在浏览方法本身之前，最好先使劲问问自己能想到什么方法。一个公认的事实是，你对问题的疑惑越大，在之前做的自己的思考越多，当看到解答之后印象就越深刻。记得大学里面的课本总是瀑布式地把整个知识结构一览无余地放在面前，读的过程倒是挺爽，连连点头，读完了很快又忘掉了，为什么？因为没有带着疑问去学习。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>知识结构<ul>
+<li>抓住不变量<ul>
+<li>把知识分为essential的和non-essential的。对于前者采取提前深入掌握牢靠的办法，对于后者采取待用到的时刻RTM (Read the manual)方法（用本）。</li>
+<li>硬件体系结构是essential的，操作系统的一些重要的实现机制是essential的，主流编程范式（OO、FP）是为了满足什么需求出现的（出现是为了解决什么问题），是怎么解决的，自身又引入了哪些新的问题，从而适用哪些场景）。这些都是essential的。</li>
+<li>作为程序员的essential knowledge列表并不完备，关键是自己在学习新知识的时候带着第三只眼来敏锐地判断这个知识是否是不变量，或不易变的量，是否完全可以在用的时候查手册即可。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="第六章-我在南大的七年"><a href="#第六章-我在南大的七年" class="headerlink" title="第六章 我在南大的七年"></a>第六章 我在南大的七年</h3><ul>
+<li>看到侯捷的《深入浅出MFC》上面很多人说这本书好，我当时也对C++有一些基础认识和好感，所以就买下来啃了。</li>
+<li>这是另一个歪打正着：为什么说是“歪打”呢？因为MFC的设计也并不能说就是C++的Best Practice，另一方面若是以用为本的话也未必就要把MFC的原理摸个透。所以搞不好现在看来我就不会细看这本书。为什么说是“正着”呢？因为理解一个费解的东西本身需要长时间投入注意力，无形中练了理解能力和思维体力（专注），另一方面虽然MFC不是最佳设计，但理解里面的代码却加强了对C++本身的认识，这是基本功；也加强了对C++的兴趣，这是动力，后来这个动力驱使了我去看了大量的系统底层知识，从操作系统代码一直看到硬件体系结构。</li>
+<li>是剖析Boost源码的</li>
+</ul>
+</li>
+<li><h3 id="第七章-逃出你的肖申克"><a href="#第七章-逃出你的肖申克" class="headerlink" title="第七章 逃出你的肖申克"></a>第七章 逃出你的肖申克</h3><ul>
+<li>为什么我们常说很多时候一定要亲身经历了之后才能明白？</li>
+<li>对付我们强大的习惯的最佳办法是将自己认为正确的（不管是自己经过困难或失败而领悟的，还是看到书上或听到别人说的）写下来，并常常拿出来翻看。事实上，我的经验是，在写下来的时候我们的大脑会进入到理性分析模块，进一步检验和推理那些道理，我们越是对一个道理审视的详细、深入、全面，大脑中留下的印象深刻，从记忆加工的角度来说，这叫深度加工，带来的结果就是该记忆与更多的提取线索相关联，于是便能够在更多的场景下被唤起</li>
+<li>认知偏差。我们有着各种各样系统的认知偏见：我们经常对事物作出错误的解释和归因（即便自己是亲历者），有时甚至反而是“当局者迷，旁观者清”。<ul>
+<li>事实上，很多成功者自己的总结都不靠谱，就是因为他们自己也难以对自己成功的原因进行正确的归因，比如我们都有这样一种倾向：将失败归因于外界因素，将成功归因于自己的能耐。（心理学把这个称为自我服务偏差）。</li>
+</ul>
+</li>
+<li>不需要经历也能明白——理性的力量<ul>
+<li>浅层次的思考， 转向着手行动， 使得让事实替代我们进行了思考和推理</li>
+<li>普通人从自己的错误中学习，聪明人从别人的错误中学习。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
       
        <hr><span style="font-style: italic;color: gray;"> 感谢你的浏览,期待你的反馈, 可以邮件至 daihuiyo@163.com </span>
