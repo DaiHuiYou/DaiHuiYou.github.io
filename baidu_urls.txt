@@ -1,8 +1,7 @@
-https://www.daihuiyou.top/2018/11/18/c-侯捷/
+https://www.daihuiyou.top/2018/11/22/算法精解/
 https://www.daihuiyou.top/2018/11/16/暗时间/
 https://www.daihuiyou.top/2018/11/10/高质量C-C-编程指南/
 https://www.daihuiyou.top/2018/11/08/设计模式/
-https://www.daihuiyou.top/2018/11/07/歌曲改变人生/
 https://www.daihuiyou.top/2018/11/01/数据库/
 https://www.daihuiyou.top/2018/11/01/思维力/
 https://www.daihuiyou.top/2018/11/01/C笔记/
@@ -11,7 +10,6 @@ https://www.daihuiyou.top/2018/10/11/数据结构/
 https://www.daihuiyou.top/2018/10/11/C++/
 https://www.daihuiyou.top/2018/10/10/C/
 https://www.daihuiyou.top/2018/10/10/Java/
-https://www.daihuiyou.top/2018/10/03/软考/
 https://www.daihuiyou.top/2018/08/28/markdown使用总结/
 https://www.daihuiyou.top/2018/08/28/clover/
 https://www.daihuiyou.top/2018/08/28/Git/
