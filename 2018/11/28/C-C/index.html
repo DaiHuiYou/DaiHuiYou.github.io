@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
-  <title>My New Post | Will&#39;s notebook</title>
-  <meta name="keywords" content=" the first post. ">
-  <meta name="description" content="My New Post | Will&#39;s notebook">
+  <title>C/C++ | Will&#39;s notebook</title>
+  <meta name="keywords" content=" 程序语言 ">
+  <meta name="description" content="C/C++ | Will&#39;s notebook">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="About me:">
 <meta name="keywords" content="笔记 生活">
@@ -316,9 +316,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-My-New-Post" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <article id="post-C-C" class="article article-type-post" itemscope="" itemprop="blogPost">
     
-        <h1 class="article-title">My New Post</h1>
+        <h1 class="article-title">C/C++</h1>
     
     <div class="article-meta">
         
@@ -326,26 +326,26 @@
         
         <span class="book">
             
-            <a href="javascript:" data-rel="开篇">开篇</a>
+            <a href="javascript:" data-rel="程序语言">程序语言</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color1">the first post.</a>
+            <a href="javascript:" class="color5">程序语言</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title="更新时间: 2018-11-09 14:11:44">2018-08-19 00:06</time>
+        创建时间:<time class="date" title="更新时间: 2018-11-28 23:50:48">2018-11-28 23:49</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:12</span>
+        <span>字数:627</span>
         
         
         
@@ -353,7 +353,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Have-a-good-day"><span class="toc-text">Have a good day!</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Cease-to-struggle-and-you-cease-to-live"><span class="toc-text">Cease to struggle and you cease to live.</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#带指针的类和不带指针的类"><span class="toc-text">带指针的类和不带指针的类</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#对象类型："><span class="toc-text">对象类型：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#using-编译指令："><span class="toc-text">using 编译指令：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#函数原型："><span class="toc-text">函数原型：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#成员函数："><span class="toc-text">成员函数：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#static"><span class="toc-text">static :</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Inheritance"><span class="toc-text">Inheritance</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#vitual"><span class="toc-text">vitual</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -368,7 +368,133 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="Have-a-good-day"><a href="#Have-a-good-day" class="headerlink" title="Have a good day!"></a>Have a good day!</h4><h4 id="Cease-to-struggle-and-you-cease-to-live"><a href="#Cease-to-struggle-and-you-cease-to-live" class="headerlink" title="Cease to struggle and you cease to live."></a>Cease to struggle and you cease to live.</h4>
+        <h5 id="带指针的类和不带指针的类"><a href="#带指针的类和不带指针的类" class="headerlink" title="带指针的类和不带指针的类"></a>带指针的类和不带指针的类</h5><ul>
+<li><em>class with pointer member</em> 必须有 拷贝构造 和拷贝赋值 </li>
+<li><strong>&amp; 有不同意义， 取地址和声明参数引用。</strong></li>
+</ul>
+<h5 id="对象类型："><a href="#对象类型：" class="headerlink" title="对象类型："></a>对象类型：</h5><ul>
+<li><em>local objects （auto object）： Complex c2();</em></li>
+<li><em>static objects</em>：其生命在作用域结束后仍然存在，知道整个程序结束。</li>
+<li><em>global objects</em></li>
+<li><em>heap objects</em></li>
+</ul>
+<h5 id="using-编译指令："><a href="#using-编译指令：" class="headerlink" title="using 编译指令："></a>using 编译指令：</h5><ul>
+<li>在多函数程序中使用using编译指令，这是因为函数都使用了 <em>cout</em>， 因此需要能够访问位于命名空间std的 <em>cout</em> 定义 。</li>
+<li><em>using namespace std</em>； 放在特定的函数定义中， 能够然这个函数使用命名空间std所有元素</li>
+<li><em>namespace</em> 和  <em>Java</em> 的 包类似</li>
+</ul>
+<h5 id="函数原型："><a href="#函数原型：" class="headerlink" title="函数原型："></a>函数原型：</h5><ul>
+<li>函数原型作为黑盒的函数</li>
+<li>函数原型 prototype</li>
+</ul>
+<h5 id="成员函数："><a href="#成员函数：" class="headerlink" title="成员函数："></a>成员函数：</h5><ul>
+<li>成员函数有一个this 的指针，this 是一个隐含的指针，不能被显示声明，它只是一个形参，一个局部变量。</li>
+</ul>
+<h5 id="static"><a href="#static" class="headerlink" title="static :"></a><em>static :</em></h5><ul>
+<li><em>static data</em> 要 <em>static</em> 函数处理</li>
+<li><em>static</em> 成员函数 和 成员函数区别：没有 <em>this pointer</em></li>
+<li><em>static</em> 函数调用方式： <em>object</em> 调用 和 <em>class name</em> 调用</li>
+</ul>
+<h5 id="Inheritance"><a href="#Inheritance" class="headerlink" title="Inheritance"></a><em>Inheritance</em></h5><ul>
+<li>继承成员变量</li>
+<li>继承成员函数的调用权</li>
+</ul>
+<h5 id="vitual"><a href="#vitual" class="headerlink" title="vitual"></a><em>vitual</em></h5><ul>
+<li><em>pure vitual</em></li>
+<li><em>impure virtual</em></li>
+<li><em>non-virtual</em></li>
+</ul>
+<pre><code class="c++">class CStuFile
+{
+public:
+    CStuFile(char *filename);
+    ~CStuFile();
+    void    Add(CStudentRec stu);
+    int        Seek(char* id, CStudentRec &amp;stu);
+    int        List(int nNum = -1);
+private:
+    char *strFileName;
+};
+
+CStuFile::CStuFile(char *fileName)
+{
+    strFileName = new char[strlen(fileName) + 1];
+    strcpy(strFileName, fileName);
+}
+
+CStuFile::~CStuFile()
+{
+    if( strFileName ) 
+        delete []strFileName;
+}
+
+void CStuFile::Add(CStudentRec stu)
+{
+    //写入文件， 二进制形式
+    fstream file(strFileName, ios::out|ios::app|ios::binary);
+    file &lt;&lt; stu;
+    file.close();
+}
+
+int    CStuFile::Seek(char *id, CStudentRec &amp;stu)
+{
+    int nRec = -1;
+    fstream file(strFileName, ios::in|ios::nocreate);
+    if(!file) {
+        cout &lt;&lt; &quot;文件&quot; &lt;&lt; strFileName &lt;&lt; &quot;不能打开&quot; &lt;&lt; endl;
+        return nRec;
+    }
+    int i = 0;
+    while( !file.eof() ) {
+        file&gt;&gt;stu; 
+        if((strcmp(id,stu.strID) == 0) &amp;&amp; (stu.chFlag != &#39;N&#39;)){
+            nRec = i;
+            break;
+        }
+        i++;
+    }
+    file.close();
+    return nRec;
+}
+
+</code></pre>
+<pre><code class="c++">int CStuFile::List(int nNum)
+{    
+    //录入数量
+    int nRec = 0; 
+    //打开文件方式 输入，不创建
+    fstream file(strFileName, ios::in|ios::nocreate); 
+    //file 为 NULL， 则打开文件失败
+    if( !file ) {
+        cout &lt;&lt; &quot;文件&quot; &lt;&lt;strFileName &lt;&lt; &quot;不能打开!&quot; &lt;&lt; endl;
+        return 0;
+    }
+
+    if((nNum==-1)||(nNum&gt;0)) {
+        //输出数据左对齐
+        cout.setf(ios::left); 
+        cout&lt;&lt;setw(6)&lt;&lt;&quot;记录&quot; &lt;&lt;setw(20)&lt;&lt;&quot;姓名&quot;&lt;&lt;setw(10)&lt;&lt;&quot;学号&quot;
+            &lt;&lt;&quot;\t成绩1\t成绩2\t成绩3\t平均分&quot;&lt;&lt;endl;
+    }
+
+     //当读取文件为结尾时 
+    while( !file.eof() ) {
+        CStudentRec data;
+        file &gt;&gt; data;
+        if(data.chFlag == &#39;A&#39;) {
+            nRec++;
+            if( (nNum == -1) || (nRec &lt;= nNum) ) {
+                cout.setf(ios::left);
+                cout &lt;&lt; setw(6) &lt;&lt; nRec;
+                data.Print();
+            }
+        }
+    }
+    file.close();
+    return nRec;
+}
+</code></pre>
+
       
        <hr><span style="font-style: italic;color: gray;"> 感谢你的浏览,期待你的反馈, 可以邮件至 daihuiyo@163.com </span>
     </div>
