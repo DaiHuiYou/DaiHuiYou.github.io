@@ -550,7 +550,7 @@ div.ac > ul > li:before,
 .nav-left {
   width: 120px;
   height: 100%;
-  background: #2a2935;
+  background: #666;
   box-shadow: inset -15px 0 15px -15px #222;
   float: left;
   position: relative;
@@ -952,7 +952,7 @@ left0px
   white-space: nowrap;
   text-decoration: none;
   text-overflow: ellipsis;
-  color: #55606f;
+  color: #222;
   overflow: hidden;
   outline: none;
 }
@@ -1154,11 +1154,11 @@ left0px
   height: 100%;
   font-size: 18px;
   line-height: 1.6;
-  background: #fff;
+  background: #666;
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  color: #2f2f2f;
+  color: #fff;
   font-weight: normal;
   margin-left: 1px;
 }
@@ -1211,7 +1211,7 @@ left0px
 .post .pjax article .article-meta .top-comment a {
   cursor: pointer;
   color: inherit;
-  font: 400 15px/1 "Open Sans", "Hiragino Sans GB", sans-serif;
+  font: 400 15px/1 "Open Sans", "Hiragino Sans GB", serif;
 }
 .post .pjax article .article-meta .top-comment a:hover {
   color: #4078c0;
@@ -1528,7 +1528,7 @@ body {
   height: 100%;
   margin: 0;
   color: #283444;
-  font: 400 16px/1 "Open Sans", "Hiragino Sans GB", sans-serif;
+  font: 400 16px/1 "Open Sans", "Microsoft YaHei", sans-serif;
   -webkit-font-smoothing: subpixel-antialiased;
   -webkit-text-size-adjust: none;
   overflow: hidden;
@@ -1544,17 +1544,23 @@ a {
   transition: color 0.35s;
 }
 h1,
-h2,
+h2 {
+  font-family: sans-serif;
+  font-weight: normal;
+  margin-top: 30px;
+  color: #fff;
+  text-rendering: optimizelegibility;
+  border-bottom: 3px solid #fff;
+}
 h3,
 h4,
 h5,
 h6 {
-  font-family: inherit;
+  font-family: sans-serif;
   font-weight: normal;
   margin-top: 30px;
-  color: #283444;
+  color: #fff;
   text-rendering: optimizelegibility;
-  border-bottom: 1px solid #eee;
 }
 h1 {
   font-size: 1.8em;
@@ -1671,7 +1677,7 @@ img.pswp__img {
 @media screen and (max-width: 1468px) {
   html,
   body {
-    font: 400 15px/1 "Open Sans", "Hiragino Sans GB", sans-serif;
+    font: 400 15px/1 "Open Sans", "Microsoft YaHei", sans-serif;
   }
   .nav {
     width: 492px;

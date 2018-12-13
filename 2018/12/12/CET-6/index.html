@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
-  <title>hexo博客搭建流程 | Will&#39;s notebook</title>
-  <meta name="keywords" content=" 博客 ">
-  <meta name="description" content="hexo博客搭建流程 | Will&#39;s notebook">
+  <title>CET-6 | Will&#39;s notebook</title>
+  <meta name="keywords" content=" 考试 ">
+  <meta name="description" content="CET-6 | Will&#39;s notebook">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="About me:">
 <meta name="keywords" content="笔记 生活">
@@ -317,9 +317,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-hexo博客搭建流程" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <article id="post-CET-6" class="article article-type-post" itemscope="" itemprop="blogPost">
     
-        <h1 class="article-title">hexo博客搭建流程</h1>
+        <h1 class="article-title">CET-6</h1>
     
     <div class="article-meta">
         
@@ -327,21 +327,21 @@
         
         <span class="book">
             
-            <a href="javascript:" data-rel="开篇">开篇</a>
+            <a href="javascript:" data-rel="考试">考试</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color3">博客</a>
+            <a href="javascript:" class="color3">考试</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title="更新时间: 2018-11-09 14:12:02">2018-08-20 14:03</time>
+        创建时间:<time class="date" title="更新时间: 2018-12-12 16:57:44">2018-12-12 16:56</time>
         
     </div>
     <div class="article-meta">
@@ -352,7 +352,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#记录总体的搭建流程"><span class="toc-text">记录总体的搭建流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装git-git同步在github上"><span class="toc-text">安装git, git同步在github上</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo与github关联起来：打开站点的配置文件-config-yml"><span class="toc-text">hexo与github关联起来：打开站点的配置文件_config.yml</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#绑定域名"><span class="toc-text">绑定域名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更换主题"><span class="toc-text">更换主题</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-6"><span class="toc-text">2018.6</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1"><span class="toc-text">1.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2"><span class="toc-text">2.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3"><span class="toc-text">3.</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2017-12"><span class="toc-text">2017.12</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1"><span class="toc-text">1.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1"><span class="toc-text">2.</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1"><span class="toc-text">3.</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2017-6"><span class="toc-text">2017.6</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2"><span class="toc-text">1.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2"><span class="toc-text">2.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2"><span class="toc-text">3.</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2016-12"><span class="toc-text">2016.12</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2016-6"><span class="toc-text">2016.6</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2015-12"><span class="toc-text">2015.12</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -367,44 +367,88 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="记录总体的搭建流程"><a href="#记录总体的搭建流程" class="headerlink" title="记录总体的搭建流程"></a>记录总体的搭建流程</h2><ol>
-<li>搭建Node.js环境：命令行使用<strong>node -v</strong>查看版本。</li>
-<li>安装Hexo博客框架：<strong>npm install hexo-cli -g</strong></li>
-<li><strong>安装git, git同步在github上</strong>。</li>
-<li>开启GitHub Pages服务： <strong>注意要选择主题，才有效。</strong></li>
-<li>创建文件夹，存放博客文件： hexo init  myHexoBlog   </li>
-<li>hexo g  //g是generetor的缩写，生成博客</li>
-<li>hexo s  //s是server的缩写，启动服务</li>
-<li><strong>hexo与github关联起来</strong></li>
-<li>绑定域名</li>
-<li>更换主题</li>
-</ol>
-<hr>
-<h2 id="安装git-git同步在github上"><a href="#安装git-git同步在github上" class="headerlink" title="安装git, git同步在github上"></a>安装git, git同步在github上</h2><pre><code>git config --global user.name &quot;你的GitHub用户名&quot;
-
-git config --global user.email &quot;你的GitHub注册邮箱&quot;
-</code></pre><ol>
-<li><strong>生成ssh密钥文件：</strong>ssh-keygen -t rsa -C “你的GitHub注册邮箱”</li>
-<li>然后找到生成的.ssh的文件夹中的id_rsa.pub密钥，将内容全部复制</li>
-<li>打开GitHub_Settings_keys 页面，新建new SSH Key</li>
-<li>在Git Bash中检测GitHub公钥设置是否成功，输入 <strong>ssh <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a> </strong></li>
-</ol>
-<hr>
-<h2 id="hexo与github关联起来：打开站点的配置文件-config-yml"><a href="#hexo与github关联起来：打开站点的配置文件-config-yml" class="headerlink" title="hexo与github关联起来：打开站点的配置文件_config.yml"></a>hexo与github关联起来：打开站点的配置文件_config.yml</h2><pre><code>deploy:
-      type: git
-      repository: git@github.com:DaiHuiYou/DaiHuiYou.github.io.git
-      branch: master
-</code></pre><hr>
-<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><pre><code>ping www.daihuiyou.github.io #得到IP值
-</code></pre><p> 第一步：在阿里云解析服务： 填写</p>
-<pre><code>主机记录www对应 daihuiyou.github.io
-主机记录@对应 www.daihuiyou.github.io
-主机记录www对应 185.199.111.153
-主机记录@对应 185.199.111.153
-</code></pre><p> 第二步：登录GitHub，进入之前创建的仓库，点击settings，设置Custom domain，输入域名 daihuiyou.top</p>
-<p> 第三步：进入本地博客文件夹 ，进入blog/source目录下，创建一个CNAME，编辑内容为daihuiyou.top</p>
-<hr>
-<h2 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h2><p>待更新。</p>
+        <h2 id="2018-6"><a href="#2018-6" class="headerlink" title="2018.6"></a>2018.6</h2><h3 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h3><p>过去，拥有一辆私家车对大部分中国人而言是件奢侈的事。</p>
+<p>如今，私家车在中国随处可见。</p>
+<p>汽车成了人们生活中不可或缺的一部分，他们不仅开车上下班，还经常驾车出游。</p>
+<p>有些城市的汽车增长速度过快，以至于交通堵塞和停车位不足的问题日益严重，这些城市的市政府不得不出台新政策，限制上路汽车的数量。</p>
+<p>由于空气污染日益严重，现在越来越多的人选择购买新能源汽车，中国政府也采取了一些措施，支持新能源汽车的发展。</p>
+<h3 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h3><p>自行车曾今是中国城乡最主要的交通工具，中国一度被称为”自行车王国“。</p>
+<p>如今，随着城市交通拥堵和空气污染日益严重，骑自行车又开始流行起来。</p>
+<p>近来，中国企业家将移动互联网技术与传统自行车结合在一起，发明了一种称为共享单车的商业模式。</p>
+<p>共享单车的出现使骑车出行更加方便，人们仅需一部手机就可以随时使用共享单车。</p>
+<p>为了鼓励人们骑车出行，很多城市修建了自行车道。</p>
+<p>现在，越来越多的中国人也喜欢通过骑车健身。</p>
+<h3 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h3><p>中国目前拥有世界上最大最快的高速铁路网。</p>
+<p>高铁列车的运行速度还将继续提升，更多的城市将修建高铁站。</p>
+<p>高铁大大缩短了人们出行的时间。</p>
+<p>相对于飞机而言，高铁列车的速度的突出优势在于准时，因为基本不受天气或交通管制的影响。</p>
+<p>高铁极大地改变了中国人的生活方式。</p>
+<p>如今，它已经成了很多人商务旅行的首选交通工具。</p>
+<p>越来越多的人也在假日乘高铁外出旅游。</p>
+<p>还有不少年轻人选择在一个城市工作而临近城市居住，每天乘高铁上下班。</p>
+<h2 id="2017-12"><a href="#2017-12" class="headerlink" title="2017.12"></a>2017.12</h2><h2 id="1-1"><a href="#1-1" class="headerlink" title="1."></a>1.</h2><p>青海湖位于海拔 3205 米、青海省省会西宁以西约 100 公里处，是中国最大的咸水湖，面积 4317 平方公里，最深处 25.5 米。</p>
+<p>有 23 条河注入湖中，其中大部分是季节性的。</p>
+<p>百分之八十的湖水源于五条主要河流。</p>
+<p>青海湖位于跨越亚洲的几条候鸟迁徙路线的交叉处。</p>
+<p>许多鸟类把青海湖作为迁徙过程中的栖息地。</p>
+<p>湖的西侧是著名的 ”鸟岛“，吸引着来自世界各地的观鸟者。</p>
+<p>每天夏天，游客们也来这里观看国际自行车比赛。</p>
+<h2 id="2-1"><a href="#2-1" class="headerlink" title="2."></a>2.</h2><p>太湖是中国东部的一个淡水湖，占地面积 2250 平方公里，是中国第三大淡水湖，仅次于潘阳和洞庭。 </p>
+<p>太湖约有 90 个岛屿，大小从几平方米到几平方公里不等。</p>
+<p>太湖以其独特的 ”太湖石“ 而闻名，太湖石常用于装饰中国传统园林。</p>
+<p>太湖也以高产的捕鱼业闻名。</p>
+<p>自从上世纪 70 年代后期以来， 捕捞鱼蟹对沿海的居民来说极为重要，并对周边地区的经济作出了重大的贡献。</p>
+<p>太湖地区是中国陶瓷业基地之一，其中宜兴的陶瓷厂家生产举世闻名的宜兴紫砂壶。</p>
+<h3 id="3-1"><a href="#3-1" class="headerlink" title="3."></a>3.</h3><p>洞庭湖位于湖南省东北部，面积很大，但湖水很浅。</p>
+<p>洞庭湖是长江的蓄洪池，湖的大小很大程度上取决于季节变化。</p>
+<p>湖北和湖南两省因其与湖的相对位置而得名： 湖北意为 “湖的北边”， 而湖南则为 ”湖的南边“。</p>
+<p>洞庭湖作为龙舟赛的发源地，在中国文化中享有盛名。</p>
+<p>据说龙舟赛始于洞庭湖东岸， 为的是搜寻楚国爱国诗人屈原的遗体。</p>
+<p>龙舟赛与洞庭湖及周边的美景，每天都吸引着成千上万来自全国和世界各地的游客。</p>
+<h2 id="2017-6"><a href="#2017-6" class="headerlink" title="2017.6"></a>2017.6</h2><h3 id="1-2"><a href="#1-2" class="headerlink" title="1."></a>1.</h3><p>唐朝始于 618 年，终于 907 年，是中国历史上最灿烂的时期。</p>
+<p>经过近三百年的发展，唐代中国成为世界上最繁荣的中国，其首都长安是当时世界上最大的都市。</p>
+<p>这一时期，经济发达、商业繁荣、社会秩序稳定，甚至边境也对外开发。</p>
+<p>随着城市化和财富的增加，艺术和文化也繁荣起来。</p>
+<p>李白和杜甫是以作品简洁自然而著称的诗人。</p>
+<p>他们的诗歌打动了学者和普通人的心。</p>
+<p>即使在今天，他们的许多诗歌仍广为儿童及成人阅读背诵。</p>
+<h3 id="2-2"><a href="#2-2" class="headerlink" title="2."></a>2.</h3><p>宋朝始于 960 年，一直延续到 1297 年。</p>
+<p>这一时期，中国经济大幅增长，成为世界上最先进的经济体，科学、技术、哲学和数学蓬勃发展。</p>
+<p>宋代中国是世界历史上首先发行纸币的国家。</p>
+<p>宋朝还最早使用火药发明活字印刷。</p>
+<p>人口增长迅速，越来越多的人住进城市，那里有热闹的娱乐场所。</p>
+<p>社会生活多种多样。</p>
+<p>人们聚集在一起观看和交易珍贵的艺术品。</p>
+<p>宋朝的政府体制在当时也是先进的。</p>
+<p>政府官员均通过竞争性考试选拔任用。</p>
+<h3 id="3-2"><a href="#3-2" class="headerlink" title="3."></a>3.</h3><p>明朝统治中国 276 年， 被人们描述成人类历史上治理有序、社会稳定的最伟大的时代之一。</p>
+<p>这一时期，手工业的发展促进了市场经济和城市化。</p>
+<p>大量的商品，包括酒和丝绸，都在市场销售。</p>
+<p>同时，在进口许多外国商品，如时钟和烟草。</p>
+<p>北京、南京、扬州、苏州这样的大商业中心相继形成。</p>
+<p>也是在明代，由郑和率领的船队曾到印度洋进行了7次大规模的探险航行。</p>
+<p>还值得一提的是，中国文学的四大经典名著中有三部写于明代。</p>
+<h2 id="2016-12"><a href="#2016-12" class="headerlink" title="2016.12"></a>2016.12</h2><p>农业是中国的一个重要产业，从业者超过 3 亿。 </p>
+<p>中国农业产量全球第一，主要生产水稻、小麦和豆类。</p>
+<p>虽然中国的农业用地仅占世界的百分之八十，但为世界百分之二十的人口提供了粮食。</p>
+<p>中国 7700 年前开始种植水稻。</p>
+<p>早在使用机械和化肥之前，勤劳和富有创造性的中国农民就已经采用的各种各样的方法来增加农作物的产量。</p>
+<p>中国农业最新的发展是推进有机农业。</p>
+<p>有机农业可以同时服务与多种目的，包括食品安全、大众健康和可持续发展。</p>
+<h2 id="2016-6"><a href="#2016-6" class="headerlink" title="2016.6"></a>2016.6</h2><p>旗袍是一种雅致的中国服装，源于中国的满族。</p>
+<p>在清代，旗袍是王室女性的穿着的宽松长袍。</p>
+<p>上世纪 20 年代， 受西方服饰影响，旗袍发生了一些变化。</p>
+<p>袖口变窄，袍身变短。</p>
+<p>这些变化是女性美得以充分体现。</p>
+<p>如今，旗袍经常出现在世界级的时装秀上。</p>
+<p>中国女性出席重要社交聚会时，旗袍往往是她们的首选。</p>
+<p>很多中国新娘也会选择旗袍作为结婚礼服。</p>
+<p>一些有影响的人士甚至建议将旗袍作为中国女性的名族服饰。</p>
+<h2 id="2015-12"><a href="#2015-12" class="headerlink" title="2015.12"></a>2015.12</h2><p>在帮助国际社会于 2030 年前消除极端贫穷的过程中，中国正扮演着越来越重要的角色。</p>
+<p>自 20 世纪 70 年代末实施改革开放以来，中国已使达四亿人摆脱贫困。</p>
+<p>在未来五年中，中国将向其他发展中国家在减少贫困、发展教育、农业现代化、环境保护和医疗保健等方面提供援助。</p>
+<p>中国在减少贫困方面取得了显著的进步，并在促进经济增长方面做出了不懈努力，这将鼓励其他贫困国家应对自己发展中的挑战。</p>
+<p>在寻求具有自身特色的发展道路时，这些国家可以借鉴中国的经验。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 感谢你的浏览,期待你的反馈, 可以邮件至 daihuiyo@163.com </span>
