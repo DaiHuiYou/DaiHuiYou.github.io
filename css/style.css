@@ -1572,27 +1572,30 @@ a {
   -o-transition: color 0.35s;
   transition: color 0.35s;
 }
-h1,
-h2 {
-  font-family: sans-serif;
-  font-weight: normal;
-  margin-top: 30px;
-  color: #fff;
-  text-rendering: optimizelegibility;
-  border-bottom: 3px solid #fff;
+h1 {
+  font-size: 2.4rem;
 }
+h2 {
+  font-weight: 600;
+}
+h3 {
+  font-size: 1.4rem;
+}
+h1,
+h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: normal;
-  margin-top: 30px;
-  color: #fff;
-  text-rendering: optimizelegibility;
 }
-h1 {
-  font-size: 1.8em;
+h3 {
+  text-transform: uppercase;
+}
+h5,
+h6 {
+  font-weight: bold;
 }
 .nav {
   width: 542px;
