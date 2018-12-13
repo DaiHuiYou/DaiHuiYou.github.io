@@ -1557,10 +1557,9 @@ body {
   height: 100%;
   margin: 0;
   color: #283444;
-  font: 400 16px/1 "Open Sans", "Microsoft YaHei", sans-serif;
-  -webkit-font-smoothing: subpixel-antialiased;
-  -webkit-text-size-adjust: none;
-  overflow: hidden;
+  font-family: 'Questrial', sans-serif;
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
 }
 a {
   color: inherit;
