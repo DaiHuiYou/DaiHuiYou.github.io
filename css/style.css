@@ -550,7 +550,7 @@ div.ac > ul > li:before,
 .nav-left {
   width: 120px;
   height: 100%;
-  background: #666;
+  background: #283444;
   box-shadow: inset -15px 0 15px -15px #222;
   float: left;
   position: relative;
@@ -629,7 +629,7 @@ div.ac > ul > li:before,
   overflow-y: auto;
 }
 .nav-left ul li {
-  color: rgba(255,255,255,0.7);
+  color: #fff;
   line-height: 40px;
   text-align: center;
   border-bottom: 1px solid #fff;
