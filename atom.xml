@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.daihuiyou.top/"/>
-  <updated>2018-12-17T13:51:47.616Z</updated>
+  <updated>2018-12-27T03:19:03.968Z</updated>
   <id>https://www.daihuiyou.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>面向对象技术</title>
+    <link href="https://www.daihuiyou.top/2018/12/27/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%8A%80%E6%9C%AF/"/>
+    <id>https://www.daihuiyou.top/2018/12/27/面向对象技术/</id>
+    <published>2018-12-27T02:54:04.000Z</published>
+    <updated>2018-12-27T03:19:03.968Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="设计要求"><a href="#设计要求" class="headerlink" title="设计要求"></a>设计要求</h3><ol><li>从屏幕上输入学生信息并保存数据，例如采用文件方式保存。学生信息包括地址、出生日期、学科成绩（语文，英语，数学，物理）、个人信息（姓名，性别，民族，国籍，学历）、联系方式（手机，家庭电话，学校电话）等。</li><li>从文件中删除一个学生信息。</li><li>显示所有学生信息。</li><li>能够按编号或姓名对学生的信息进行检索并将检索结果显示在屏幕上。</li><li>能够对单个学生进行编辑。</li><li>可以统计全部学生的总成绩，及其在班上的排名。</li><li>能够统计各科的平均成绩及及格率。</li><li>要求有错误提示功能，例如性别只能输入男女，输入错误提示重新输入。</li><li>如果检索不到相应的信息应提示用户。</li><li>要求利用菜单的形式进行管理。</li></ol><h3 id="开发软件及编程语言"><a href="#开发软件及编程语言" class="headerlink" title="开发软件及编程语言"></a>开发软件及编程语言</h3><p><strong>VC++6.0 ，MFC， C++</strong></p><h3 id="成果展示"><a href="#成果展示" class="headerlink" title="成果展示"></a>成果展示</h3><p><img src="https://i.imgur.com/oh3GPQ8.png" alt=""></p><h3 id="完成时间"><a href="#完成时间" class="headerlink" title="完成时间"></a>完成时间</h3><p>Start: 2018-12-20  </p><p>End:   2018-12-27 </p><h3 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h3><p>黑马程序员 MFC 教程  <a href="https://www.bilibili.com/video/av20005978?from=search&amp;seid=3934139833389680533" target="_blank" rel="noopener">https://www.bilibili.com/video/av20005978?from=search&amp;seid=3934139833389680533</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+      <category term="选修" scheme="https://www.daihuiyou.top/categories/%E9%80%89%E4%BF%AE/"/>
+    
+    
+      <category term="选修" scheme="https://www.daihuiyou.top/tags/%E9%80%89%E4%BF%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>资源</title>
@@ -271,7 +296,7 @@
     <link href="https://www.daihuiyou.top/2018/11/01/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     <id>https://www.daihuiyou.top/2018/11/01/数据库/</id>
     <published>2018-11-01T00:47:08.000Z</published>
-    <updated>2018-11-30T15:18:46.487Z</updated>
+    <updated>2018-12-24T04:34:01.575Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="SQL基本概念"><a href="#SQL基本概念" class="headerlink" title="SQL基本概念"></a>SQL基本概念</h3><p><strong>数据库</strong>是一个以某种有组织的方式存储的数据集合. </p><p>表是一种结构化的文件, 可用来存储某种特定类型的数据.</p><p><strong>表</strong>:某种特定类型数据的结构化清单．</p><p><strong>模式</strong>：关于数据库和表的布局及特定的信息. </p><p>表由列组成. 列中存储着表中某部分的信息. </p><p><strong>列</strong>: 表中的一个字段. 所有表都是由一个或多个列组成的. </p><p>数据库中每个列都有相应的数据类型.数据类型定义列可以存储的数据种类.</p><p>表中数据都是按行存储的, 所保存的每个记录存储在自己行内. </p><p><strong>行</strong>：表中的一个记录.  记录和行互相代替. </p><p><strong>主键</strong>：一列(或一组列), 其值能够唯一区分表中每个行. </p><p>唯一标识表中的每行的这个列称为主键. </p><p><strong>SQL</strong>: 是结构化查询语言的缩写.</p><p>客户机-服务器应用分为两个不同的部分, 服务器部分是负责所有数据访问和处理的一个软件. 这个软件运行在称为数据服务其的计算机上. </p><p>与数据文件打交道的只有服务器软件. 关于数据, 数据添加, 删除和数据更新的所有请求都由服务器软件完成.这些请求或更改来自运行客户机软件的计算机. <strong>客户机</strong>是与用户打交道的软件.</p><p>​    <strong>客户机和如软件可能安装在两台计算机或一个计算机上. 不管他们在不在相同的计算机上, 为进行所有数据库交互, 客户机软件都要与服务器软件进行通信. </strong></p><p>​    所有这些活动对用户都是透明的. 数据存储在别的地方, 或者数据库服务器为你完成这个处理这一事实是隐藏的. 你不需要直接访问数据文件. 事实上, 多数网络的建立使用户不具有对数据的访问权, 甚至不具有对存储数据的驱动去的驱动器的访问权. </p><ul><li>服务器软件为MySQL DBMS. 你可以在本地安装的副本上运行, 也可以连接到运行在你具有访问权的远程服务期上的一个副本. </li><li>客户机可以是MySQL提供的工具, 脚本语言, web应用开发语言, 程序设计语言. </li></ul><p><strong>熟悉MySQL命令行实用程序,</strong></p><h3 id="数据库的基本概念："><a href="#数据库的基本概念：" class="headerlink" title="数据库的基本概念："></a>数据库的基本概念：</h3><p> 列/字段/属性/数据项（column/field/attribute/data item）</p><p>行/元组/记录（row/tuple/record）</p><p>关系模式： 表名 +表标题（格式）</p><p>表／关系：表名＋表标题（格式）＋表内容（值）</p><p>DataBase：相互之间有关联关系的Table的集合。</p><p>数据库： DB</p><p>数据库管理系统：DBMS</p><p>数据库应用：DBAP</p><p> 数据库管理员：DBA</p><p>DBMS提供了一套数据控制语言（DCL）给用户，DBA-&gt;DCL-&gt;DBMS</p><p>数据操作语言：DML，提供给用户，以便给用户对数据进行操作</p><p>数据控制语言：DCL，用户使用DCL；定义对不同操作的约束，对不同操作者的约束。</p><p>数据定义语言：DDL, 定义表名，表标题，列名其结构形式</p><p>SQL语言： DML, DCL, DDL， 结构化的数据库语言</p><p><strong>数据库语言与高级语言的区别：</strong></p><p>​    一条数据库语言相当于高级语言的一个或多个循环程序。 </p><p>数据模型——模式——数据</p><p>模式：外模式（子模式），概念模式（全局模式，逻辑模式），内模式（存储模式，物理模式）</p><p>E-C映像 ， C-I映像</p><p>三级模式两层映像：实现了逻辑独立性和物理独立性， 数据和应用程序的独立性</p><p>数据模型：</p><ul><li>关系模型</li><li>层次模型</li><li>网状模型</li></ul><p>关系模型的三个要素：</p><ol><li>基本结构</li><li>基本操作</li><li>完整性约束：实体完整性，参照完整性和用户自定义完整性</li></ol><p>关系运算：关系代数和关系演算；关系演算：元组演算和域演算</p><p>关系代数：基于集合的运算，即操作的对象和结果都是集合，是一次一集合的操作。而非关系型的数据操作通常是一次一记录的操作</p><p>“列“的取值范围“称为 ”域（Domain）”</p><p>笛卡尔积的每个元素（d1, d2,…..)称为一个n-元组</p><p>元组的每个值叫做一个分量。</p><p>笛卡尔积中具有某一方面意义的那些元组被称作一个关系。</p><p>关系模式和关系：关系模式是关系的结构，关系是关系模式在某一时刻的数据。</p><p>关系是笛卡尔积的子集。</p><p>列名（属性名）</p><p>列值（来自域）</p><p>关系的特性：</p><ol><li>列位置的互换性：区分哪一列是靠列名</li><li>行位置的互换性：区分哪一行是靠某一或某几列的值</li><li>关系是以内容来区的</li><li>属性不可再分特性：又被称为关系第一范式</li></ol><p>关系的任意两个元组不能完全相同。</p><p>Table：可能有重复的元组存在。</p><p>关系和Table（表） 大部分相同。</p><p>关系中的一个属性组，其值能唯一标识一个元组，若从该属性组总去掉任何一个属性，它就不具有这一性质了，这样的属性称作候选码。</p><p>当有多个候选码，可以选定一个作为主码。</p><p>DBMS以主码为主要线索管理关系中的各个元组。</p><p>主属性：包含在任何一个候选码的属性被称作主属性</p><p>外码/外键：两个关系通常是靠外码连接起来的。</p><p>关系模型中的完整性：</p><ol><li>实体完整性：关系的主码的属性值不能为空</li><li>参照完整性：相对于外码</li><li>用户自定义完整性：用户针对具体的应用环境定义的完整性的约束条件。</li></ol><h3 id="关系代数基本操作："><a href="#关系代数基本操作：" class="headerlink" title="关系代数基本操作："></a>关系代数基本操作：</h3><p>并相容性</p><p>并</p><p>差</p><p>广义笛卡尔积</p><p>选择操作</p><p>投影操作</p><p>关系代数的基本书写思路：</p><ol><li>选出将用到的关系/表</li><li>做“积”运算</li><li>做悬着运算保留所需的行/元组</li><li>做投影运算保留所需的列/属性</li></ol><p>扩张操作</p><p>交运算</p><p>连接操作：在乘积操作的基础上，在做一个选择操作。</p><p>更名操作</p><p>等值连接</p><p>自然连接</p><p>除运算</p><p>关系代数  和 关系演算 </p><p>关系演算：元组演算和域演算</p><p>E-R关系图： 实体表示方框， 属性表示椭圆， 关系表示菱形。</p><p>抽象是理解，区分，命名，表达</p><p>实体， 属性，联系， 关键字（码）</p><p>属性：单一属性和复合属性</p><p>关键字/码，实体中能够用其值唯一区分每个实体的属性或属性组合。</p><p>参与发生联系的实体的数目，称为联系的度， 联系是多样化的。</p><p>实体在联系中的作用称为实体的角色</p><p>当同一实体的不同实例参与一个联系时，为区别各实例参与联系的方式，需要显示指明其角色。</p><p>实体之间的联系有很多种类。</p><p>完全参与联系</p><p>部分参与联系</p><p>不同层次的型与值</p><p>数据模型：概念 </p><h3 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h3><p><img src="https://i.imgur.com/gvifg33.png" alt=""></p>]]></content>
     

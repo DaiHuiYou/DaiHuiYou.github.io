@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[面向对象技术]]></title>
+    <url>%2F2018%2F12%2F27%2F%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%8A%80%E6%9C%AF%2F</url>
+    <content type="text"><![CDATA[设计要求 从屏幕上输入学生信息并保存数据，例如采用文件方式保存。学生信息包括地址、出生日期、学科成绩（语文，英语，数学，物理）、个人信息（姓名，性别，民族，国籍，学历）、联系方式（手机，家庭电话，学校电话）等。 从文件中删除一个学生信息。 显示所有学生信息。 能够按编号或姓名对学生的信息进行检索并将检索结果显示在屏幕上。 能够对单个学生进行编辑。 可以统计全部学生的总成绩，及其在班上的排名。 能够统计各科的平均成绩及及格率。 要求有错误提示功能，例如性别只能输入男女，输入错误提示重新输入。 如果检索不到相应的信息应提示用户。 要求利用菜单的形式进行管理。 开发软件及编程语言VC++6.0 ，MFC， C++ 成果展示 完成时间Start: 2018-12-20 End: 2018-12-27 参考教程黑马程序员 MFC 教程 https://www.bilibili.com/video/av20005978?from=search&amp;seid=3934139833389680533]]></content>
+      <categories>
+        <category>选修</category>
+      </categories>
+      <tags>
+        <tag>选修</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[资源]]></title>
     <url>%2F2018%2F12%2F17%2F%E8%B5%84%E6%BA%90%2F</url>
     <content type="text"><![CDATA[前端note ：前阿里架构师整理出来的资料 ps 链接: https://pan.baidu.com/s/1mjYbcJA 密码：pqdt HTML5+CSS3 从入门到精通.iso 链接: https://pan.baidu.com/s/1cUHz3o 密码：gdyw Javascript 视频教程 链接: https://pan.baidu.com/s/1i6eC5YP 密码：ku5k Jquery 视频教程 链接：https://pan.baidu.com/s/17DbNSnR3q5OGSjdw9tvCEA 密码：twcp Bootstrap 视频教程 链接: https://pan.baidu.com/s/1jKb2UDS 密码：wr8c Vue.js 链接: https://pan.baidu.com/s/1slYqBa1 密码：75xd Smarty 模板引擎视频教程 链接: https://pan.baidu.com/s/1smewom5 密码：v8vp Nodejs 链接: https://pan.baidu.com/s/1sm509GD 密码：fux1 Mysql 视频教程 链接: https://pan.baidu.com/s/1kVTdjcr 密码：e37d PHP 视频教程 链接: https://pan.baidu.com/s/1kWE0qZP 密码：xc4q oracle 视频教程 链接: https://pan.baidu.com/s/1i6jwpal 密码：hk6p nginx 视频教程 链接: https://pan.baidu.com/s/1nxccLg1 密码：x2q8 ajax 链接: https://pan.baidu.com/s/1dHctdXv 密码：jfwf mongodb 视频教程 链接: https://pan.baidu.com/s/1c3EE7U4 密码：7v8b Angular.js 链接: https://pan.baidu.com/s/1jJhYrEu 密码：ddci React 链接: https://pan.baidu.com/s/1nwnrQxb 密码：942g dedeCMS 织梦视频 链接: https://pan.baidu.com/wap/init?surl=bpQBCbP 密码：ikns ThinkPHP 视频教程 链接: https://pan.baidu.com/wap/init?surl=ggiKvYV 密码：7p5h 案例和总结 链接: https://pan.baidu.com/wap/init?surl=eTSNB5C 密码：5rx7 天猫商城购物车实战 链接: https://pan.baidu.com/wap/init?surl=smVjb7v 密码：cu4c Java 学科链接：https://pan.baidu.com/wap/init?surl=DtnDNv1p9ENZETLqIuKytw 密码：82lk Python 链接：https://pan.baidu.com/wap/init?surl=scBXSLdiTs9SBixdkykflw 密码：ck51 node.js 微信开发链接： https://pan.baidu.com/wap/init?surl=5tYBZ2yVz9aPO57LKqt7Mg 密码：jrwb 数据分析与挖掘高级工程师课程链接： https://pan.baidu.com/s/1me3jTNxoKY6mQkPE-KnJtw提取码：fe2a]]></content>
