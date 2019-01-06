@@ -1,14 +1,9 @@
-https://www.daihuiyou.top/2018/12/27/面向对象技术/
-https://www.daihuiyou.top/2018/12/17/资源/
-https://www.daihuiyou.top/2018/12/12/CET-6/
-https://www.daihuiyou.top/2018/12/10/计算机科学概论/
 https://www.daihuiyou.top/2018/12/02/C++Primer/
 https://www.daihuiyou.top/2018/11/30/硅谷来信/
 https://www.daihuiyou.top/2018/11/28/C-C复习/
 https://www.daihuiyou.top/2018/11/22/算法精解/
 https://www.daihuiyou.top/2018/11/16/暗时间/
 https://www.daihuiyou.top/2018/11/10/高质量C-C-编程指南/
-https://www.daihuiyou.top/2018/11/08/设计模式/
 https://www.daihuiyou.top/2018/11/01/数据库/
 https://www.daihuiyou.top/2018/10/11/数据结构/
 https://www.daihuiyou.top/2018/10/11/C++/

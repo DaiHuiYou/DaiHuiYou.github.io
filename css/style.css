@@ -1561,6 +1561,12 @@ body {
   font-size: 18px;
   -webkit-font-smoothing: antialiased;
 }
+body {
+  background-image: url("/source/img/blue.png");
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-size: contain;
+}
 a {
   color: inherit;
   text-decoration: none;
