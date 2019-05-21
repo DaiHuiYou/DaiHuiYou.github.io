@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
-  <title>about | Will&#39;s notebook</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="about | Will&#39;s notebook">
+  <title>程序设计 | Will&#39;s notebook</title>
+  <meta name="keywords" content=" 程序设计 ">
+  <meta name="description" content="程序设计 | Will&#39;s notebook">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="About me:">
 <meta name="keywords" content="笔记 生活">
@@ -284,19 +284,25 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="page-" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <article id="post-程序设计" class="article article-type-post" itemscope="" itemprop="blogPost">
     
-        <h1 class="article-title">about</h1>
+        <h1 class="article-title">程序设计</h1>
     
     <div class="article-meta">
         
         
         
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color5">程序设计</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title="更新时间: 2018-11-11 21:39:02">2018-11-09 18:46</time>
+        创建时间:<time class="date" title="更新时间: 2019-05-21 20:26:03">2019-05-21 20:21</time>
         
     </div>
     <div class="article-meta">
@@ -307,7 +313,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#程序设计："><span class="toc-text">程序设计：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#C-类方法和-C-函数的区别"><span class="toc-text">C++ 类方法和 C 函数的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对象调用成员方法和类调用成员方法："><span class="toc-text">对象调用成员方法和类调用成员方法：</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -322,9 +328,21 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>About me:</p>
-<iframe height="265" scrolling="no" title="Fancy Animated SVG Menu" src="http://codepen.io/jeangontijo/embed/OxVywj/?height=265&theme-id=0&default-tab=css,result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;"></iframe>
-
+        <p><code></code></p>
+<h3 id="程序设计："><a href="#程序设计：" class="headerlink" title="程序设计："></a>程序设计：</h3><p>面向对象： 强调数据，名词为类，动词为该类的成员方法。</p>
+<p>面向过程：整体到局部。</p>
+<h3 id="C-类方法和-C-函数的区别"><a href="#C-类方法和-C-函数的区别" class="headerlink" title="C++ 类方法和 C 函数的区别"></a>C++ 类方法和 C 函数的区别</h3><ul>
+<li><strong>在变量的角度</strong></li>
+</ul>
+<p>在C语言的函数中，只能使用 local variable（函数内部的所有变量），global variable （独立于该函数外的所有变量）。</p>
+<p>在C++的 类方法中，可以使用 局部变量，可以使用属于对象的成员变量，可以使用属于类的静态成员变量，以及属于该文件的全局变量。 </p>
+<ul>
+<li><strong>在数据输出的角度</strong></li>
+</ul>
+<p>C语言的函数在执行后，通过形参 pointer 来返回结果 或 通过 return 返回结果。结果只能是局部变量的值或者全局变量。</p>
+<p>C++的类方法在执行后，可以通过 形参 或者 return  输出 成员变量，静态成员变量， 全局变量，局部变量的值或引用。</p>
+<h3 id="对象调用成员方法和类调用成员方法："><a href="#对象调用成员方法和类调用成员方法：" class="headerlink" title="对象调用成员方法和类调用成员方法："></a>对象调用成员方法和类调用成员方法：</h3><p>obj.func(): 对象调用成员方法，可能会改变对象状态，也就是说将对象中的成员变量的值因成员方法的调用而所改变。</p>
+<p>Class.func(): 类调用成员方法， 由于类无成员变量， 静态成员变量除外。所以 类调用成员方法只是单纯调用函数。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 感谢你的浏览,期待你的反馈, 可以邮件至 daihuiyo@163.com </span>
