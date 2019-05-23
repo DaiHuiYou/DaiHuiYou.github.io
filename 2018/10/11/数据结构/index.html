@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
-  <title>排序 | Will&#39;s notebook</title>
-  <meta name="keywords" content=" 算法与数据结构 ">
-  <meta name="description" content="排序 | Will&#39;s notebook">
+  <title>数据结构 | Will&#39;s notebook</title>
+  <meta name="keywords" content=" 程序语言 ">
+  <meta name="description" content="数据结构 | Will&#39;s notebook">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="About me:">
 <meta name="keywords" content="笔记 生活">
@@ -286,9 +286,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-排序" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <article id="post-数据结构" class="article article-type-post" itemscope="" itemprop="blogPost">
     
-        <h1 class="article-title">排序</h1>
+        <h1 class="article-title">数据结构</h1>
     
     <div class="article-meta">
         
@@ -296,21 +296,21 @@
         
         <span class="book">
             
-            <a href="javascript:" data-rel="c++">c++</a>
+            <a href="javascript:" data-rel="程序语言">程序语言</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color3">算法与数据结构</a>
+            <a href="javascript:" class="color5">程序语言</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title="更新时间: 2019-03-04 22:38:40">2019-01-04 13:13</time>
+        创建时间:<time class="date" title="更新时间: 2019-05-24 07:58:05">2018-10-11 08:53</time>
         
     </div>
     <div class="article-meta">
@@ -321,7 +321,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#O-n-2"><span class="toc-text">O(n^2)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-选择排序"><span class="toc-text">1 . 选择排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-插入排序"><span class="toc-text">2. 插入排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-希尔排序"><span class="toc-text">3. 希尔排序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#O-nlogN"><span class="toc-text">O(nlogN)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-归并排序"><span class="toc-text">1. 归并排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-快速排序"><span class="toc-text">2. 快速排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-堆排序"><span class="toc-text">3. 堆排序</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#for循环常用写法"><span class="toc-text">for循环常用写法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#循序栈和链式栈"><span class="toc-text">循序栈和链式栈</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#线性表顺序存储和链式存储"><span class="toc-text">线性表顺序存储和链式存储</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基本概念"><span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二叉树"><span class="toc-text">二叉树</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#二叉树的表示法"><span class="toc-text">二叉树的表示法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二叉树遍历"><span class="toc-text">二叉树遍历</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#树的非递归中序遍历"><span class="toc-text">树的非递归中序遍历</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#图"><span class="toc-text">图</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -336,219 +336,507 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="O-n-2"><a href="#O-n-2" class="headerlink" title="O(n^2)"></a>O(n^2)</h2><h3 id="1-选择排序"><a href="#1-选择排序" class="headerlink" title="1 . 选择排序"></a>1 . 选择排序</h3><pre><code class="c++">// 未优化
-template&lt;typename T&gt;
-void selectionSort1(T arr[], int n)
+        <h3 id="for循环常用写法"><a href="#for循环常用写法" class="headerlink" title="for循环常用写法"></a>for循环常用写法</h3><p>date: 2018-09-27 11:03:38</p>
+<pre><code class="c++">void main()
 {
-    for (int i = 0; i &lt; n; i++) {
-        for (int j = i + 1; j &lt; n; j++) {
-            if (arr[j] &lt; arr[i])
-                swap(arr[j], arr[i]);
-        }
-    }
 
-    return;
-}
+    int  i = 0;
+    int a[20];
+    int len = 10;
+    int pos = 5;
 
-// 优化
-template &lt;typename T&gt;
-void selectionSort2(T arr[], int n)
-{
-    for (int i = 0; i &lt;= n - 1; i++){
+    i = i - 1; /*结果:i = -1; 不是溢出.*/
+    printf(&quot;i = %d\n&quot;, i);
+    /*数组赋值*/
+    for (i = 0; i &lt; len; i++)
+        a[i] = i + 1;
+    printf(&quot;\n&quot;);
+    /*逆序打印*/
+    for (i = len-1; i &gt;=0; i--)
+        printf(&quot;%d &quot;, a[i]);
+    printf(&quot;\n&quot;);
 
-        int minIndex = i;
-        for (int j = i+1; j &lt;= n - 1; j++) {
-            if (arr[minIndex] &gt; arr[j])
-                minIndex = j;
-        }
-
-        swap(arr[minIndex], arr[i]);
-    }
-    return;
-}
-
-
-</code></pre>
-<ul>
-<li>测试</li>
-</ul>
-<p>从 1 万个 0~100 的随机数中，从小到大排序。</p>
-<p>selectionSort1 :  <font color="red"> 2.208 s </font></p>
-<p>selectionSort2  : <font color="red">0.108 s</font></p>
-<h3 id="2-插入排序"><a href="#2-插入排序" class="headerlink" title="2. 插入排序"></a>2. 插入排序</h3><pre><code class="c++">// 未优化
-template&lt;typename T&gt;
-void InsertionSort1(T arr[], int n)
-{
-    for (int i = 1; i &lt; n; i++)
+    /*插入元素, 往后移动元素(倒序循环)*/
+    for (i = len-1; i &gt;=5; i--)/* 往后移动 倒序循环*/
     {
-        for (int j = i; j &gt; 0 &amp;&amp; arr[j] &lt; arr[j - 1]; j--) {
-            swap(arr[j], arr[j - 1]);
-        }
-    }    
-}
-
-// 优化
-template&lt;typename T&gt;
-void InsertionSort2(T arr[], int n) {
-
-    for (int i = 1; i &lt; n; i++) {
-
-        T e = arr[i];
-        int j;
-        for (j = i; j &gt; 0 &amp;&amp; arr[j - 1] &gt; e; j--)
-            arr[j] = arr[j - 1];
-        arr[j] = e;
+        a[i+1] = a[i];  /*表示最后要插入a[6] = a[5] */
     }
+    a[5] = 0;
+    len = len + 1;    
+    /*逆序打印*/
+    for (i = len-1; i &gt;= 0; i--)
+        printf(&quot;%d &quot;, a[i]);
+    printf(&quot;\n&quot;);
+    /*删除元素, 往前移动(正序循环)*/
+    for (i = 5; i &lt;len; i++) /*向前移动, 正序循环*/
+    {
+        a[i] = a[i+1];
+    }
+    len = len - 1;
+    /*逆序打印*/
+    for (i = len - 1; i &gt;= 0; i--) //倒序循环
+        printf(&quot;%d &quot;, a[i]);
+    printf(&quot;\n&quot;);
 
-    return;
+    printf(&quot;\n&quot;);
+    printf(&quot;hello.&quot;);
+    system(&quot;pause&quot;);
 }
 
+
+/*
+总结:
+符号要注意区分, 正序循环&lt; 和 倒序循环&gt;
+A: 正序循环 for(i=0; i&lt;len; i++)   
+           for(i=1; i&lt;=len; i++)
+B: 倒序循环 for(i=len-1; i&lt;=0; i--) //数组采用这种方式, 大于号和小于号
+           for(i=len; i&lt;0; i--)
+ */
 </code></pre>
-<ul>
-<li>测试</li>
-</ul>
-<p>从1万个 0~100 的随机数中，从小到大排序。</p>
-<p>InsertionSort1 : <font color="red">2.653 s </font></p>
-<p>InsertionSort2 : <font color="red">0.064 s</font></p>
-<h3 id="3-希尔排序"><a href="#3-希尔排序" class="headerlink" title="3. 希尔排序"></a>3. 希尔排序</h3><pre><code class="c++">// 希尔排序
-template&lt;typename T&gt;
-// n 表示数组 capacity
-void shellSort(T arr[], int n)
+<h3 id="循序栈和链式栈"><a href="#循序栈和链式栈" class="headerlink" title="循序栈和链式栈"></a>循序栈和链式栈</h3><p>date: 2018-09-25 15:54:15</p>
+<p>stack的采用模型：</p>
+<p>线性表的链式存储：头插法　　　</p>
+<p>线性表的顺序存储：尾插法　</p>
+<h3 id="线性表顺序存储和链式存储"><a href="#线性表顺序存储和链式存储" class="headerlink" title="线性表顺序存储和链式存储"></a>线性表顺序存储和链式存储</h3><p>date: 2018-09-23 19:46:15</p>
+<p>单独把结点的指针域 声明成结构体数据类型， </p>
+<p>指针指向谁， 就把谁的地址赋给指针。</p>
+<p><strong>note:</strong></p>
+<p>wrong:</p>
+<pre><code class="c++">current-&gt;next = node-&gt;next;
+node = current-&gt;next;        // what is wrong?   node is not pointer filed and can&#39;t be assigned.
+</code></pre>
+<p>right:</p>
+<pre><code class="c++">    node-&gt;next = current-&gt;next;
+    current-&gt;next = node;
+</code></pre>
+<p><strong>LinkList Test FrameWork</strong></p>
+<pre><code class="c++">#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdio.h&gt;
+#include &quot;linklist.h&quot;
+
+typedef struct Teahcer
 {
-    int cnt = n - 1;  // 数组元素个数
-    int tmp = 0;       // 临时变量
+    LinkListNode *node;
+    int age;
+    int name[64];
+}Teacher;
+void main()
+{
+    int len = 0;
+    int i = 0;
+    Teacher *tmp = NULL;
+    LinkList *list = NULL;      //note: list is handle that is void type.    list = LinkListCreate();
+    Teacher t1, t2, t3, t4, t5;
+    t1.age = 31;
+    t2.age = 32;
+    t3.age = 33;
+    t4.age = 34;
+    t5.age = 35;
 
-    // d：distance， 
-    for (int d = n/2; d&gt;=1; d=d/2) {
-        // 遍历
-        for (int i = d; i &lt;=cnt; i++) {
-            // 插入排序
-            tmp = arr[i];
-            for ( int j = i - d; j&gt;=0 &amp;&amp; arr[j + d] &lt; arr[j]; j = j - d) {
-                arr[j + d] = arr[j];
-                arr[j] = tmp;
-            }
+    list = LinkListCreate();
+    LinkListInsert(list, (LinkListNode*)&amp;t1, 0);
+    LinkListInsert(list, (LinkListNode*)&amp;t2, 0);
+    LinkListInsert(list, (LinkListNode*)&amp;t3, 0);
+    LinkListInsert(list, (LinkListNode*)&amp;t4, 0);
+    LinkListInsert(list, (LinkListNode*)&amp;t5, 0);
+
+    len = LinkListGetLength(list);
+    for (i = 0; i &lt; len; i++)
+    {
+        tmp = (Teacher*)LinkListGetElement(list, i);
+        if (tmp != NULL)
+        {
+            printf(&quot;age: %d &quot;, tmp-&gt;age);
         }
+    }
+    printf(&quot;\n&quot;);
+
+    //note: This function deletes LinkList element at the position.
+    LinkListDeleteElement(list, 2);
+
+    printf(&quot;After delete element. \n &quot;);
+    len = LinkListGetLength(list);
+    for (i = 0; i &lt; len; i++)
+    {
+        tmp = (Teacher*)LinkListGetElement(list, i);
+        if (tmp != NULL)
+        {
+            printf(&quot;age: %d &quot;, tmp-&gt;age);
+        }
+    }
+    printf(&quot;\n&quot;);
+
+    LinkListClear(list);
+
+
+    printf(&quot;hello.&quot;);
+    system(&quot;pause&quot;);
+}
+</code></pre>
+<p><strong>linklist.h</strong></p>
+<pre><code class="c++">#pragma once
+
+#ifndef _LINKLIST_H
+#define _LINKLIST_H
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdio.h&gt;
+#endif
+
+/*
+    LinkList API
+*/
+typedef void LinkList;
+
+typedef struct _tag_LinkListNode
+{
+    struct _tag_LinkListNode *next;
+
+}LinkListNode; //Node type   It&#39;s a great heavest for me..  
+
+LinkList *LinkListCreate();
+
+int LinkListClear(LinkList *list);
+
+LinkListNode * LinkListGetElement(LinkList *list, int pos);
+
+int LinkListInsert(LinkList *list, LinkListNode *node, int pos);
+
+int LinkListDeleteElement(LinkList *list, int pos);
+
+int LinkListGetLength(LinkList *list);
+</code></pre>
+<p><strong>linklist.c</strong></p>
+<pre><code class="c++">#include &quot;linklist.h&quot;
+
+typedef struct _tag_LinkList
+{
+    LinkListNode header;
+    int length;
+}TLinkList; //It&#39;s still LinkListNode type.
+
+LinkList *LinkListCreate()
+{
+    TLinkList *ret = (TLinkList *)malloc(sizeof(TLinkList)); //alocate memory. 
+    if (ret == NULL)
+    {
+        return NULL;
+    }
+    ret-&gt;length = 0;
+    ret-&gt;header.next = NULL;
+    return ret;
+}
+
+int LinkListClear(LinkList *list)
+{
+    if (list == NULL)
+    {
+        return 0;
+    }
+    TLinkList *tlist = (TLinkList *)list;
+    free(tlist);
+    return 0;
+}
+
+LinkListNode * LinkListGetElement(LinkList *list, int pos)
+{
+    int i = 0;
+
+    TLinkList *tlist = NULL;
+    LinkListNode *current = NULL;
+    LinkListNode *ret = NULL;
+
+    tlist = (TLinkList*)list; //handle(void type) have turn to Tlinklist(struct type);
+    current = &amp;tlist-&gt;header; 
+    if (list == NULL || pos &lt; 0 || pos &gt;= tlist-&gt;length)
+    {
+        return NULL;
+    }
+
+
+    for (i = 0; i &lt; pos &amp;&amp; (current-&gt;next != NULL); i++)
+    {    
+        current = current-&gt;next;
+    }
+    ret = current-&gt;next;
+    return     ret;
+}
+
+int LinkListInsert(LinkList *list, LinkListNode *node, int pos)
+{
+    int i = 0;
+    TLinkList  *tlist = (TLinkList*)list; //transfrom
+    LinkListNode *current = NULL;
+    LinkListNode *ret = NULL;
+
+    current = &amp;tlist-&gt;header;
+
+    for (i = 0; i&lt;pos &amp;&amp; (current-&gt;next != NULL); i++)
+    {
+        current = current-&gt;next;
+    }
+    //insert elememt;
+    ret = current-&gt;next; //sort information, avoid that It can&#39;t find the next element;
+    current-&gt;next = node;
+    node-&gt;next = ret;
+    tlist-&gt;length++;
+    return 0;
+}
+
+int LinkListDeleteElement(LinkList *list, int pos)
+{
+    int i = 0;
+
+    LinkListNode  *current = NULL;
+    LinkListNode *ret = NULL;
+    TLinkList *tlist = (TLinkList *)list;
+
+    current = &amp;tlist-&gt;header;
+    if (list == NULL || pos &lt;0 || pos &gt;= tlist-&gt;length)
+    {
+        return NULL;
+    }
+
+    for (i = 0; i &lt; pos; i++)
+    {
+        current = current-&gt;next;
+    }
+    ret = current-&gt;next;
+    current-&gt;next = ret-&gt;next;
+    return 0;
+}
+
+int LinkListGetLength(LinkList *list)
+{
+    int ret = 0;
+    TLinkList *tlist = (TLinkList* )list;
+    ret = tlist-&gt;length;
+    return ret;
+}
+</code></pre>
+<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>date: 2018-09-22 14:22:10</p>
+<p>数据元素： 是组成数据的、有一定意义的基本单位，在计算机中通常作为整体处理。也被成为记录。</p>
+<p>数据项：一个数据元素可以由若干个数据项组成。</p>
+<p>数据对象： 是性质相同的数据元素的集合，是数据的子集。</p>
+<p>抽象数据类型（Abstract Data Type， ADT）： 是指一个数学模型及定义在该模型上的一组操作。  </p>
+<p>逻辑结构：集合结构，线性结构，树形结构，图形结构</p>
+<p>物理结构：顺序存储结构，链接存储结构。</p>
+<p>好的算法还应该具备时间效率高和存储量低的特点。　　</p>
+<p>线性阶：      </p>
+<pre><code class="c++">int i;
+for(i=0; i&lt;n; i=+)
+{
+
+}
+//对数阶： 
+int count = 1;
+while (count  &lt; n)
+{
+count = count * 2;
+}
+
+//平方阶：  
+int i, j;
+for (i = 0; i &lt; n; i++)
+{
+    for (j = 0; j &lt; n; j++)
+    {
+
     }
 }
 
+//时间复杂（m*n):  
+int i, j;
+for (i = 0; i &lt; n; i++)
+{
+    for (j = i; j &lt; n; j++)
+    {
+        /*时间复杂度*/
+    }
+}
+//数列计算: n + (n-1) + (n-2) + ....+ 1 = n*(n+1)/2;
+/*
+最坏情况运行时间是一种保证， 那就是运行时间将不会再坏。在应用中，这是一种最重要的需求，通常，除非特别指定，我们提到的运行时间都是最坏情况的运行时间。  
+
+平均时间是所有情况中最有意义的，因为他是期望的运行时间。
+
+一般没有特殊说明的情况下， 都是指最坏时间复杂度。
+/*
 </code></pre>
-<ul>
-<li><p>测试</p>
-<p>从 1 万个 0~100 的随机数中，从小到大排序。</p>
-<p>Insertion Sort  :  <font color="red">6.332 s </font></p>
-<p>Shell Sort       : <font color="red">0.029 s</font></p>
+<p><strong>可以通过算法的时间复杂度的估算， 判断自己写的代码是否效率低下，是不是可以通过优化让计算机更加快速高效。</strong></p>
+<p>线性表的抽象数据类型 :</p>
+<ol>
+<li>时间复杂度</li>
+<li><p>空间复杂度  </p>
 </li>
-</ul>
-<h2 id="O-nlogN"><a href="#O-nlogN" class="headerlink" title="O(nlogN)"></a>O(nlogN)</h2><h3 id="1-归并排序"><a href="#1-归并排序" class="headerlink" title="1. 归并排序"></a>1. 归并排序</h3><h3 id="2-快速排序"><a href="#2-快速排序" class="headerlink" title="2. 快速排序"></a>2. 快速排序</h3><pre><code class="c++">int __partition(int arr[], int l, int r)
-{
-    int v = arr[l];
-
-    int j = l;
-    for (int i = l + 1; i &lt;= r; i++) {
-        if (arr[i] &lt; v) {
-            j++;
-            swap(arr[i], arr[j]);
-        }
-    }
-
-    swap(arr[j], arr[l]);
-    return j;
-}
-
-void __quickSort(int arr[], int l, int r)
-{
-    if (l &gt;= r)
-        return;
-
-    int p = __partition(arr, l, r);
-    __quickSort(arr, l, p - 1);
-    __quickSort(arr, p + 1, r);
-}
-
-// 快速排序
-void quickSort(int arr[], int n)
-{
-    __quickSort(arr, 0, n - 1);
-}
-</code></pre>
-<h3 id="3-堆排序"><a href="#3-堆排序" class="headerlink" title="3. 堆排序"></a>3. 堆排序</h3><pre><code class="c++">void shiftDown(int arr[], int n, int k)
-{
-    while (2 * k + 1 &lt; n) {
-        int j = 2 * k + 1;
-        if (j+1&lt;n &amp;&amp; arr[j] &lt; arr[j + 1]) {
-            j++;
-        }
-        if (arr[k] &lt; arr[j]) {
-            swap(arr[k], arr[j]);
-            k = j;
-        }
-        else
-            break;
-    }
-}
-
-void heapSort1(int arr[], int n)
-{
-    // heapify
-    for (int i = (n - 1) / 2; i &gt;= 0; i--) {
-        shiftDown(arr, n, i);
-    }
-
-    for (int i = n - 1; i &gt; 0; i--) {
-        swap(arr[0], arr[i]);
-        shiftDown(arr, i, 0);
-    }
-}
-
-// n 为数组元素个数
-// k 当前要筛选的索引
-// arr[0] 为临时存储变量
-void shift(int arr[], int n, int k) 
-{
-    while (2 * k &lt; n) {
-        int j = 2 * k;
-        if (j + 1 &lt; n &amp;&amp; arr[j] &lt; arr[j + 1])
-            j++;
-        if (arr[k] &lt; arr[j]) {
-            // arr[j] 与 arr[k] 交换
-            arr[0] = arr[j];
-            arr[j] = arr[k];
-            arr[k] = arr[0];
-
-            k = j;
-        }
-        else 
-            break;
-    }
-}
-
-// n 为数组元素个数
-// arr[0] 为临时存储变量
-void heapSort2(int arr[], int n)
-{
-    for (int i = (n - 1) / 2; i &gt;= 1; i--) {
-        shift(arr, n, i);
-    }
-
-    for (int i = n - 1; i &gt;=2; i--) {
-        // arr[i] 与 arr[1] 交换
-        arr[0] = arr[i];
-        arr[i] = arr[1];
-        arr[1] = arr[0];
-
-        shift(arr, i, 1);
-    }
-
-}
-</code></pre>
-<ul>
-<li><p>测试</p>
-<p>从100 万个 0~100 的随机数中，从小到大排序。</p>
-<p>Heap Sort 1 : <font color="red">2.228 s </font></p>
-<p>Heap Sort 2 : <font color="red">0.248 s</font></p>
+<li><p>时间换空间  </p>
 </li>
+<li><p>空间换时间</p>
+</li>
+</ol>
+<p>　</p>
+<h3 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h3><p>定义： 是 n(n&gt;=0)个结点的有限集合，由一个根结点以及两颗互不相交的，分别成为左子树和右子树的二叉树组成。</p>
+<p>基本特征：每个结点最多只有两颗子树； 左子树和右子树次序不能颠倒（有序树）</p>
+<p>二叉树性质： 对于任何一颗二叉树，若2度的节点数有 n 个，则叶子数必定为 n+1。</p>
+<p>满二叉树：每层都“充满”了结点。</p>
+<p>完全二叉树： 第 k-1 层 和满二叉树的一样； 最后一层，叶子节点尽力靠左。</p>
+<p>性质： <strong>对完全二叉树，若从上至下，从左到右编号，则编号为 i 的结点，其左孩子编号必为 2i， 其右孩子编号必为 2i+1， 其双亲的编号必为 i/2.</strong> 可以通过数组下标，隐藏地找到其左孩子和右孩子。 </p>
+<p>不是完全二叉树， 则一律转为完全二叉树。 将各层空缺处统统补上”虚结点“， 其内容为空。</p>
+<h4 id="二叉树的表示法"><a href="#二叉树的表示法" class="headerlink" title="二叉树的表示法"></a><strong>二叉树的表示法</strong></h4><p>二叉树的二叉链表 表示法</p>
+<p>二叉树的三叉链表 表示法： 添加了 Parent Position</p>
+<p>二叉树的双亲链表 Parent）： 子结点中保存了 双亲的位置。</p>
+<p>​    </p>
+<pre><code class="c">//二叉链 表示法 
+typedef struct BitNode {
+    int data;
+    struct BitNode *lchild, *rchild;
+}BitNode, *BitNode;
+
+//三叉链表
+typedef struct TriNode {
+    int data;
+    struct TriNode *lchild, *rchild;
+    struct TriNode *parent;
+}TriNode, *TriNode;
+
+//双亲表示法
+#define MAX_TREE_SIZE 100
+typedef struct BPTNode {
+    int data;
+    int parentPosition;
+    char LRTag;
+}BPTNode;
+
+typedef struct BPTree {
+    BPTNode nodes[MAX_TREE_SIZE];
+    int num_node;
+    int root;
+}BPTree;
+</code></pre>
+<h4 id="二叉树遍历"><a href="#二叉树遍历" class="headerlink" title="二叉树遍历"></a>二叉树遍历</h4><p>先序遍历： DLR， 先根再左再右</p>
+<p>中序遍历： LDR， 先左再根再右</p>
+<p>后序遍历： LDR，先左再右再根</p>
+<p>总结： 顺序都是相对于根（root）来说的。</p>
+<p>二叉树表示算数表达式： </p>
+<ol>
+<li>先序遍历： 前缀表示法</li>
+<li>中序遍历： 中缀表示法</li>
+<li>后序遍历： 后缀表示法</li>
+</ol>
+<p>对遍历的分析：</p>
+<p>1.从前面的三种遍历算法可以知道：如果将 printf 语句抹去，从递归的角度看， 这三种算法是完全相同的，或者说者三种遍历算法的访问路径是相同，知识访问结点的时机不同。</p>
+<p>从虚线的出发点到终点的路径上，每个结点经过3次。</p>
+<p>第 1 次经过时访问 = 先序遍历</p>
+<p>第 2 次经过时访问 = 中序遍历</p>
+<p>第 3 次经过时访问 = 后序遍历</p>
+<h3 id="树的非递归中序遍历"><a href="#树的非递归中序遍历" class="headerlink" title="树的非递归中序遍历"></a>树的非递归中序遍历</h3><pre><code class="c++">/*
+步骤1： 
+如果结点有左子树，该结点入栈；
+若果结点没有左子树，访问该结点
+步骤2： 
+如果结点有右子树，重复步骤1；
+如果结点没有右子树（结点访问完毕），根据栈顶指示回退，访问栈顶元素，并访问右子树，重复步骤1
+如果栈为空，表示遍历结束。
+*/
+#include &lt;iostream&gt;
+using namespace std;
+#include &quot;stack&quot;
+
+typedef struct BitNode {
+    int data;
+    struct BitNode *lchild;
+    struct BitNode *rchild;
+}BitNode;
+
+//参数列表: BitNode *T, stack(BitNode *&gt; &amp;s
+//返回值: BitNode *
+BitNode *goLeft(BitNode *T, stack&lt;BitNode *&gt; &amp;s) {   //&amp;s 引用类型
+    if (T == NULL) {
+        return NULL;
+    }
+    while (T-&gt;lchild != NULL) {
+        //如果有左子树， 该结点入栈，并指向左子树。
+        s.push(T);
+        T = T-&gt;lchild;
+    }
+    //如果没有左子树， 返回该结点。
+    return T;
+}
+void inOrder(BitNode *T) {
+    BitNode *t = NULL;
+    stack&lt;BitNode *&gt;s;
+
+    t = goLeft(T, s);
+    while (t) {
+        printf(&quot;%d &quot;, t-&gt;data); // 访问该结点
+        //如果t有右子树，重复步骤1
+        if (t-&gt;rchild != NULL) {
+            t = goLeft(t-&gt;rchild, s);
+        }
+        // 如果t没有右子树，根据栈顶提示，回退
+        else if (!s.empty()) {
+            t = s.top();
+            s.pop();
+        }
+        // 如果没有右子树， 并且栈为空
+        else {
+            t = NULL;
+        }
+    }
+
+}
+
+void main() {
+    BitNode t1, t2, t3, t4, t5;
+    memset(&amp;t1, 0, sizeof(BitNode));
+    memset(&amp;t2, 0, sizeof(BitNode));
+    memset(&amp;t3, 0, sizeof(BitNode));
+    memset(&amp;t4, 0, sizeof(BitNode));
+    memset(&amp;t5, 0, sizeof(BitNode));
+    t1.data = 1;
+    t2.data = 2;
+    t3.data = 3;
+    t4.data = 4;
+    t5.data = 5;
+
+    t1.lchild = &amp;t2;
+    t1.rchild = &amp;t3;
+    t2.lchild = &amp;t4;
+    t3.lchild = &amp;t5;
+
+    printf(&quot;\r\n 非递归遍历 \r\n&quot;);
+    inOrder(&amp;t1);
+
+    cout &lt;&lt; &quot;hello world&quot; &lt;&lt; endl;
+    system(&quot;pause&quot;);
+}
+</code></pre>
+<p>通过中序遍历和先序遍历可以确定一个树</p>
+<p>通过中序遍历和后序遍历可以确定一个树</p>
+<p>通过先序遍历和后序遍历不能确定一个树</p>
+<p>单独先序遍历。</p>
+<p>二叉线索树： 普通二叉树只能找到结点的左右孩子信息，而该结点的直接前驱和直接后继只能在遍历过程中获得；若可将遍历后对应的有关前驱和后继预存储起来，则从第一个结点开始就能很快“顺藤摸瓜”，而遍历整个树了。</p>
+<h3 id="图"><a href="#图" class="headerlink" title="图"></a>图</h3><p>线性表中我们把数据元素叫元素，树中的数据元素叫结点，在图中数据元素，我们称之为顶点（Vertex）。</p>
+<p>线性表中可以没有数据元素，称为空表。树中可以没有结点，叫做空树。同样，在图的结构中，不允许没有顶点，在定义中，若 V 是顶点的集合，则强调了顶点集合 V 有穷非空。</p>
+<p>图中，任意两个顶点你之间都可能有关系，顶点之间的逻辑关系用吧边表示，边集可以是空的。</p>
+<ul>
+<li>连通图</li>
 </ul>
+<p>在无向图 G 中， 如果对于图中任意两个顶点v1，v2都是连通的，则称 G 是连通图。</p>
+<p>无向图中的极大连通子图称为连通分量。</p>
+<p>有向图 G 中，如果对于每一对vi， vj， 从vi 到 vj 和 从 vj 到 vi都存在路径，则称 G 是强连通图。 </p>
+<ul>
+<li>邻接表</li>
+</ul>
+<p>一种孩子表示法，将结点存入数组，并对结点的孩子进行链式存储，不管有多少孩子，也不会存在空间的浪费。这个思路同样适用于图的存储，我们把这种数据与链表结合的存储方法称为邻接表。</p>
+<p>顶点表的各个结点有 data 和 firstedge 两个域表示， data 是数据域，存储顶点信息，firstedge 是指针域，指向边表的第一个结点。</p>
+<p>边表结点有 adjvex 和 next 两个域组成， adjvex 是邻接点域，存储某顶点的邻接点在顶点中的下标。 next 则存储指向表中下一个结点的指针。</p>
+<p>有时为了便于确定顶点的入度或以顶点为弧头的弧， 有向图的逆连接表，即对每个顶点 v1 都建立一个链接为 v1 为 弧头的表。</p>
+<ul>
+<li>邻接矩阵</li>
+</ul>
+<p>图的邻接矩阵存方式是用两个数组来表示图。一个一维数组存图中顶点信息， 一个二维数组（称为邻接矩阵）存储图中的边或弧的信息。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 感谢你的浏览,期待你的反馈, 可以邮件至 daihuiyo@163.com </span>

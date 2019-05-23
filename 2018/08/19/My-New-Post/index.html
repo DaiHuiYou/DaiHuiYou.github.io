@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
-  <title>排序 | Will&#39;s notebook</title>
-  <meta name="keywords" content=" 算法与数据结构 ">
-  <meta name="description" content="排序 | Will&#39;s notebook">
+  <title>My New Post | Will&#39;s notebook</title>
+  <meta name="keywords" content=" the first post. ">
+  <meta name="description" content="My New Post | Will&#39;s notebook">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="About me:">
 <meta name="keywords" content="笔记 生活">
@@ -286,9 +286,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-排序" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <article id="post-My-New-Post" class="article article-type-post" itemscope="" itemprop="blogPost">
     
-        <h1 class="article-title">排序</h1>
+        <h1 class="article-title">My New Post</h1>
     
     <div class="article-meta">
         
@@ -296,21 +296,21 @@
         
         <span class="book">
             
-            <a href="javascript:" data-rel="c++">c++</a>
+            <a href="javascript:" data-rel="开篇">开篇</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color3">算法与数据结构</a>
+            <a href="javascript:" class="color1">the first post.</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title="更新时间: 2019-03-04 22:38:40">2019-01-04 13:13</time>
+        创建时间:<time class="date" title="更新时间: 2018-11-09 14:11:44">2018-08-19 00:06</time>
         
     </div>
     <div class="article-meta">
@@ -321,7 +321,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#O-n-2"><span class="toc-text">O(n^2)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-选择排序"><span class="toc-text">1 . 选择排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-插入排序"><span class="toc-text">2. 插入排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-希尔排序"><span class="toc-text">3. 希尔排序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#O-nlogN"><span class="toc-text">O(nlogN)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-归并排序"><span class="toc-text">1. 归并排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-快速排序"><span class="toc-text">2. 快速排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-堆排序"><span class="toc-text">3. 堆排序</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Have-a-good-day"><span class="toc-text">Have a good day!</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Cease-to-struggle-and-you-cease-to-live"><span class="toc-text">Cease to struggle and you cease to live.</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -336,220 +336,7 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="O-n-2"><a href="#O-n-2" class="headerlink" title="O(n^2)"></a>O(n^2)</h2><h3 id="1-选择排序"><a href="#1-选择排序" class="headerlink" title="1 . 选择排序"></a>1 . 选择排序</h3><pre><code class="c++">// 未优化
-template&lt;typename T&gt;
-void selectionSort1(T arr[], int n)
-{
-    for (int i = 0; i &lt; n; i++) {
-        for (int j = i + 1; j &lt; n; j++) {
-            if (arr[j] &lt; arr[i])
-                swap(arr[j], arr[i]);
-        }
-    }
-
-    return;
-}
-
-// 优化
-template &lt;typename T&gt;
-void selectionSort2(T arr[], int n)
-{
-    for (int i = 0; i &lt;= n - 1; i++){
-
-        int minIndex = i;
-        for (int j = i+1; j &lt;= n - 1; j++) {
-            if (arr[minIndex] &gt; arr[j])
-                minIndex = j;
-        }
-
-        swap(arr[minIndex], arr[i]);
-    }
-    return;
-}
-
-
-</code></pre>
-<ul>
-<li>测试</li>
-</ul>
-<p>从 1 万个 0~100 的随机数中，从小到大排序。</p>
-<p>selectionSort1 :  <font color="red"> 2.208 s </font></p>
-<p>selectionSort2  : <font color="red">0.108 s</font></p>
-<h3 id="2-插入排序"><a href="#2-插入排序" class="headerlink" title="2. 插入排序"></a>2. 插入排序</h3><pre><code class="c++">// 未优化
-template&lt;typename T&gt;
-void InsertionSort1(T arr[], int n)
-{
-    for (int i = 1; i &lt; n; i++)
-    {
-        for (int j = i; j &gt; 0 &amp;&amp; arr[j] &lt; arr[j - 1]; j--) {
-            swap(arr[j], arr[j - 1]);
-        }
-    }    
-}
-
-// 优化
-template&lt;typename T&gt;
-void InsertionSort2(T arr[], int n) {
-
-    for (int i = 1; i &lt; n; i++) {
-
-        T e = arr[i];
-        int j;
-        for (j = i; j &gt; 0 &amp;&amp; arr[j - 1] &gt; e; j--)
-            arr[j] = arr[j - 1];
-        arr[j] = e;
-    }
-
-    return;
-}
-
-</code></pre>
-<ul>
-<li>测试</li>
-</ul>
-<p>从1万个 0~100 的随机数中，从小到大排序。</p>
-<p>InsertionSort1 : <font color="red">2.653 s </font></p>
-<p>InsertionSort2 : <font color="red">0.064 s</font></p>
-<h3 id="3-希尔排序"><a href="#3-希尔排序" class="headerlink" title="3. 希尔排序"></a>3. 希尔排序</h3><pre><code class="c++">// 希尔排序
-template&lt;typename T&gt;
-// n 表示数组 capacity
-void shellSort(T arr[], int n)
-{
-    int cnt = n - 1;  // 数组元素个数
-    int tmp = 0;       // 临时变量
-
-    // d：distance， 
-    for (int d = n/2; d&gt;=1; d=d/2) {
-        // 遍历
-        for (int i = d; i &lt;=cnt; i++) {
-            // 插入排序
-            tmp = arr[i];
-            for ( int j = i - d; j&gt;=0 &amp;&amp; arr[j + d] &lt; arr[j]; j = j - d) {
-                arr[j + d] = arr[j];
-                arr[j] = tmp;
-            }
-        }
-    }
-}
-
-</code></pre>
-<ul>
-<li><p>测试</p>
-<p>从 1 万个 0~100 的随机数中，从小到大排序。</p>
-<p>Insertion Sort  :  <font color="red">6.332 s </font></p>
-<p>Shell Sort       : <font color="red">0.029 s</font></p>
-</li>
-</ul>
-<h2 id="O-nlogN"><a href="#O-nlogN" class="headerlink" title="O(nlogN)"></a>O(nlogN)</h2><h3 id="1-归并排序"><a href="#1-归并排序" class="headerlink" title="1. 归并排序"></a>1. 归并排序</h3><h3 id="2-快速排序"><a href="#2-快速排序" class="headerlink" title="2. 快速排序"></a>2. 快速排序</h3><pre><code class="c++">int __partition(int arr[], int l, int r)
-{
-    int v = arr[l];
-
-    int j = l;
-    for (int i = l + 1; i &lt;= r; i++) {
-        if (arr[i] &lt; v) {
-            j++;
-            swap(arr[i], arr[j]);
-        }
-    }
-
-    swap(arr[j], arr[l]);
-    return j;
-}
-
-void __quickSort(int arr[], int l, int r)
-{
-    if (l &gt;= r)
-        return;
-
-    int p = __partition(arr, l, r);
-    __quickSort(arr, l, p - 1);
-    __quickSort(arr, p + 1, r);
-}
-
-// 快速排序
-void quickSort(int arr[], int n)
-{
-    __quickSort(arr, 0, n - 1);
-}
-</code></pre>
-<h3 id="3-堆排序"><a href="#3-堆排序" class="headerlink" title="3. 堆排序"></a>3. 堆排序</h3><pre><code class="c++">void shiftDown(int arr[], int n, int k)
-{
-    while (2 * k + 1 &lt; n) {
-        int j = 2 * k + 1;
-        if (j+1&lt;n &amp;&amp; arr[j] &lt; arr[j + 1]) {
-            j++;
-        }
-        if (arr[k] &lt; arr[j]) {
-            swap(arr[k], arr[j]);
-            k = j;
-        }
-        else
-            break;
-    }
-}
-
-void heapSort1(int arr[], int n)
-{
-    // heapify
-    for (int i = (n - 1) / 2; i &gt;= 0; i--) {
-        shiftDown(arr, n, i);
-    }
-
-    for (int i = n - 1; i &gt; 0; i--) {
-        swap(arr[0], arr[i]);
-        shiftDown(arr, i, 0);
-    }
-}
-
-// n 为数组元素个数
-// k 当前要筛选的索引
-// arr[0] 为临时存储变量
-void shift(int arr[], int n, int k) 
-{
-    while (2 * k &lt; n) {
-        int j = 2 * k;
-        if (j + 1 &lt; n &amp;&amp; arr[j] &lt; arr[j + 1])
-            j++;
-        if (arr[k] &lt; arr[j]) {
-            // arr[j] 与 arr[k] 交换
-            arr[0] = arr[j];
-            arr[j] = arr[k];
-            arr[k] = arr[0];
-
-            k = j;
-        }
-        else 
-            break;
-    }
-}
-
-// n 为数组元素个数
-// arr[0] 为临时存储变量
-void heapSort2(int arr[], int n)
-{
-    for (int i = (n - 1) / 2; i &gt;= 1; i--) {
-        shift(arr, n, i);
-    }
-
-    for (int i = n - 1; i &gt;=2; i--) {
-        // arr[i] 与 arr[1] 交换
-        arr[0] = arr[i];
-        arr[i] = arr[1];
-        arr[1] = arr[0];
-
-        shift(arr, i, 1);
-    }
-
-}
-</code></pre>
-<ul>
-<li><p>测试</p>
-<p>从100 万个 0~100 的随机数中，从小到大排序。</p>
-<p>Heap Sort 1 : <font color="red">2.228 s </font></p>
-<p>Heap Sort 2 : <font color="red">0.248 s</font></p>
-</li>
-</ul>
-
+        <h4 id="Have-a-good-day"><a href="#Have-a-good-day" class="headerlink" title="Have a good day!"></a>Have a good day!</h4><h4 id="Cease-to-struggle-and-you-cease-to-live"><a href="#Cease-to-struggle-and-you-cease-to-live" class="headerlink" title="Cease to struggle and you cease to live."></a>Cease to struggle and you cease to live.</h4>
       
        <hr><span style="font-style: italic;color: gray;"> 感谢你的浏览,期待你的反馈, 可以邮件至 daihuiyo@163.com </span>
     </div>
