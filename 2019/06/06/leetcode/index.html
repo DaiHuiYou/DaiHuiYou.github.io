@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
-  <title>about | Will&#39;s notebook</title>
+  <title>leetcode | Will&#39;s notebook</title>
   <meta name="keywords" content="">
-  <meta name="description" content="about | Will&#39;s notebook">
+  <meta name="description" content="leetcode | Will&#39;s notebook">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="About me:">
 <meta name="keywords" content="笔记 生活">
@@ -291,9 +291,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="page-" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <article id="post-leetcode" class="article article-type-post" itemscope="" itemprop="blogPost">
     
-        <h1 class="article-title">about</h1>
+        <h1 class="article-title">leetcode</h1>
     
     <div class="article-meta">
         
@@ -303,7 +303,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title="更新时间: 2018-11-11 21:39:02">2018-11-09 18:46</time>
+        创建时间:<time class="date" title="更新时间: 2019-06-06 22:26:59">2019-06-06 22:25</time>
         
     </div>
     <div class="article-meta">
@@ -329,9 +329,86 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>About me:</p>
-<iframe height="265" scrolling="no" title="Fancy Animated SVG Menu" src="http://codepen.io/jeangontijo/embed/OxVywj/?height=265&theme-id=0&default-tab=css,result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;"></iframe>
+        <p>给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。</p>
+<p>如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。</p>
+<p>您可以假设除了数字 0 之外，这两个数都不会以 0 开头。</p>
+<p>示例：</p>
+<p>输入：(2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)<br>输出：7 -&gt; 0 -&gt; 8<br>原因：342 + 465 = 807</p>
+<pre><code class="C++">/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        ListNode *h1 = l1;
+        ListNode *h2 = l2;
+        ListNode *h3 = new ListNode(0);
+        ListNode *pos = h3;
+        int res = 0;
+        int carry  = 0;
+        bool first = true;
 
+        // 两个链表相加，想象拉裤子拉链的情况。 ^_^
+        while(h1!=NULL &amp;&amp; h2!=NULL){ // 两个链表之间的共同位
+
+            res = h1-&gt;val + h2-&gt;val + carry;
+            if(first){  // 第一次执行 
+                pos-&gt;val = res % 10;
+                carry = res / 10;
+                first = false;
+            }
+            else {
+                ListNode *pNode = new ListNode(0);
+                pNode-&gt;val = res % 10;
+                carry = res / 10;
+                pos-&gt;next = pNode;
+                pos = pos-&gt;next;
+            }
+
+            h1 = h1-&gt;next;
+            h2 = h2-&gt;next;
+        }
+
+        // 当 h1.len &gt; h2.len
+        if(h1!=NULL){   
+            while(h1!=NULL){
+                ListNode *pNode = new ListNode(0);
+                res = h1-&gt;val + carry;
+                pNode-&gt;val = res % 10;
+                carry = res / 10;
+                pos-&gt;next = pNode;
+                pos = pos-&gt;next;
+                h1 = h1-&gt;next;
+            }
+        }
+         // 当 h1.len &lt; h2.len
+        if(h2!=NULL){    
+            while(h2!=NULL){
+                ListNode *pNode = new ListNode(0);
+                res = h2-&gt;val + carry;
+                pNode-&gt;val = res % 10;
+                carry = res / 10;
+                pos-&gt;next = pNode;
+                pos = pos-&gt;next;
+                h2 = h2-&gt;next;
+            }
+        }
+
+        if(carry!=0){  // 最后一位相加
+            ListNode *pNode = new ListNode(carry);
+            pos-&gt;next = pNode;
+            pos = pos-&gt;next;
+            carry = 0;
+        }
+        return h3;
+    }
+};
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 感谢你的浏览,期待你的反馈, 可以邮件至 daihuiyo@163.com </span>
