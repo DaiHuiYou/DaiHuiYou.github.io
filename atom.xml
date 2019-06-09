@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.daihuiyou.top/"/>
-  <updated>2019-06-09T14:31:48.449Z</updated>
+  <updated>2019-06-09T14:58:52.981Z</updated>
   <id>https://www.daihuiyou.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>软件工程之美</title>
+    <link href="https://www.daihuiyou.top/2019/06/09/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E4%B9%8B%E7%BE%8E/"/>
+    <id>https://www.daihuiyou.top/2019/06/09/软件工程之美/</id>
+    <published>2019-06-09T14:56:51.000Z</published>
+    <updated>2019-06-09T14:58:52.981Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>在编写自己的函数时，仅仅假设一个特定样本数据的输入， 并满足该函数的输出要求，就马不停蹄实现下一个函数的定义。 完全没有考虑这函数的健壮性，即没有足够的样本数据进行单元测试， 这样的函数犹如建房子的砖瓦「够用就行」。</p><p>那么自己完成的项目，以下图片描述再形象不过了。</p><p><img src="https://github.com/DaiHuiYou/Material/blob/master/pic/software.png?raw=true" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+      <category term="程序语言" scheme="https://www.daihuiyou.top/categories/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/"/>
+    
+    
+      <category term="程序语言" scheme="https://www.daihuiyou.top/tags/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode</title>

@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
-  <title>SOCKET | Will&#39;s notebook</title>
-  <meta name="keywords" content=" 项目 ">
-  <meta name="description" content="SOCKET | Will&#39;s notebook">
+  <title>软件工程之美 | Will&#39;s notebook</title>
+  <meta name="keywords" content=" 程序语言 ">
+  <meta name="description" content="软件工程之美 | Will&#39;s notebook">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="About me:">
 <meta name="keywords" content="笔记 生活">
@@ -296,9 +296,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-SOCKET" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <article id="post-软件工程之美" class="article article-type-post" itemscope="" itemprop="blogPost">
     
-        <h1 class="article-title">SOCKET</h1>
+        <h1 class="article-title">软件工程之美</h1>
     
     <div class="article-meta">
         
@@ -306,21 +306,21 @@
         
         <span class="book">
             
-            <a href="javascript:" data-rel="SOCKET">SOCKET</a>
+            <a href="javascript:" data-rel="程序语言">程序语言</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color3">项目</a>
+            <a href="javascript:" class="color5">程序语言</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title="更新时间: 2019-05-30 22:36:58">2019-05-20 12:36</time>
+        创建时间:<time class="date" title="更新时间: 2019-06-09 22:58:52">2019-06-09 22:56</time>
         
     </div>
     <div class="article-meta">
@@ -331,7 +331,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-TCP连接的粘包问题"><span class="toc-text">1. TCP连接的粘包问题</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#解决方法"><span class="toc-text">解决方法</span></a></li></ol></li></ol><li class="toc-item toc-level-3"><a class="toc-link" href="#2-多媒体文件传输"><span class="toc-text">2. 多媒体文件传输</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#传输文件的方法"><span class="toc-text">传输文件的方法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-阻塞和非阻塞"><span class="toc-text">3. 阻塞和非阻塞</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-多线程实现多个客户端连接"><span class="toc-text">4. 多线程实现多个客户端连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-Select模型实现多个客户端连接"><span class="toc-text">5. Select模型实现多个客户端连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-ping"><span class="toc-text">6. ping</span></a></li>
+        
     
 <style>
     .left-col .switch-btn,
@@ -346,26 +346,9 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://github.com/DaiHuiYou/Material/blob/master/gif/socket.gif?raw=true" alt="gif过大，加载时间稍长"></p>
-<h3 id="1-TCP连接的粘包问题"><a href="#1-TCP连接的粘包问题" class="headerlink" title="1. TCP连接的粘包问题"></a>1. TCP连接的粘包问题</h3><p>由于TCP是面向连接，二进制流传输，由于 Send()是发送给操作系统的缓冲区，并不是立即发送给客户端，等缓冲区有一定大小，再一次性发送给客户端。</p>
-<p>所以由于这样的机制，多次消息的发送，可能一次性消息的接受。导致粘包问题，即是多个消息粘在一起发送。</p>
-<ul>
-<li><h5 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h5></li>
-</ul>
-<p>发送一次消息，等待接受消息，即判断对方是否接受到消息，确定对方接受到了消息，再继续发送下一条消息。</p>
-<h3 id="2-多媒体文件传输"><a href="#2-多媒体文件传输" class="headerlink" title="2. 多媒体文件传输"></a>2. 多媒体文件传输</h3><p>多媒体文件并不是文本文件，采取文本文件读取，对方接受到多媒体文件无法解码。所以文件读取的方式采取是二进制。</p>
-<ul>
-<li><h5 id="传输文件的方法"><a href="#传输文件的方法" class="headerlink" title="传输文件的方法"></a>传输文件的方法</h5></li>
-</ul>
-<p>服务端：读取文件，连续 send()，直到发送完成。等待客户端接受完成消息。</p>
-<p>客户端：接受服务端的消息，以二进制的方式存储到文件中，接受完成后，发送服务端接受完成消息。</p>
-<h3 id="3-阻塞和非阻塞"><a href="#3-阻塞和非阻塞" class="headerlink" title="3. 阻塞和非阻塞"></a>3. 阻塞和非阻塞</h3><p>阻塞即是有消息则接受消息，没有消息则一直等待，不去执行其他操作。</p>
-<p>在 TCP中 recv() 是采用阻塞方式接受。</p>
-<p>非阻塞即有消息接受消息，没有消息则执行其他操作。</p>
-<h3 id="4-多线程实现多个客户端连接"><a href="#4-多线程实现多个客户端连接" class="headerlink" title="4. 多线程实现多个客户端连接"></a>4. 多线程实现多个客户端连接</h3><p>多线程实现多个客户端连接，线程的数量等于客户端的数量， 当客户端连接数量大到一定程序，服务端容易崩溃。</p>
-<h3 id="5-Select模型实现多个客户端连接"><a href="#5-Select模型实现多个客户端连接" class="headerlink" title="5. Select模型实现多个客户端连接"></a>5. Select模型实现多个客户端连接</h3><p>select 模型时 Winsock 中最常见的 I/0 模型， 它的中心思想是利用 select 函数，实现多个套接字 I/0 的管理。 利用 select 函数，可以判断套接字上是否存在数据，或则能否向一个套接字写入数据。 只有在条件满足时，才对套接字进行输出操作。</p>
-<p>异步 I/0 模型通过调用 WSAAsynocSelect 函数实现，利用这个模型，应用程序可在一个套接字上接受以 windows 消息为基础的网络事件。</p>
-<h3 id="6-ping"><a href="#6-ping" class="headerlink" title="6. ping"></a>6. ping</h3><p>PING ，使用 ICMP 协议， 基于网络层， 包加上 源IP 和 目的IP， 在 数据链路层中加上源 MAC 地址和目的 MAC 地址，发送到局域网的另一台主机。</p>
+        <p>在编写自己的函数时，仅仅假设一个特定样本数据的输入， 并满足该函数的输出要求，就马不停蹄实现下一个函数的定义。 完全没有考虑这函数的健壮性，即没有足够的样本数据进行单元测试， 这样的函数犹如建房子的砖瓦「够用就行」。</p>
+<p>那么自己完成的项目，以下图片描述再形象不过了。</p>
+<p><img src="https://github.com/DaiHuiYou/Material/blob/master/pic/software.png?raw=true" alt=""></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 感谢你的浏览,期待你的反馈, 可以邮件至 daihuiyo@163.com </span>
