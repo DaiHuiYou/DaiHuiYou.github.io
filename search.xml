@@ -14,7 +14,7 @@
   <entry>
     <title><![CDATA[leetcode]]></title>
     <url>%2F2019%2F06%2F06%2Fleetcode%2F</url>
-    <content type="text"><![CDATA[数组vector&lt;int&gt;iterator::it = nums.begin(); nums.insert(nums.end(), 100); // 等价于 nums.push_back(100); nums.insert(nums.end(), anothernums.begin, anothernums.end()); // nums = nums + anothernums 排序 C++ sort() 时间复杂度 Sort() 因为它使用的排序方法是类似于快排的方法，时间复杂度为n*log2(n)，执行效率较高！ 果断放弃的自己造轮子， 来实现 时间复杂度为 O(n^2) 的冒泡或者选择算法。 ^_^]]></content>
+    <content type="text"><![CDATA[数组vector&lt;int&gt;iterator::it = nums.begin(); nums.insert(nums.end(), 100); // 等价于 nums.push_back(100); nums.insert(nums.end(), anothernums.begin, anothernums.end()); // nums = nums + anothernums 排序 C++ sort() 时间复杂度 Sort() 因为它使用的排序方法是类似于快排的方法，时间复杂度为n*log2(n)，执行效率较高！ 果断放弃的自己造轮子， 来实现 时间复杂度为 O(n^2) 的冒泡或者选择算法。 ^_^ unordered_map在 unordered_map 中，键值通常用于唯一标识元素，而映射值是与该键关联的内容的对象。键和映射值的类型可能不同。 在内部，unordered_map 中的元素没有按照它们的键值或映射值的任何顺序排序，而是根据它们的散列值组织成桶以允许通过它们的键值直接快速访问单个元素（具有常数平均时间复杂度）。 unordered_map 容器比映射容器更快地通过它们的键来访问各个元素，尽管它们通过其元素的子集进行范围迭代通常效率较低。 无序映射实现直接访问操作符（operator []），该操作符允许使用其键值作为参数直接访问映射值。 容器中的迭代器至少是前向迭代器。 关键词：无序的 快速的检索 达到的是更快的访问 但是子集的范围迭代效率低。]]></content>
   </entry>
   <entry>
     <title><![CDATA[OS]]></title>
