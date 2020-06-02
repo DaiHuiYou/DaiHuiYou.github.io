@@ -140,17 +140,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[学会提问]]></title>
-    <url>%2F2018%2F08%2F21%2F%E5%AD%A6%E4%BC%9A%E6%8F%90%E9%97%AE%2F</url>
-    <content type="text"><![CDATA[日常上，我在网络上几乎不评论某些看法和表达自己的看法。因为心理上，我想成为信息的接受者，这样舒服，不必费劲，不必评论，不必打字。哈哈哈，发现自己懒癌已经不轻了。 但是我自己看了在微信，知乎看了许许多多的文章，我发现只有自己觉得认同的，通常不会再多考虑作者的理由是否妥当，就贸然接受其结论。 我认为这样不好，没有属于自己的思想。 看完《学会提问》，批判性思维是重要的，克服自己的懒癌，不想是信息的接受者，而是信息的筛选者，还要是敢于表达自己的观点和想法。 读书摘抄价值观： 苏格拉底说过的话:”我唯一所知的就是我一无所知。” 找不到作者的结论，你就会曲解别人的意图，这样做出的回应也显得驴唇不对马嘴。 关键问题：论题和结论。 没有把证据支撑的断言称为纯观点。 写作建议：在写作之前最好确定好论题，引导读者得出你的结论 如果你没找到这些潜在的联系，你常常会发现自己不知不觉就相信了一些观点，这些观点稍加考虑的话就绝不会接受。 一个论证的表面结构由理由和结论两部分组成。 我们把没有明说出来的想法成为假设。 先检查理由，然后检查结论，寻找价值观假设和描述性假设。 假设越可疑，推理和结论的相关程度也就越小。 用证据证明一件事引起另一件事发生的过程里常见的一个难题–替代原因。 单一的个人经历，甚至是个人经历的总和，根本不足以构成一个代表性的经历样本。 价值观是：人这辈子觉得什么是最珍贵的。例如 价值观：我喜欢团队合作，不喜欢竞争，不喜欢办公室文化。 价值观假设：就是在特定情形下没有明说的出来的喜欢一种价值观超过另一种价值观的偏向。 谬误，就是推理中的欺骗手段，作者有肯恩利用这个欺骗手段来说服你采纳结论。 过度简化因果关系谬误指 依赖并不足解释整个事件的具有因果关系的因素来解释一个事件，或者过分强调这些因素的一个或多个因素的作用。 以偏概全谬误指一个人仅根据群体中极小部分人的经历就得出有关整个群体的结论。 循环论证谬误指在推理过程中已然假设自己的结论成立的论证。 人生攻击谬误指针对个人的人身攻击或侮辱，而不是直接反驳其提供的理由。]]></content>
-      <categories>
-        <category>Share</category>
-      </categories>
-      <tags>
-        <tag>Share</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[hexo博客搭建流程]]></title>
     <url>%2F2018%2F08%2F20%2Fhexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B%2F</url>
     <content type="text"><![CDATA[记录总体的搭建流程 搭建Node.js环境：命令行使用node -v查看版本。 安装Hexo博客框架：npm install hexo-cli -g 安装git, git同步在github上。 开启GitHub Pages服务： 注意要选择主题，才有效。 创建文件夹，存放博客文件： hexo init myHexoBlog hexo g //g是generetor的缩写，生成博客 hexo s //s是server的缩写，启动服务 hexo与github关联起来 绑定域名 更换主题 安装git, git同步在github上git config --global user.name &quot;你的GitHub用户名&quot; git config --global user.email &quot;你的GitHub注册邮箱&quot; 生成ssh密钥文件：ssh-keygen -t rsa -C “你的GitHub注册邮箱” 然后找到生成的.ssh的文件夹中的id_rsa.pub密钥，将内容全部复制 打开GitHub_Settings_keys 页面，新建new SSH Key 在Git Bash中检测GitHub公钥设置是否成功，输入 ssh git@github.com hexo与github关联起来：打开站点的配置文件_config.ymldeploy: type: git repository: git@github.com:DaiHuiYou/DaiHuiYou.github.io.git branch: master 绑定域名ping www.daihuiyou.github.io #得到IP值 第一步：在阿里云解析服务： 填写 主机记录www对应 daihuiyou.github.io 主机记录@对应 www.daihuiyou.github.io 主机记录www对应 185.199.111.153 主机记录@对应 185.199.111.153 第二步：登录GitHub，进入之前创建的仓库，点击settings，设置Custom domain，输入域名 daihuiyou.top 第三步：进入本地博客文件夹 ，进入blog/source目录下，创建一个CNAME，编辑内容为daihuiyou.top 更换主题待更新。]]></content>
